@@ -68,4 +68,6 @@ build/buildinfo.properties
 build/config/buildinfo.properties
 
 guide/public
+extra/*
+repositories/*
 
