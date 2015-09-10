@@ -9,3 +9,18 @@
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 */
+#page{
+	max-width:100%;  /* As its handled by wordpress */
+	padding:0px;
+	margin:0px;
+}
+.container-fluid{
+	padding:0px;
+}
+hgroup{
+	display:none;
+}
+.masthead-inner .row{
+	margin:0px;
+}
+.masthead-inner .row > .col-xs-6{padding:0px;}
