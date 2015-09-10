@@ -43,6 +43,28 @@ class ODA {
 			'post-formats' => 'link'
 		) );
 
+		register_post_type( 'Homelinks', array(
+			'labels'       => array(
+				'name'               => __('Home page links', 'oda'),
+				'singular_name'      => __('Home page link', 'oda'),
+				'add_new_item'       => __('Add new link', 'oda'),
+				'edit_item'          => __('Edit link', 'oda'),
+				'new_item'           => __('New home page link', 'oda'),
+				'view_item'          => __('View link', 'oda'),
+				'search_items'       => __('Search link', 'oda'),
+				'not_found'          => __('No home page link found', 'oda'),
+				'not_found_in_trash' => __('No home page link found in trash', 'oda'),
+				'parent_item_colon'  => __('Parent Links', 'oda')
+			),
+			'public'       => true,
+			'show_ui'      => true,
+			'has_archive'  => false,
+			'hierarchical' => true,
+			'menu_position'=> 6,
+			'supports'     => array( 'title', 'editor', 'thumbnail', 'revisions'),
+			'post-formats' => 'link'
+		) );
+
 
 
 	}
