@@ -31,9 +31,13 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<div class='container-fluid'>
-	<?php do_action( 'before' ); ?>
+	<?php do_action( 'before' );
+	 $homePageObj = get_page_by_title( 'home');
+
+	 if( $homePageObj->ID != get_the_ID()):
+	?>
 	<header id="masthead" class="site-header" role="banner" >
-		<div class="masthead-inner clear-fix">
+		<div class="masthead-inner">
 			<hgroup>
 				<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
@@ -57,8 +61,10 @@
 			</div>
 		</div>
 	</header><!-- #masthead .site-header -->
-
-	<div id="main" class="clear-fix">
+	<?php
+	endif;
+	?>
+	<div id="main" class="clear-fix" >
 		<?php if ( is_front_page() && ! is_paged() )
 			get_template_part( 'featured' );
 		?>

@@ -7,17 +7,27 @@
 get_header(); ?>
 <div id="primary" class="site-content">
 			<div id="content" role="main">
+			<?php $header_image = get_header_image();
+			if ( ! empty( $header_image ) ) { ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+					rel="home" class="sliderLogo header1-image-link">
+					<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+				</a>
+			<?php } // if ( ! empty( $header_image ) ) ?>
 
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
-
+					<?php echo do_shortcode("[huge_it_slider id='2']"); ?>
 					<?php
 						/* Include the Post-Format-specific template for the content.
 						 * If you want to overload this in a child theme then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'content', get_post_format() );
+						//This will be used to show home links
+						get_template_part( 'content', 'homelinks' );
+
+						get_template_part( 'home-content', get_post_format() );
 					?>
 
 				<?php endwhile; ?>

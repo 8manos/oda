@@ -14,6 +14,12 @@
 	padding:0px;
 	margin:0px;
 }
+#content {
+	margin: 0;
+}
+.site-content{
+	margin:0px;
+}
 .container-fluid{
 	padding:0px;
 }
@@ -24,3 +30,14 @@ hgroup{
 	margin:0px;
 }
 .masthead-inner .row > .col-xs-6{padding:0px;}
+.masthead-inner{
+
+}
+.sliderLogo{
+	position:absolute;
+	z-index:10;
+}
+.sub-homelink-title{
+	font-family:'stabile-regular';
+	font-size:15px;
+}

@@ -17,21 +17,21 @@ jQuery(document).ready(function() {
 				    minSlides: huge_it_obj.slideCount,
 				    maxSlides:huge_it_obj.slideCount,
 				    moveSlides: 1,
-				    auto: true, 
+				    auto: false,
 				    pause: +huge_it_obj.pauseTime,
 				    pager: false,
 				    controls: false,
 				    mode: 'horizontal',
 				    infiniteLoop:true,
 				    speed: +huge_it_obj.speed
-				   
-			
-				    
-				   
-					  
+
+
+
+
+
 			    });
-           
-	   ///on hover on slider stop both slider and thumbnail slider 
+
+	   ///on hover on slider stop both slider and thumbnail slider
 	  	  jQuery("ul[class^='huge_it_slider_"+sliderID+"']").hover(function(){
 	  		_this.stopAuto();
 			},function(){
@@ -56,10 +56,10 @@ jQuery(document).ready(function() {
 
 					_this.startAuto();
 			})
-	
 
 
-	
+
+
 
 
 	  	  jQuery(".huge_it_slideshow_thumbs_"+sliderID).find('li').on('click',function(){
@@ -79,7 +79,7 @@ jQuery(document).ready(function() {
 
 
 	  	   jQuery("#huge_it_slideshow_left_"+sliderID).on('click',function(){
-	  	 
+
 	  	  		_this.goToPrevSlide();
 	  	  		//jQuery("ul[class^='huge_it_slideshow_thumbs_"+sliderID+"']").unbind();
 	  	  		//jQuery("ul[class^='huge_it_slider_"+sliderID+"']").unbind();
@@ -95,7 +95,7 @@ jQuery(document).ready(function() {
 	  	    	//jQuery("ul[class^='huge_it_slideshow_thumbs_"+sliderID+"']").unbind();
 	  	    	//jQuery("ul[class^='huge_it_slider_"+sliderID+"']").unbind();
 	  	  		//_this.stopAuto();
-	  	  		
+
             _this.stopAuto();
             restart=setTimeout(function(){
                 _this.startAuto();
@@ -116,25 +116,25 @@ jQuery(document).ready(function() {
 
 					_this.startAuto();
 			})
-	  	  
+
 
 setInterval(function(){
 	if(huge_video_playing['video_is_playing_'+sliderID]==true){
 		 _this.stopAuto();
-		
+
 	}else if(huge_video_playing['video_is_playing_'+sliderID]==false){
 		_this.startAuto();
-		
+
 	}
 	if(jQuery('#huge_it_loading_image_'+sliderID).css('display')=='table-cell'){
 		_this.stopAuto();
-		
+
 	}else if(jQuery('#huge_it_loading_image_'+sliderID).css('display')=='none'){
 		_this.startAuto();
-		
+
 	}
 },100)
-	
+
 
 
 })
