@@ -5,7 +5,7 @@
 */
 
 get_header(); ?>
-<div id="primary" class="site-content">
+<div id="primary" class="site-content homepage">
 			<div id="content" role="main">
 			<?php $header_image = get_header_image();
 			if ( ! empty( $header_image ) ) { ?>
@@ -32,7 +32,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php sundance_content_nav( 'nav-below' ); ?>
+				<?php //sundance_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

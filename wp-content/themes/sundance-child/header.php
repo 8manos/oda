@@ -32,7 +32,8 @@
 <div id="page" class="hfeed site">
 	<div class='container-fluid'>
 	<?php do_action( 'before' );
-	 $homePageObj = get_page_by_title( 'home');
+	 //TODO might be we provide fixed page no.
+	 $homePageObj = get_page_by_title( 'Lorem ipsum dolor sit amet');
 
 	 if( $homePageObj->ID != get_the_ID()):
 	?>

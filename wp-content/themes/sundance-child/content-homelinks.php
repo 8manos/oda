@@ -5,46 +5,44 @@
  */
 ?>
 
-<nav <?php post_class(); ?>>
+<div class='clsLinkSection'>
 
 	<header class="entry-header">
 
 		<h2 class="sub-homelink-title">
-			<?php echo __('Home Links','sundance'); ?>
+			<?php echo __('atajos del oso','sundance'); ?>
 		</h2>
 
 	</header><!-- .entry-header -->
+	<div class='row'>
+		<div class='col-lg-10 col-lg-offset-1 ' >
 
-	<footer class="entry-meta">
-		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'sundance' ) );
-				if ( $categories_list && sundance_categorized_blog() ) :
-			?>
-			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'sundance' ), $categories_list ); ?>
-			</span>
-			<span class="sep"> | </span>
-			<?php endif; // End if categories ?>
+	<?php
+	//make the sql to collect all page links
+	$args = array(
+		'post_type' => 'homelinks'
+	);
+	$the_query = new WP_Query( $args );
 
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'sundance' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="tag-links">
-				<?php printf( __( 'Tagged %1$s', 'sundance' ), $tags_list ); ?>
-			</span>
-			<span class="sep"> | </span>
-			<?php endif; // End if $tags_list ?>
-		<?php endif; // End if 'post' == get_post_type() ?>
+	if ( $the_query->have_posts() ) :
+		while ( $the_query->have_posts() ) : $the_query->the_post();
+			//the_content();
 
-		<?php if ( comments_open() || ( '0' != get_comments_number() && ! comments_open() ) ) : ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'sundance' ), __( '1 Comment', 'sundance' ), __( '% Comments', 'sundance' ) ); ?></span>
-		<span class="sep"> | </span>
-		<?php endif; ?>
+		?>
+			<div class='col-lg-4 linkBox'>
+				<a href='<?php $the_query->get_the_content();?>'>
+         <?php the_post_thumbnail('large') ?>
+        </a>
+      </div>
 
-		<?php edit_post_link( __( 'Edit', 'sundance' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- #entry-meta -->
-</nav>
+		<?php
+	endwhile;
+	endif;
+	wp_reset_postdata();
+	?>
+		</div> <!-- col-lg-10 -->
+	</div> <!-- row -->
+	<div class='clsLinkSecfooter'>
+	</div>
+</div>
+<div class='clear'></div>
