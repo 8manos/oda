@@ -71,8 +71,45 @@ function sundance_header_style() {
 }
 add_action('sundance_credits', 'show_footer');
 function show_footer(){
-	echo __( 'Contacto: Lorel Ipsum', 'sundance' );
+	echo '<div class="siteInfoFooter text-center">' . __( 'Contacto: Lorel Ipsum', 'sundance' ) . '</div>';
 }
+
+//This will be used to register footer section as sidebar
+add_action( 'widgets_init', 'footer_sidebar_init' );
+
+function footer_sidebar_init() {
+    register_sidebar( array(
+        'name' => __( 'Footer Section', 'sundance' ),
+        'id' => 'footersidebar',
+        'description' => __( 'Widgets in this area will be shown on all footer sections', 'sundance' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</li>',
+				'before_title'  => '<h2 class="widgettitle">',
+				'after_title'   => '</h2>',
+    ) );
+}
+
+
+class mySocialIcons extends Social_Icons_Widget {
+	function __construct(){
+		add_filter('social_icon_accounts', array('mySocialIcons','my_socialIcons'));
+
+		parent::__construct();
+
+	}
+	function my_socialIcons($content)
+	{
+		$siw_social_accounts = array(
+				'Facebook' => 'facebook',
+				'Instagram' => 'instagram',
+				'YouTube' => 'youtube',
+		);
+		return $siw_social_accounts;
+	}
+
+}
+unregister_widget( 'Social_Icons_Widget' );
+add_action('widgets_init', create_function('', 'register_widget("mySocialIcons");') );
 
 //Added theme supports
 add_theme_support('post-thumbnails');

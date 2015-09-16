@@ -74,6 +74,7 @@ hgroup{
 	margin:0px;
 	background:#E0FFB4 url('img/footerBg.png') bottom left no-repeat;
 	min-height:450px;
+	padding:0px;
 }
 .clsHomeHead{
 	text-align:center;
@@ -102,4 +103,53 @@ hgroup{
 	font-size:20px;
 	text-align:justify;
 	color:#00BFAA;
+}
+.widget,.site-footer {
+	border-top:0px;
+}
+.footersidebar .widget_sp_image:nth-child(1){
+	padding-left:20px;
+	text-align:left;
+}
+.footersidebar .widget(2){
+	width:100%;
+
+}
+.footersidebar .widget_sp_image:nth-child(3){
+
+	text-align:right;
+	padding-right:20px;
+}
+.footersidebar  .widget{
+	text-align:center;
+	display:table-cell;
+	margin:0px auto;
+	width:33.33%;
+	vertical-align:bottom;
+}
+.footersidebar{
+	display:table;
+	width:100%;
+	padding-top:190px;
+}
+.footersidebar  .widget > .icons-custom_medium{
+	margin:0px auto;
+	text-align:center;
+	width:180px;
+	display:table;
+}
+.footersidebar .social-icons-widget ul{
+	float:none;
+}
+.footersidebar .widgettitle{
+	font-family:'stabile-regular';
+	font-size:28px;
+	color:#00BFAA;
+}
+.siteInfoFooter{
+	margin-top:50px;
+	padding-left:30px;
+	color:#00BFAA;
+	font-family:'stabile-regular';
+	font-size:28px;
 }

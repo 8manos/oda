@@ -11,7 +11,16 @@
 	</div> <!-- container -->
 	</div><!-- #main -->
 
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<?php
+		//Footer Widget
+			if ( is_active_sidebar( 'footersidebar' ) ) : ?>
+			<div class="footersidebar">
+				<?php dynamic_sidebar( 'footersidebar' ); ?>
+			</div>
+		<?php endif; ?>
+
 		<div class="site-info">
 			<?php do_action( 'sundance_credits' ); ?>
 		</div><!-- .site-info -->
