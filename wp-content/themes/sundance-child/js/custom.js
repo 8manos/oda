@@ -1,5 +1,12 @@
 jQuery(function($){
+	isMenuShow = false ;
 	$(".clsMenu").click(function(){
-		alert('work is in progress');
+		if(!isMenuShow){
+			$(".withBg").show();
+			isMenuShow = true ;
+		}else{
+			isMenuShow = false;
+			$(".withBg").hide();
+		}
 	})
 });
