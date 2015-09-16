@@ -88,29 +88,29 @@ function footer_sidebar_init() {
 				'after_title'   => '</h2>',
     ) );
 }
+//Check whether class exists or not
+if(class_exists('Social_Icons_Widget')){
+	class mySocialIcons extends Social_Icons_Widget {
+		function __construct(){
+			add_filter('social_icon_accounts', array('mySocialIcons','my_socialIcons'));
 
+			parent::__construct();
 
-class mySocialIcons extends Social_Icons_Widget {
-	function __construct(){
-		add_filter('social_icon_accounts', array('mySocialIcons','my_socialIcons'));
-
-		parent::__construct();
+		}
+		function my_socialIcons($content)
+		{
+			$siw_social_accounts = array(
+					'Facebook' => 'facebook',
+					'Instagram' => 'instagram',
+					'YouTube' => 'youtube',
+			);
+			return $siw_social_accounts;
+		}
 
 	}
-	function my_socialIcons($content)
-	{
-		$siw_social_accounts = array(
-				'Facebook' => 'facebook',
-				'Instagram' => 'instagram',
-				'YouTube' => 'youtube',
-		);
-		return $siw_social_accounts;
-	}
-
+	unregister_widget( 'Social_Icons_Widget' );
+	add_action('widgets_init', create_function('', 'register_widget("mySocialIcons");') );
 }
-unregister_widget( 'Social_Icons_Widget' );
-add_action('widgets_init', create_function('', 'register_widget("mySocialIcons");') );
-
 //Added theme supports
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size( 80, 80, true );
