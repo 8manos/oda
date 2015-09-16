@@ -8,13 +8,17 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'stabile-toy', get_stylesheet_directory_uri() . '/css/fonts/Stabile-toy.css', array( $parent_style ) );
 
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ) );
+    wp_enqueue_style( 'iconmoon', get_stylesheet_directory_uri() . '/css/iconmoon.css', array( $parent_style ) );
 
 
 		wp_enqueue_style( 'bootstrap-style', get_stylesheet_directory_uri() . '/css/bootstrap-3.3.5-dist/css/bootstrap.min.css', array( 'child-style' ) );
 		wp_deregister_script('bxSliderSetup');
 		wp_register_script( 'bxSliderSetup', get_stylesheet_directory_uri() .'/js/bxslider.setup.js',array ('bxSlider'), '1.0.0', true);
+		wp_register_script( 'customjs', get_stylesheet_directory_uri() .'/js/custom.js',array ('jquery'), '1.0.0', true);
     wp_register_script('bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap-3.3.5-dist/js/bootstrap.min.js', array('jquery'), true );
+
     wp_enqueue_script('bootstrap');
+    wp_enqueue_script('customjs');
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
