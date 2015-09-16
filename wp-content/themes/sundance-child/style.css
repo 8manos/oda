@@ -176,7 +176,7 @@ hgroup{
 	z-index:20;
 	display:none;
 }
-.menu{
+.menu-fullpage-container{
 	width:320px;
 	margin:0px auto;
 	text-align:center;
@@ -185,21 +185,21 @@ hgroup{
 	border:0px solid black;
 	margin-top:40px;
 }
-.menu ul{
+.menu-fullpage-container ul{
 	list-style-type:none;
 	color:white;
 	font-family:'stabile-regular';
 	margin:0px;
 	padding:0px;
 }
-.menu ul li{
+.menu-fullpage-container ul li{
 	margin:0px;
 }
-.menu ul li a{
+.menu-fullpage-container ul li a{
 	color:white;
 
 }
-.menu ul li a:hover{
+.menu-fullpage-container ul li a:hover{
 	text-decoration:none;
 	color:#00BFAA;
 }
