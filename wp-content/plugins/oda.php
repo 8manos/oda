@@ -21,18 +21,18 @@ class ODA {
 
 	public static function register_post_types() {
 
-		register_post_type( 'slider', array(
+		register_post_type( 'guest', array(
 			'labels'       => array(
-				'name'               => __('Slides', 'oda'),
-				'singular_name'      => __('slide', 'oda'),
-				'add_new_item'       => __('Add New Slide', 'oda'),
-				'edit_item'          => __('Edit Slide', 'oda'),
-				'new_item'           => __('New Slide', 'oda'),
-				'view_item'          => __('View Slide', 'oda'),
-				'search_items'       => __('Search Slide', 'oda'),
-				'not_found'          => __('No Slide found', 'oda'),
-				'not_found_in_trash' => __('No Slide found in trash', 'oda'),
-				'parent_item_colon'  => __('Parent Slide', 'oda')
+				'name'               => __('Guests', 'oda'),
+				'singular_name'      => __('guest', 'oda'),
+				'add_new_item'       => __('Add New Guest', 'oda'),
+				'edit_item'          => __('Edit Guest', 'oda'),
+				'new_item'           => __('New Guest', 'oda'),
+				'view_item'          => __('View Guest', 'oda'),
+				'search_items'       => __('Search Guest', 'oda'),
+				'not_found'          => __('No Guest found', 'oda'),
+				'not_found_in_trash' => __('No Guest found in trash', 'oda'),
+				'parent_item_colon'  => __('Parent Guest', 'oda')
 			),
 			'public'       => true,
 			'show_ui'      => true,
