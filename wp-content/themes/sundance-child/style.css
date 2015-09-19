@@ -72,7 +72,7 @@ hgroup{
 }
 .site-footer{
 	margin:0px;
-	background:#E0FFB4 url('img/footerBg.png') bottom left no-repeat;
+	background:transparent url('img/footerBg.png') bottom left repeat-x;
 	min-height:450px;
 	padding:0px;
 }
@@ -165,6 +165,7 @@ hgroup{
 	z-index:10;
 	margin-right:20px;
 	margin-top:35px;
+	cursor:pointer;
 }
 .withBg{
 	background:transparent url('img/menu-bg.png') ;
@@ -210,4 +211,58 @@ hgroup{
 	top:32px;
 	width:36px;
 	padding:6px;
+}
+.reverseImg{
+		-moz-transform: scaleX(-1);
+		-o-transform: scaleX(-1);
+		-webkit-transform: scaleX(-1);
+		transform: scaleX(-1);
+		filter: FlipH;
+		-ms-filter: "FlipH";
+}
+.clsPageHead{
+	background:transparent url("img/heading-bg.png") center center no-repeat;
+	padding:44px 0px 60px 0px;
+	font-size:60px;
+	font-family:'stabile-regular';
+	font-weight:bold;
+}
+.clsFestPage1{
+	color:#00AA90;
+}
+.clsFirstPageDesc{
+	font-family:apercu-regular, sans;
+	font-size:25px;
+	margin-top:30px;
+	margin-bottom:30px;
+	text-align:justify;
+}
+.page1,.clsFestMenu , .clsFestPage1, .clsFestPage2{
+	background-color:#47FDBE;
+}
+.clsFestMenu{
+	padding:30px 0px;
+	font-size:30px;
+	font-family:'stabile-regular';
+
+}
+.clsFestMenu a {
+	text-transform:capitalize;
+	color:#00AA90;
+}
+.clsFestMenu .nav > li > a:hover, .clsFestMenu .nav > li > a:active{
+	background-color:transparent;
+	border-bottom:2px solid #00AA90;
+}
+.imgMPple{
+	margin-top:30px;
+}
+.clsFestPage2{
+	background:#47FDBE url('img/festival-page2.png') top left no-repeat;
+	height:1346px;
+
+}
+.clsMapHead{
+	font-size:30px;
+	font-family:'stabile-regular';
 }

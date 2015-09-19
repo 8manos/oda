@@ -6,6 +6,7 @@ function theme_enqueue_styles() {
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'stabile-regular', get_stylesheet_directory_uri() . '/css/fonts/Stabile-regular.css', array( $parent_style ) );
     wp_enqueue_style( 'stabile-toy', get_stylesheet_directory_uri() . '/css/fonts/Stabile-toy.css', array( $parent_style ) );
+    wp_enqueue_style( 'stabile-toy', get_stylesheet_directory_uri() . '/css/fonts/apercu.css', array( $parent_style ) );
 
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ) );
     wp_enqueue_style( 'iconmoon', get_stylesheet_directory_uri() . '/css/iconmoon.css', array( $parent_style ) );
