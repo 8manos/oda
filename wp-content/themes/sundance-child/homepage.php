@@ -7,25 +7,6 @@
 get_header(); ?>
 <div id="primary" class="site-content homepage">
 			<div id="content" role="main">
-			<?php $header_image = get_header_image();
-			if ( ! empty( $header_image ) ) { ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-					rel="home" class="sliderLogo header1-image-link">
-					<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
-				</a>
-				<div class="menuPanel ">
-					<div class="clsMenu menuFor" >
-						<span class='icon-lnr-menu'></span>
-					</div>
-					<div class='withBg'>
-						<div class="clsMenu menuBg" >
-							<span class='icon-cross'></span>
-						</div>
-
-						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-					</div>
-				</div>
-			<?php } // if ( ! empty( $header_image ) ) ?>
 
 			<?php if ( have_posts() ) : ?>
 

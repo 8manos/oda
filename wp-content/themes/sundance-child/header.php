@@ -33,38 +33,29 @@
 	<div class='container-fluid'>
 	<?php do_action( 'before' );
 	 //TODO might be we provide fixed page no.
-	 $homePageObj = get_page_by_title( 'Lorem ipsum dolor sit amet');
+	 //$homePageObj = get_page_by_title( 'Lorem ipsum dolor sit amet');
+			$header_image = get_header_image();
+			if ( ! empty( $header_image ) ) { ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+					rel="home" class="sliderLogo header1-image-link">
+					<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+				</a>
+				<div class="menuPanel ">
+					<div class="clsMenu menuFor" >
+						<span class='icon-lnr-menu'></span>
+					</div>
+					<div class='withBg'>
+						<div class="clsMenu menuBg" >
+							<span class='icon-cross'></span>
+						</div>
 
-	 if( $homePageObj->ID != get_the_ID()):
-	?>
-	<header id="masthead" class="site-header" role="banner" >
-		<div class="masthead-inner">
-			<hgroup>
-				<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</hgroup>
-			<div class='row'>
-				<div class='col-xs-6'>
-				<?php $header_image = get_header_image();
-				if ( ! empty( $header_image ) ) { ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="clear header-image-link">
-						<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
-					</a>
-				<?php } // if ( ! empty( $header_image ) ) ?>
-				</div>
-				<div class='col-xs-6'>
-				<nav role="navigation" class="site-navigation main-navigation">
-					<h1 class="assistive-text"><?php _e( 'Menu', 'sundance' ); ?></h1>
-					<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'sundance' ); ?>"><?php _e( 'Skip to content', 'sundance' ); ?></a></div>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				</nav>
-				</div>
-			</div>
-		</div>
-	</header><!-- #masthead .site-header -->
-	<?php
-	endif;
-	?>
+						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+					</div> <!-- withBg -->
+				</div> <!-- menuPanel -->
+			<?php } // if ( ! empty( $header_image ) ) ?>
+
+
+
 	<div id="main" class="clear-fix" >
 		<?php if ( is_front_page() && ! is_paged() )
 			get_template_part( 'featured' );
