@@ -260,9 +260,36 @@ hgroup{
 .clsFestPage2{
 	background:#47FDBE url('img/festival-page2.png') top left no-repeat;
 	height:1346px;
-
+	padding-top:106px;
 }
 .clsMapHead{
-	font-size:30px;
+	font-size:60px;
 	font-family:'stabile-regular';
+	font-weight:500;
+	color:#F565BD;
+}
+.clsMapBtn, .clsActBtn{
+	color:white;
+	font-family:'stabile-regular';
+	margin-top:40px;
+	font-size:35px;
+	display:inline-block;
+	text-align:center;
+}
+
+.clsMapBtn{
+	background-image:url('img/button1.png');
+	background-repeat:no-repeat;
+	width:200px;
+	height:80px;
+	margin-top:100px;
+
+}
+.clsActBtn{
+	background-image:url('img/button2.png');
+	background-repeat:no-repeat;
+	width:223px;
+	height:110px;
+	padding-top:10px;
+	margin-top:750px;
 }
