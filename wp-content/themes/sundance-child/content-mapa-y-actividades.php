@@ -20,7 +20,9 @@ $path = get_stylesheet_directory_uri() ;
 				<?php echo __( 'View Map', 'sundance' ); ?>
 			</a>
 			<span class='clsDecoFont'></span>
+			<div class='mapFont'>
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sundance' ) ); ?>
+			</div>
 			<span class='clsDecoFont'></span>
 		</div>
 		<div class="col-lg-2 col-lg-offset-2 clsMapPageDesc">

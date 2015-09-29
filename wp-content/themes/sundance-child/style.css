@@ -344,3 +344,14 @@ hgroup{
 .clsFestPage4 .clsMapHead{
 	color:black;
 }
+.clsDecoFont{
+	background:transparent url('img/design.png') center center no-repeat;
+	height:50px;
+	display:block;
+}
+.mapFont{
+	font-family:'stabile-regular';
+	font-size:25px;
+	color:#F76BB5;
+	text-align:center;
+}
