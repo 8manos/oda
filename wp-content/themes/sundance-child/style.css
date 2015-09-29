@@ -293,6 +293,10 @@ hgroup{
 	padding-top:10px;
 	margin-top:750px;
 }
+.clsActBtn:hover, .clsActBtn:active, .clsMapBtn:hover, .clsMapBtn:active{
+	text-decoration:none;
+	color:white;
+}
 /* Contact us Page */
 .clsFestPage3{
 		background-color:#0DFDAB;
