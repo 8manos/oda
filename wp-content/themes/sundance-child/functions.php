@@ -10,6 +10,7 @@ function theme_enqueue_styles() {
 
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ) );
     wp_enqueue_style( 'iconmoon', get_stylesheet_directory_uri() . '/css/iconmoon.css', array( $parent_style ) );
+    wp_enqueue_style( 'iconmoon', get_stylesheet_directory_uri() . '/wpp.css', array( $parent_style ) );
 
 
 		wp_enqueue_style( 'bootstrap-style', get_stylesheet_directory_uri() . '/css/bootstrap-3.3.5-dist/css/bootstrap.min.css', array( 'child-style' ) );
@@ -93,6 +94,23 @@ function footer_sidebar_init() {
 				'after_title'   => '</h2>',
     ) );
 }
+
+//This will be used to register footer section as sidebar
+add_action( 'widgets_init', 'guest_sidebar_init' );
+
+function guest_sidebar_init() {
+    register_sidebar( array(
+        'name' => __( 'Guest Section', 'sundance' ),
+        'id' => 'guestsidebar',
+        'description' => __( 'Widgets in this area will be shown on all Guest sections', 'sundance' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</li>',
+				'before_title'  => '<h2 class="widgettitle">',
+				'after_title'   => '</h2>',
+    ) );
+}
+
+
 //Check whether class exists or not
 if(class_exists('Social_Icons_Widget')){
 	class mySocialIcons extends Social_Icons_Widget {
