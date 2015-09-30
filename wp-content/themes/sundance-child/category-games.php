@@ -28,7 +28,6 @@ get_header(); ?>
 							 <span class="game-auth"><?php echo get_post_meta($post->ID, 'author', true); ?></span>
 						  	<h3 class="game-title"><?php the_title();?> </h3>
 							</div>
-							<div class="caption" style="position:relative;">111111111</div>
 						</div>
 				  </div>
 				<?php endwhile; ?>
