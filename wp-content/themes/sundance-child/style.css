@@ -359,3 +359,20 @@ hgroup{
 	color:#F76BB5;
 	text-align:center;
 }
+.games .game-title{
+	font-family:'stabile-regular';
+	margin:0px;
+	padding:0px 0 10px 15px;
+}
+.game-box{margin-bottom:20px;}
+.game-auth{
+	font-family:'stabile-regular';
+	padding:0px 0 10px 15px;
+	margin-top:10px;
+}
+.game-info{
+	padding-top:10px;
+	border-left:1px solid #938D8B;
+	border-bottom:1px solid #938D8B;
+	border-right:1px solid #938D8B;
+}
