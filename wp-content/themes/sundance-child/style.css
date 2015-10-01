@@ -426,7 +426,6 @@ hgroup{
 	padding-top:83px;
 }
 .talleres-banner .banner-txt{	
-	vertical-align:middle;
 	background:transparent url('img/taller-title-deco.png') center center no-repeat;
 	font-family:'stabile-regular';
 	font-size:100px;
@@ -441,7 +440,6 @@ hgroup{
 	padding-top:100px;
 }
 .juegos-banner .banner-txt{	
-	vertical-align:middle;
 	background:transparent url('img/juegos-title.png') center center no-repeat;
 	font-family:'stabile-regular';
 	font-size:145px;
@@ -452,4 +450,19 @@ hgroup{
 }
 .juegos-banner .banner-txt > span {
     padding-right: 25px;
+}
+.parques-banner{	
+	height:470px;
+	background:transparent url('img/parques-banner.png') center center no-repeat;
+	background-size: cover;
+	padding-top:75px;
+}
+.parques-banner .banner-txt{	
+	background:transparent url('img/parques-title.png') center center no-repeat;
+	font-family:'stabile-regular';
+	font-size:120px;
+	color:#fff;
+	height:280px;
+	padding-top:42px;
+	font-weight:500;
 }
