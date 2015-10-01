@@ -110,6 +110,20 @@ function guest_sidebar_init() {
     ) );
 }
 
+//This will be used to register footer section as sidebar
+add_action( 'widgets_init', 'games_sidebar_init' );
+
+function games_sidebar_init() {
+    register_sidebar( array(
+        'name' => __( 'Games Section', 'sundance' ),
+        'id' => 'gamessidebar',
+        'description' => __( 'Widgets in this area will be shown on Games Page.', 'sundance' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</li>',
+				'before_title'  => '<h2 class="widgettitle">',
+				'after_title'   => '</h2>',
+    ) );
+}
 
 //Check whether class exists or not
 if(class_exists('Social_Icons_Widget')){
