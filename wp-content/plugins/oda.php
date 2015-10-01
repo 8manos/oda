@@ -65,7 +65,28 @@ class ODA {
 			'post-formats' => 'link'
 		) );
 
-
+		register_post_type( 'Workshop', array(
+			'labels'       => array(
+				'name'               => __('Workshop', 'oda'),
+				'singular_name'      => __('Workshop', 'oda'),
+				'add_new_item'       => __('Add new Workshop', 'oda'),
+				'edit_item'          => __('Edit Workshop', 'oda'),
+				'new_item'           => __('New Workshop', 'oda'),
+				'view_item'          => __('View Workshop', 'oda'),
+				'search_items'       => __('Search Workshop', 'oda'),
+				'not_found'          => __('No Workshop found', 'oda'),
+				'not_found_in_trash' => __('No Workshop found in trash', 'oda'),
+				'parent_item_colon'  => __('Parent Workshop', 'oda')
+			),
+			'public'       => true,
+			'show_ui'      => true,
+			'has_archive'  => false,
+			'hierarchical' => true,
+			'menu_position'=> 6,
+			'supports'     => array( 'title', 'editor', 'categories','thumbnail', 'revisions'),
+			'post-formats' => 'link',
+			'taxonomies' => array('category'),  
+		) );
 
 	}
 
