@@ -466,3 +466,17 @@ hgroup{
 	padding-top:42px;
 	font-weight:500;
 }
+.parq-box{
+	border:1px solid #e2e2e2;
+	font-family:'stabile-regular';
+}
+.parq-box .parq-info{
+	padding:10px 25px 25px 25px;
+}
+.parq-title{
+	font-size:35px;
+	color:#727276;
+}
+.parq-box hr{
+	color:#727272;
+}
