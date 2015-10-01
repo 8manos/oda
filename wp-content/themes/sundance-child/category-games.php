@@ -13,7 +13,17 @@
  */
 
 get_header(); ?>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<div class="juegos-banner text-center">
+			<div class="banner-txt"><span>JUEGOS</span></div>
+			<div class="container text-center">
+				<?php	if ( is_active_sidebar( 'gamessidebar' ) ) : ?>
+			   <div class="gamessidebar">
+				<?php dynamic_sidebar( 'gamessidebar' ); ?>
+			  </div>
+		    <?php endif; ?>
+			</div>
+		</div>
+		<br/>
 		<div class="container games">
 			<div class="row">
 <?php 
