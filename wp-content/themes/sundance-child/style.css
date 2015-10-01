@@ -376,3 +376,80 @@ hgroup{
 	border-bottom:1px solid #938D8B;
 	border-right:1px solid #938D8B;
 }
+.workshops h1.head{
+	font-family:'stabile-regular';
+	color:#E2452D;
+	text-align:center;
+	font-size:50px;
+	 font-weight: 500;
+	 margin-bottom:40px;
+}
+.work-cat{
+	font-family:'stabile-regular';
+	color:#727276;
+	font-size:32px;
+	font-weight:500;
+	margin-bottom:30px;
+}
+.work-cat li{
+	margin-right:15px;
+}
+.work-cat li:hover{
+	color:#E2452D;
+	border-bottom:3px solid #E2452D;
+}
+.workshops .work-title{
+	font-family:'stabile-regular';
+	margin:0px;
+	padding:0px 0 10px 15px;
+}
+.work-box{
+	margin-bottom:20px;
+	height: 365px;
+}
+.work-auth{
+	font-family:'stabile-regular';
+	padding:0px 0 10px 15px;
+	margin-top:10px;
+}
+.work-info{
+	padding-top:10px;
+	border-left:1px solid #938D8B;
+	border-bottom:1px solid #938D8B;
+	border-right:1px solid #938D8B;
+}
+.talleres-banner{	
+	height:500px;
+	border:0px solid black;
+	background:transparent url('img/tallerers-banner.png') center center no-repeat;
+	background-size: cover;
+	padding-top:83px;
+}
+.talleres-banner .banner-txt{	
+	vertical-align:middle;
+	background:transparent url('img/taller-title-deco.png') center center no-repeat;
+	font-family:'stabile-regular';
+	font-size:100px;
+	color:#fff;
+	height:280px;
+	padding-top:55px;
+}
+.juegos-banner{	
+	height:1350px;
+	background:transparent url('img/juegos-banner.png') center center no-repeat;
+	background-size: cover;
+	padding-top:100px;
+}
+.juegos-banner .banner-txt{	
+	vertical-align:middle;
+	background:transparent url('img/juegos-title.png') center center no-repeat;
+	font-family:'stabile-regular';
+	font-size:145px;
+	color:#fff;
+	height:280px;
+	padding-top:10px;
+	font-weight:500;
+}
+.juegos-banner .banner-txt > span {
+    padding-right: 25px;
+}
