@@ -65,7 +65,7 @@ class ODA {
 			'post-formats' => 'link'
 		) );
 
-		register_post_type( 'Workshop', array(
+		register_post_type( 'workshop', array(
 			'labels'       => array(
 				'name'               => __('Workshop', 'oda'),
 				'singular_name'      => __('Workshop', 'oda'),
@@ -80,16 +80,17 @@ class ODA {
 			),
 			'public'       => true,
 			'show_ui'      => true,
-			'has_archive'  => false,
+			'has_archive'  => true,
 			'hierarchical' => true,
 			'menu_position'=> 6,
 			'supports'     => array( 'title', 'editor', 'categories','thumbnail', 'revisions'),
 			'post-formats' => 'link',
 			'taxonomies' => array('category'),  
 		) );
+		flush_rewrite_rules();
 
 	}
-
+	
 	public static function metadata_post( $groups ) {
 		$groups[] = array(
 
