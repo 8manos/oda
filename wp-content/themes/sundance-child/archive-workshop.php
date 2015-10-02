@@ -22,7 +22,7 @@ get_header(); ?>
 		<div class="text-center  work-cat">
 			<ul class="list-inline">
 			<?php
-			$args = array('child_of'     => '24');
+			$args = array('child_of'     => '12'); //locally at runwal3 24
 			$categories =get_categories( $args );
 			foreach($categories as $category){
 				echo '<li>'.$category->name.'</li>';
