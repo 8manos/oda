@@ -16,7 +16,8 @@ get_header(); ?>
 		<div class="container">
 			<div class="grid col-lg-offset-1 col-lg-10"> <!--style="border:1px solid red;">-->
 		  <?php 
-					query_posts($query_string . '&orderby=date&order=ASC');
+					query_posts($query_string . '&orderby=date&order=ASC&cat=-10');
+					
 		    while ( have_posts() ) : the_post(); ?>
 					<div class="col-lg-4 grid-item " style="width:300px;">
 					<div  class="parq-box">
