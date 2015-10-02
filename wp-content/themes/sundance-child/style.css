@@ -168,7 +168,9 @@ hgroup{
 	cursor:pointer;
 }
 .withBg{
-	background:transparent url('img/menu-bg.png') ;
+	background:transparent url('img/menu-bg.png') no-repeat ;
+	background-color:#F5697A;
+	background-size:cover;
 	width:100%;
 	height:100%;
 	left:0px;
