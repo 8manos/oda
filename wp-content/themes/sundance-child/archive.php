@@ -20,10 +20,10 @@ get_header(); ?>
 		    while ( have_posts() ) : the_post(); ?>
 					<div class="col-lg-4 grid-item " style="width:300px;">
 					<div  class="parq-box">
-						<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?></a>
 						<div class="parq-info">
-							<span class="parq-title"> <?php	the_title(); ?></span>
-							<span class="parq-content"><?php the_content(); ?></span>
+							<a href="<?php the_permalink(); ?>"><span class="parq-title"> <?php	the_title(); ?></span></a>
+							<div class="parq-content"><?php echo get_the_content(); ?> <a class="more-link" href="<?php the_permalink(); ?>">VER MAS+</a></div>
 							<div class="parq-date"><?php echo get_the_date(); ?></div>
 						</div> 
 					</div>
