@@ -14,23 +14,24 @@ get_header(); ?>
 		</div>
 		<br/><br/>
 		<div class="container">
-			<div class="row">
-			<div class="col-lg-10 col-lg-offset-1">
+			<div class="grid col-lg-offset-1 col-lg-10"> <!--style="border:1px solid red;">-->
 		  <?php 
 					query_posts($query_string . '&orderby=date&order=ASC');
 		    while ( have_posts() ) : the_post(); ?>
-					<div class="col-lg-4 ">
+					<div class="col-lg-4 grid-item " style="width:300px;">
 					<div  class="parq-box">
 						<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
 						<div class="parq-info">
 							<span class="parq-title"> <?php	the_title(); ?></span>
 							<span class="parq-content"><?php the_content(); ?></span>
-							<hr/>
+							<div class="parq-date"><?php echo get_the_date(); ?></div>
 						</div> 
 					</div>
 					</div>
 				<?php endwhile; ?>
-				</div>
-			</div>	
+			</div>
+			<div class="parq-btn text-center col-lg-12 clearfix">
+			<span>? QUiERES HACER UNA DONACION</span>
+			</div>
 		</div>
 <?php get_footer(); ?>

@@ -477,6 +477,25 @@ hgroup{
 	font-size:35px;
 	color:#727276;
 }
-.parq-box hr{
-	color:#727272;
+.parq-date {
+    border-top: 1px solid #727272;
+		padding:10px 0 0 0;
+}
+.parq-box img{
+	width:100%;
+}
+.grid-item { margin-bottom:15px; }
+.parq-btn{
+	/*margin-top:30px;*/
+	background:transparent url('img/parques-btn-bg.png') center center no-repeat;
+	padding-top:80px;
+	height:200px;
+}
+.parq-btn span{
+	background-color:#96BD11;
+	color:#FFF;
+ 	padding:0px 20px 12px; 
+  font-size:40px;
+  border-radius:50px;
+	font-family:'stabile-regular';
 }
