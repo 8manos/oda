@@ -535,6 +535,9 @@ font-family:apercu-regular, sans;
 	font-family:'stabile-regular';
 	color:#fff;
 	background-color:#000000;
+	background-image:none;
+	box-shadow: -3px 2px 1px #909385;
+	padding: 0 15px;
 }
 .sp-page .wpcf7-form .ajax-loader{
 	margin-right:-25px;
