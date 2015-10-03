@@ -88,7 +88,30 @@ class ODA {
 			'taxonomies' => array('category'),  
 		) );
 		flush_rewrite_rules();
-
+		
+		register_post_type( 'customproduct', array(
+			'labels'       => array(
+				'name'               => __('Custom Product', 'oda'),
+				'singular_name'      => __('Custom Product', 'oda'),
+				'add_new_item'       => __('Add new Custom Product', 'oda'),
+				'edit_item'          => __('Edit Custom Product', 'oda'),
+				'new_item'           => __('New Custom Product', 'oda'),
+				'view_item'          => __('View Custom Product', 'oda'),
+				'search_items'       => __('Search Custom Product', 'oda'),
+				'not_found'          => __('No Custom Product found', 'oda'),
+				'not_found_in_trash' => __('No Custom Product found in trash', 'oda'),
+				'parent_item_colon'  => __('Parent Custom Product', 'oda')
+			),
+			'public'       => true,
+			'show_ui'      => true,
+			'has_archive'  => true,
+			'hierarchical' => true,
+			'menu_position'=> 6,
+			'supports'     => array( 'title', 'editor', 'custom-fields','thumbnail', 'revisions'),
+			'post-formats' => 'link',
+			'taxonomies' => array('category'),  
+		) );
+		flush_rewrite_rules();
 	}
 	
 	public static function metadata_post( $groups ) {
