@@ -586,7 +586,7 @@ span .buy-img{
 .prod-box h3 span:hover .buy-img{
 	background:#0FEEA2 url('img/eco-btn.png') no-repeat 0 5px; 
 }
-.prod-box h3 span:hover{
+.prod-box h3 span:hover , .ecotinda .wpcf7-form .wpcf7-submit:hover{
 	background-color:#0FEEA2;
 	color:#000000;
 }
@@ -609,3 +609,24 @@ span .buy-img{
     padding-left: 40px;
 }
 .formc{margin-top:20px;}
+.ecotinda .wpcf7-form{
+	color:#000;
+	font-family:apercu-regular, sans;
+}
+.ecotinda .wpcf7-form .ciudad_o_municipo input{
+	width:260px;
+}
+.ecotinda .wpcf7-form .wpcf7-submit{
+	color:#fff;
+	background-color:#000000;
+	background-image:none;
+	box-shadow: -3px 2px 1px #909385;
+	padding: 0 15px;
+}
+.ecotinda .wpcf7-form input[type="text"], .ecotinda .wpcf7-form input[type="email"]{
+	border:2px solid #000;
+	border-radius:0px;
+}
+.ecotinda div.wpcf7-validation-errors{
+	border:none;
+}
