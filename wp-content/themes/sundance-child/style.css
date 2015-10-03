@@ -542,3 +542,70 @@ font-family:apercu-regular, sans;
 .sp-page .wpcf7-form .ajax-loader{
 	margin-right:-25px;
 }
+.eco-banner{	
+ 	height:470px; 
+	background:transparent url('img/eco-banner.png') center center no-repeat;
+	background-size: cover;
+ 	padding-top:75px; 
+}
+.eco-banner .banner-txt{	
+ 	background:transparent url('img/eco-titlebg.png') center center no-repeat; 
+	font-family:'stabile-regular';
+	font-size:120px;
+	color:#fff;
+	font-weight:500;
+}
+.eco-banner .banner-txt span{
+	font-size:140px;
+}	
+.eco-banner .banner-txt p{
+	margin-top:-75px;
+}	
+.prod-box{margin-bottom:20px;}
+.prod-img{border:4px solid #000;}
+.prod-name{
+	font-size:30px;
+	color:#000;
+}
+.prod-price{
+	font-size:20px;
+}
+.prod-box h3 span{ 
+  background-color: #000000;
+  box-shadow: -3px 2px 1px #909385;
+	color:#fff;
+	font-size:15px;
+	padding:8px 15px;
+	font-weight:bold;
+	cursor:pointer;
+}
+span .buy-img{
+	background:transparent url('img/eco-btn.png') no-repeat 0 -17px; 
+	box-shadow:none !important;
+}
+.prod-box h3 span:hover .buy-img{
+	background:#0FEEA2 url('img/eco-btn.png') no-repeat 0 5px; 
+}
+.prod-box h3 span:hover{
+	background-color:#0FEEA2;
+	color:#000000;
+}
+.ecotinda .modal-content{
+	border-radius:0px;
+	border:4px solid #000;
+}
+.ecotinda .modal-body{
+	padding:20px 20px 40px 40px;
+}
+.ecotinda .modal-body .head{
+	font-family:'stabile-regular';
+	font-size:30px;
+	margin-bottom:20px;
+	cursor:pointer;
+}
+.ecotinda .modal .pimg{border: 1px solid #777;}
+.prod-img img , .pimg img{margin:0px auto;}
+.ecotinda .modal .pleft {
+    padding-left: 40px;
+}
+.formc{margin-top:20px;}
