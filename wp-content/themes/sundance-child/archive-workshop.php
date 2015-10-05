@@ -22,7 +22,7 @@ get_header(); ?>
 		<div class="text-center  work-cat">
 			<ul class="list-inline">
 			<?php
-			$args = array('child_of'     => '12'); //locally at runwal3 24
+			$args = array('child_of'     => '12'); //12 ;locally at runwal3 24
 			$categories =get_categories( $args );
 			foreach($categories as $category){
 				echo '<li>'.$category->name.'</li>';
@@ -34,8 +34,10 @@ get_header(); ?>
 			query_posts($query_string . '&orderby=date&order=ASC');
 			if ( have_posts() ) : ?>
 				<div class="clearfix">
-				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="col-lg-4 work-box">
+				<?php
+				$i=0;
+				while ( have_posts() ) : the_post(); ?>
+					<div class="col-lg-4 work-box col-sm-6">
 							<div>
 								<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
 								<div class="work-info">
@@ -43,11 +45,38 @@ get_header(); ?>
 										<?php $categories = get_the_category(); 
 									echo $cat_name = $categories[0]->cat_name;  ?>
 									</span>
-									<h3 class="work-title"><?php the_title();?> </h3>
+									<h3 class="work-title"  data-toggle="modal" data-target="#talleresModal<?php echo $i; ?>"><?php the_title();?> </h3>
 								</div>
+								<div class="modal fade" id="talleresModal<?php echo $i; ?>" role="dialog">
+						      <div class="modal-dialog modal-lg">
+									  <div class="modal-content">
+										  <div class="modal-body">
+												<div>
+													<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/taller_earth.png">
+													<img data-dismiss="modal" class="pull-right cls" src="<?php echo get_stylesheet_directory_uri(); ?>/img/taller_close.png">
+												</div>
+												<div class="clearfix">
+														<div class="col-lg-4 text-center">
+															<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/taller_glass.png">
+															<div class="pdf"><?php echo pdf_attachment_file(1,"DESCARGA FICHA PDF");?></div>
+															<div class="wlink"><a href="">LEEVA ESTA TALLER A TU COLEGIO</a></div>
+															<div class="cimg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/taller_cloud.png"></div>
+															<div><?php echo do_shortcode("[contact-form-7 id='209; title='talleres popup']");?></div>
+														</div>
+														<div class="col-lg-8">
+																<div class="main-title"> <?php the_title();?> </div>
+																<div class="work-descp"> <?php the_content();?> </div>
+														</div>
+												</div>
+										  </div>
+										</div> 
+									</div>
+								</div>	
 							</div>
 						</div>
-				<?php endwhile; ?>
+				<?php
+				$i++;
+				endwhile; ?>
 				</div>	
 				<?php sundance_content_nav( 'nav-below' ); ?>
 
