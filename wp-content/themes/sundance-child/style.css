@@ -702,7 +702,7 @@ span .buy-img{
 	color:#fff;
 	background-color:#000000;
 	background-image:none;
-	box-shadow: -3px 2px 1px #909385;
+	box-shadow: none;
 	padding: 0 15px;
 	background:#000000 url("img/eco-btn.png") no-repeat scroll right 5px top -9px; 
 	padding:0px 40px 0px 10px;
