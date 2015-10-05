@@ -566,6 +566,8 @@ font-family:apercu-regular, sans;
 .prod-name{
 	font-size:30px;
 	color:#000;
+		font-family:apercu-regular, sans;
+		text-transform:capitalize;
 }
 .prod-price{
 	font-size:20px;
@@ -586,7 +588,7 @@ span .buy-img{
 .prod-box h3 span:hover .buy-img{
 	background:#0FEEA2 url('img/eco-btn.png') no-repeat 0 5px; 
 }
-.prod-box h3 span:hover , .ecotinda .wpcf7-form .wpcf7-submit:hover{
+.prod-box h3 span:hover {
 	background-color:#0FEEA2;
 	color:#000000;
 }
@@ -608,7 +610,13 @@ span .buy-img{
 .ecotinda .modal .pleft {
     padding-left: 40px;
 }
-.formc{margin-top:20px;}
+.formc{
+	margin-top:20px;
+	padding-right:0px;
+}
+.formc .col-lg-7{
+	padding-right:0px;
+}
 .ecotinda .wpcf7-form{
 	color:#000;
 	font-family:apercu-regular, sans;
@@ -622,6 +630,10 @@ span .buy-img{
 	background-image:none;
 	box-shadow: -3px 2px 1px #909385;
 	padding: 0 15px;
+	background:#000000 url("img/eco-btn.png") no-repeat scroll right 5px top -9px; 
+	padding:0px 40px 0px 10px;
+	text-indent:1;
+	font-size:22px;
 }
 .ecotinda .wpcf7-form input[type="text"], .ecotinda .wpcf7-form input[type="email"]{
 	border:2px solid #000;
@@ -630,3 +642,8 @@ span .buy-img{
 .ecotinda div.wpcf7-validation-errors{
 	border:none;
 }
+ .ecotinda .wpcf7-form .wpcf7-submit:hover{
+	color:#000000;
+	background:#0FEEA2 url("img/eco-btn.png") no-repeat scroll right 5px top 11px;
+}
+ .ecotinda .wpcf7-form .note{padding-top:25px}
