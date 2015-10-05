@@ -404,6 +404,7 @@ hgroup{
 	font-family:'stabile-regular';
 	margin:0px;
 	padding:0px 0 10px 15px;
+	cursor:pointer;
 }
 .work-box{
 	margin-bottom:20px;
@@ -419,6 +420,77 @@ hgroup{
 	border-left:1px solid #938D8B;
 	border-bottom:1px solid #938D8B;
 	border-right:1px solid #938D8B;
+}
+.workshops .modal-content{
+	padding:10px;
+	border-radius:0px;
+}
+.workshops .modal-body{
+	background-color:#FF6600;
+	padding: 0 0 40px;
+}
+.workshops .modal-body .cls{
+	padding: 30px 30px 0 0;
+	cursor:pointer;
+}
+.workshops .modal-body .main-title{
+	font-family:'stabile-regular';
+	color:#FFFF33;
+	font-size:50px;
+}
+.workshops .modal-body .work-descp h1{
+	font-family:'stabile-regular';
+	color:#FFF;
+	font-size:30px;
+}
+.workshops .modal-body .work-descp p{
+	font-family:apercu-regular, sans;
+	color:#FFF;
+}
+.workshops .pdf img{display:none;}
+.workshops .pdf{
+	margin:20px 0 40px;
+}
+.workshops .wlink{
+	background-color:#00cc99;
+	border-radius:20px;
+	padding-bottom: 5px;
+	width:85%;
+	margin:0px auto;
+}
+.workshops .pdf a , .workshops .wlink a{ 
+	padding:2px 15px 8px;
+	background-color:#00cc99;
+	border-radius :15px;
+	color:#fff;
+	font-family:'stabile-regular';
+	font-size:25px;
+	text-decoration: none;
+}
+.workshops .wpcf7-form input[type="email"] {
+	width:100%;
+	font-family:'stabile-regular';
+}
+.workshops textarea {
+	height:70px;
+	font-family:'stabile-regular';
+}
+.workshops .wpcf7-submit{
+	font-family:'stabile-regular';
+	color:#fff;
+	background-color:#00cc99;
+	background-image:none;
+	padding: 0 12px;
+	box-shadow:none;
+	border:none;
+}
+.workshops .wpcf7-submit:hover{background:#00cc99;}
+.workshops .wpcf7-form .ajax-loader{margin-right:-15px;}
+.workshops .cimg{margin-top:25px;}
+.workshops .ftitle{
+	font-family:'stabile-regular';
+	font-size:25px;
+	color:#fff;
 }
 .talleres-banner{	
 	height:500px;

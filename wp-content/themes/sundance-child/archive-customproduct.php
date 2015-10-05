@@ -13,8 +13,8 @@
 						</div>  
 						<div class="prod-name"><?php the_title(); ?></div>
 						<div class="prod-price"><?php echo get_post_meta($post->ID, 'price', true); ?></div>
-						<h3 class="buy_prod" data-toggle="modal" data-target="#myModal<?php echo $i; ?>"><span>Comprar &nbsp;&nbsp;<span class="buy-img"></span></span></h3>
-						<div class="modal fade" id="myModal<?php echo $i; ?>" role="dialog">
+						<h3 class="buy_prod" data-toggle="modal" data-target="#ecoModal<?php echo $i; ?>"><span>Comprar &nbsp;&nbsp;<span class="buy-img"></span></span></h3>
+						<div class="modal fade" id="ecoModal<?php echo $i; ?>" role="dialog">
 						<div class="modal-dialog modal-lg">
 									<div class="modal-content">
 										<div class="modal-body">
