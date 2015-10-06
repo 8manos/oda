@@ -11,17 +11,29 @@ $path = get_stylesheet_directory_uri() ;
 	<div id="content" role="main">
 
 			<div class='page1'>
-			<div> <img src='<?php echo $path ?>/img/festival-page1-top.png' class='img-responsive' /></div>
-			<div class="text-center" style="background:url('<?php echo $path ?>/img/festival-page1-middle.png') ; background-size:cover;height: 538px;">
-			<?php while ( have_posts() ) : the_post(); 
-         the_content(); 
-         endwhile; 
-        wp_reset_query(); 
-     ?>
+			<div class="timg"> <img src='<?php echo $path ?>/img/festival-page1-top.png' class='img-responsive' /></div>
+			<div class="text-center mimg">
+				<div class="">
+					<div class="col-lg-8 fes-vid">
+							<img src='<?php echo $path ?>/img/bear-hand.png' class='himg' />
+						<?php while ( have_posts() ) : the_post(); 
+						remove_filter ('the_content',  'wpautop'); 
+							the_content(); 
+							endwhile; 
+							wp_reset_query(); 
+					?>
+					</div>
+					<div class="col-lg-2">
+					<img src='<?php echo $path ?>/img/small-bear.png' class='sbear img-responsive' />
+					</div>
+				</div>
      </div>
-			<div> <img src='<?php echo $path ?>/img/festival-page1-bottom.png' class='img-responsive' /></div>
+			<div class="bimg">
+			 <!--   <img src='<?php echo $path ?>/img/festival-page1-bottom.png' class='img-responsive' />-->
+			 </div>
 		</div> <!-- page 1 -->
 		
+     
 		 
 		<div class='clearfix clsFestMenu'>
 			<div class='col-lg-10 col-lg-offset-1' >

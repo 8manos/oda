@@ -242,7 +242,26 @@ hgroup{
 .page1,.clsFestMenu , .clsFestPage1, .clsFestPage2{
 	background-color:#47FDBE;
 }
-.page1 img{ width:100%;}
+.page1 .timg img{ width:100%;}
+.fes-vid{
+	margin-left: 13.6667%;
+}
+.himg{position:absolute;}
+.sbear{
+    position: absolute;
+		margin-left: -60%;
+    margin-top: 25px;
+}
+.page1 .mimg{
+	background:url('img/festival-page1-middle.png') ; 
+	background-size:cover;
+	height: 538px;
+}
+.page1 .bimg{
+	  background:url('img/festival-page1-bottom.png') ; 
+		background-size:cover;
+		height:226px;
+}
 .clsFestMenu{
 	padding:30px 0px;
 	font-size:30px;
