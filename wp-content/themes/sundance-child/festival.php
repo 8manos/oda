@@ -12,9 +12,17 @@ $path = get_stylesheet_directory_uri() ;
 
 			<div class='page1'>
 			<div> <img src='<?php echo $path ?>/img/festival-page1-top.png' class='img-responsive' /></div>
-			<div> <img src='<?php echo $path ?>/img/festival-page1-middle.png' class='img-responsive' /></div>
+			<div class="text-center" style="background:url('<?php echo $path ?>/img/festival-page1-middle.png') ; background-size:cover;height: 538px;">
+			<?php while ( have_posts() ) : the_post(); 
+         the_content(); 
+         endwhile; 
+        wp_reset_query(); 
+     ?>
+     </div>
 			<div> <img src='<?php echo $path ?>/img/festival-page1-bottom.png' class='img-responsive' /></div>
 		</div> <!-- page 1 -->
+		
+		 
 		<div class='clearfix clsFestMenu'>
 			<div class='col-lg-10 col-lg-offset-1' >
 				<ul class=' nav nav-justified'>
