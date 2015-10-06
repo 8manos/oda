@@ -22,7 +22,8 @@ get_header(); ?>
 		<div class="text-center  work-cat">
 			<ul class="list-inline">
 			<?php
-			$args = array('child_of'     => '12'); //12 ;locally at runwal3 24
+		  $parent=get_cat_ID( "cat_workshop");
+			$args = array('child_of'     => $parent); 
 			$categories =get_categories( $args );
 			foreach($categories as $category){
 				echo '<li>'.$category->name.'</li>';
