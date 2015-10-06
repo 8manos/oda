@@ -16,11 +16,19 @@ get_header(); ?>
 		<div class="juegos-banner text-center">
 			<div class="banner-txt"><span>JUEGOS</span></div>
 			<div class="container text-center">
-				<?php	if ( is_active_sidebar( 'gamessidebar' ) ) : ?>
+				<?php	/*if ( is_active_sidebar( 'gamessidebar' ) ) : ?>
 			   <div class="gamessidebar">
 				<?php dynamic_sidebar( 'gamessidebar' ); ?>
 			  </div>
-		    <?php endif; ?>
+		    <?php endif;*/ ?>
+		    <?php 
+        $arr=get_page_by_title( "juegos video" );
+        $id=$arr->ID;
+       $my_query = new WP_Query( array( 'page_id' => $id ) );
+				while ($my_query->have_posts()) : $my_query->the_post(); ?>
+					<?php the_content(); ?>
+				<?php endwhile; ?>   
+
 			</div>
 		</div>
 		<br/>
