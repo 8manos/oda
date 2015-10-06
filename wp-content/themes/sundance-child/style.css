@@ -557,7 +557,10 @@ hgroup{
     border-top: 1px solid #727272;
 		padding:10px 0 0 0;
 }
-.parq-box img{
+.parq-date img{
+	margin:0 15px 0 0;
+}
+.parq-box .parq-img{
 	width:100%;
 }
 .grid-item { margin-bottom:15px; }
@@ -721,3 +724,41 @@ span .buy-img{
 	background:#0FEEA2 url("img/eco-btn.png") no-repeat scroll right 5px top 11px;
 }
  .ecotinda .wpcf7-form .note{padding-top:25px}
+ 
+ .recmd-banner{	
+	height:470px;
+	background:transparent url('img/recmd-banner.png') center center no-repeat;
+	background-size: cover;
+	padding-top:25px;
+}
+.recmd-banner .banner-txt{	
+	background:transparent url('img/recmd-title.png') center center no-repeat;
+	font-family:'stabile-regular';
+	color:#fff;
+	height:280px;
+}
+.recmd-banner .banner-txt span{font-size:180px;}
+.recmd-banner .banner-txt p{font-size: 85px;
+    margin-top: -70px;}
+ .recmd-box{
+	border:1px solid #e2e2e2;
+	font-family:'stabile-regular';
+}
+.recmd-box .recmd-info{
+	padding:10px 25px 25px 25px;
+}
+.recmd-title{
+	font-size:35px;
+	color:#727276;
+}
+.recmd-date {
+    border-top: 1px solid #727272;
+		padding:10px 0 0 0;
+}
+.recmd-date img{
+	margin:0 15px 0 0;
+}
+.recmd-box .recmd-img{
+	width:100%;
+}   
+.recmd-item{margin-bottom:20px;}
