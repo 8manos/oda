@@ -160,7 +160,7 @@ hgroup{
 	border:1px solid black;
 	display:inline-block;
 	padding:10px;
-	position:absolute;
+	position:fixed;
 	right:0px;
 	z-index:10;
 	margin-right:20px;
@@ -242,6 +242,7 @@ hgroup{
 .page1,.clsFestMenu , .clsFestPage1, .clsFestPage2{
 	background-color:#47FDBE;
 }
+.page1 img{ width:100%;}
 .clsFestMenu{
 	padding:30px 0px;
 	font-size:30px;
@@ -510,8 +511,8 @@ hgroup{
 	padding-top:55px;
 }
 .juegos-banner{	
-	height:1350px;
-	background:transparent url('img/juegos-banner.png') center center no-repeat;
+	height:900px;
+	background:transparent url('img/juegos-banner.png') center bottom no-repeat;
 	background-size: cover;
 	padding-top:100px;
 }
