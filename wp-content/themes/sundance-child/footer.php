@@ -22,7 +22,10 @@
 		<?php endif; ?>
 
 		<div class="site-info">
-			<?php do_action( 'sundance_credits' ); ?>
+			<?php //do_action( 'sundance_credits' ); ?>
+			<?php	if ( is_active_sidebar( 'copyrightsidebar' ) ) : 
+							dynamic_sidebar( 'copyrightsidebar' ); 
+							endif; ?>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer .site-footer -->
 </div><!-- #page .hfeed .site -->
