@@ -447,6 +447,9 @@ hgroup{
 	margin-bottom:20px;
 	height: 365px;
 }
+.work-box>div{
+	border:1px solid #938D8B;
+}
 .work-auth{
 	font-family:'stabile-regular';
 	padding:0px 0 10px 15px;
@@ -454,9 +457,6 @@ hgroup{
 }
 .work-info{
 	padding-top:10px;
-	border-left:1px solid #938D8B;
-	border-bottom:1px solid #938D8B;
-	border-right:1px solid #938D8B;
 }
 .workshops .modal-content{
 /* 	padding:10px; */
@@ -799,7 +799,7 @@ span .buy-img{
 	width:100%;
 }   
 .recmd-item{margin-bottom:20px;}
-.caption {
+.caption , .wrk-cap {
     background: #FF6708;
     opacity: 0.9;
     width: 100%;
@@ -813,13 +813,14 @@ span .buy-img{
     visibility: hidden; 
 		padding:20px;
 }
-.game-box .game-content{position:relative;
+.game-box .game-content ,.work-box .img-div{
+		position:relative;
 		overflow:hidden;}
-.game-box:hover .caption {
+.game-box:hover .caption ,.work-box:hover .wrk-cap {
     min-height: 100%;
 		 visibility: visible;
 }
-.caption p{ 
+.caption p , .wrk-cap p{ 
 	font-size:20px;
 	font-family:apercu-regular, sans;
 	text-align:center;
@@ -855,3 +856,4 @@ span .buy-img{
 	color:#68696D;
 	font-size:15px;
 }
+ 

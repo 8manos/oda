@@ -42,7 +42,12 @@ get_header(); ?>
 				<li data-id="<?php $cat = get_the_category();echo $cat[0]->name;?>" class="list-unstyled">
 					<div class="col-lg-4 work-box col-sm-6">
 							<div>
-								<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
+								<div class="clearfix img-div"><?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
+									<div class="wrk-cap">
+										<br/>
+										<?php the_excerpt(); ?>
+									</div>
+								</div>
 								<div class="work-info">
 									<span class="work-auth">
 										<?php $categories = get_the_category(); 
