@@ -796,3 +796,39 @@ span .buy-img{
 	width:100%;
 }   
 .recmd-item{margin-bottom:20px;}
+.caption {
+    background: #FF6708;
+    opacity: 0.9;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    transition: min-height 0.5s ,visibility 0.5s ease;
+    position: absolute;
+    bottom: 0;
+    min-height: 0px;
+		height:0px;
+    visibility: hidden; 
+		padding:20px;
+}
+.game-box .game-content{position:relative;
+		overflow:hidden;}
+.game-box:hover .caption {
+    min-height: 100%;
+		 visibility: visible;
+}
+.caption p{ 
+	font-size:20px;
+	font-family:apercu-regular, sans;
+	text-align:center;
+}
+.caption .jbtn a{
+	text-decoration:none;
+}
+.caption .jbtn a span{
+	background:transparent url('img/juegos-button.png') no-repeat;
+	background-size:cover;
+	 font-size: 30px;
+    padding: 0 30px 20px;
+	font-family:'stabile-regular';
+	color:#FF6708;
+}

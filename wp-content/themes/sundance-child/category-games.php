@@ -39,12 +39,20 @@ get_header(); ?>
 			if ( have_posts() ) : ?>
 				
 				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="col-lg-4 game-box">
-						<div>
+					<div class="col-lg-4 col-sm-6 game-box">    	
+						<div class="game-content">
 							<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
 							<div class="game-info">
 							 <span class="game-auth"><?php echo get_post_meta($post->ID, 'author', true); ?></span>
 						  	<h3 class="game-title"><?php the_title();?> </h3>
+							</div>
+							<div class="caption">
+								<br/><br/>
+								<?php the_excerpt();?>
+								<br/><br/>
+								<div class="text-center jbtn">
+									<a  href=""><span>DESCARGAR</span></a>
+								</div>
 							</div>
 						</div>
 				  </div>
