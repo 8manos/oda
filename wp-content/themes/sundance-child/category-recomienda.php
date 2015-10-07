@@ -7,11 +7,29 @@ get_header(); ?>
 		</div>
 		<br/><br/>
 		<div class="container">
+		
 			<div class="recmd col-lg-offset-1 col-lg-10"> <!--style="border:1px solid red;">-->
 		  <?php 
 					query_posts($query_string . '&orderby=date&order=ASC&cat=-10');
-					
+				$i=0;	
 		    while ( have_posts() ) : the_post(); ?>
+					<?php if($i==2) { ?>
+						<div class="col-lg-4 recmd-item for-cat" style="width:300px;">
+							<div class="catbox">
+								<div class="indiv">
+									<p>TEMAS</p>
+									<ul class="list-unstyled">
+								<?php $parent=get_cat_ID( "recomienda");
+											$args = array('child_of' => $parent,'hide_empty' => FALSE); 
+											$categories =get_categories( $args );
+											foreach($categories as $category){
+												echo '<li> + &nbsp;'.$category->name.'</li>';
+											} ?>
+									</ul>
+								</div>	
+						</div>	
+					</div>
+					<?php } ?>
 					<div class="col-lg-4 recmd-item " style="width:300px;">
 					<div  class="recmd-box">
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full', array('class' => 'img-responsive recmd-img')); ?></a>
@@ -23,7 +41,9 @@ get_header(); ?>
 						</div> 
 					</div>
 					</div>
-				<?php endwhile; ?>
+				<?php
+				$i++;
+				endwhile; ?>
 			</div>
 		</div>
 <?php get_footer(); ?>
