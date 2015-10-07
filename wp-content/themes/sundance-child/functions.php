@@ -112,7 +112,7 @@ function guest_sidebar_init() {
     ) );
 }
 
-//This will be used to register footer section as sidebar
+//This will be used to register  as sidebar
 add_action( 'widgets_init', 'games_sidebar_init' );
 
 function games_sidebar_init() {
@@ -120,6 +120,21 @@ function games_sidebar_init() {
         'name' => __( 'Games Section', 'sundance' ),
         'id' => 'gamessidebar',
         'description' => __( 'Widgets in this area will be shown on Games Page.', 'sundance' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</li>',
+				'before_title'  => '<h2 class="widgettitle">',
+				'after_title'   => '</h2>',
+    ) );
+}
+
+////This will be used to register  as sidebar
+add_action( 'widgets_init', 'menu_sidebar_init' );
+
+function menu_sidebar_init() {
+    register_sidebar( array(
+        'name' => __( 'Menu Section', 'sundance' ),
+        'id' => 'menusidebar',
+        'description' => __( 'Widgets in this area will be shown on Menu Page.', 'sundance' ),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</li>',
 				'before_title'  => '<h2 class="widgettitle">',

@@ -177,7 +177,16 @@ hgroup{
 	top:0px;
 	position:fixed;
 	z-index:20;
-	display:none;
+ 	display:none; 
+}
+.withBg .social-icons-widget ul li {
+    display: inline;
+	float:none;
+}
+.withBg .widgettitle{
+	font-family:'stabile-regular';
+	color:#fff;
+	font-size:30px;
 }
 .menu-fullpage-container{
 	width:320px;

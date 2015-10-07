@@ -50,6 +50,12 @@
 						</div>
 
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+						
+						 <div class="text-center"> 
+							<?php	if ( is_active_sidebar( 'menusidebar' ) ) : 
+							dynamic_sidebar( 'menusidebar' ); 
+							endif; ?>
+						 </div>
 					</div> <!-- withBg -->
 				</div> <!-- menuPanel -->
 			<?php } // if ( ! empty( $header_image ) ) ?>
