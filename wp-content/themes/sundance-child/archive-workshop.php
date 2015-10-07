@@ -17,27 +17,29 @@ get_header(); ?>
 			<div class="banner-txt"><span>TALLERES</span></div>
 		</div>
 		<div class="container workshops">
-			<div class="row">
+		<div class="row">
 		<h1 class="head">? QUE TE GUSTA	HACER?</h1>				
 		<div class="text-center  work-cat">
-			<ul class="list-inline">
+			<ul id="source" class="list-inline">
 			<?php
 		  $parent=get_cat_ID( "cat_workshop");
 			$args = array('child_of'     => $parent); 
 			$categories =get_categories( $args );
 			foreach($categories as $category){
-				echo '<li>'.$category->name.'</li>';
+				echo '<li data-id="'.$category->name.'">'.$category->name.'</li>';
 			}
 			?>
 			</ul>
 		</div>
 			<?php 
-			query_posts($query_string . '&orderby=date&order=ASC');
+			query_posts($query_string . '&posts_per_page=-1&orderby=date&order=ASC');
 			if ( have_posts() ) : ?>
 				<div class="clearfix">
+				<ul id="destination">
 				<?php
 				$i=0;
 				while ( have_posts() ) : the_post(); ?>
+				<li data-id="<?php $cat = get_the_category();echo $cat[0]->name;?>" class="list-unstyled">
 					<div class="col-lg-4 work-box col-sm-6">
 							<div>
 								<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
@@ -75,9 +77,11 @@ get_header(); ?>
 								</div>	
 							</div>
 						</div>
+						</li>
 				<?php
 				$i++;
 				endwhile; ?>
+				</ul>
 				</div>	
 				<?php sundance_content_nav( 'nav-below' ); ?>
 

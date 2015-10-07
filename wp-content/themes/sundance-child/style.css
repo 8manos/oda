@@ -429,6 +429,9 @@ hgroup{
 }
 .work-cat li{
 	margin-right:15px;
+	display:inline;
+	padding-bottom: 5px;
+	cursor:pointer;
 }
 .work-cat li:hover{
 	color:#E2452D;
