@@ -832,3 +832,23 @@ span .buy-img{
 	font-family:'stabile-regular';
 	color:#FF6708;
 }
+.for-cat{
+	padding: 0 21px;
+}
+.catbox{
+	border:4px solid  rgba(255,255,255,0.2);
+	outline:7px solid #535459;
+}
+.catbox .indiv{
+	border:6px solid #CF0456;
+	}
+.catbox p {
+	padding:0px 0 0 10px ;
+	font-family:'stabile-regular';
+	color:#BF004C;
+	font-size:35px
+}
+.catbox ul li{
+	color:#68696D;
+	font-size:15px;
+}
