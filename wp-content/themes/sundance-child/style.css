@@ -713,7 +713,7 @@ font-family:apercu-regular, sans;
 	cursor:pointer;
 }
 span .buy-img{
-	background:transparent url('img/eco-btn.png') no-repeat 0 -31px; 
+	background:transparent url('img/eco-btn.png') no-repeat 0 -33px;
 	box-shadow:none !important;
 }
 .prod-box h3 span:hover .buy-img{
@@ -901,4 +901,9 @@ margin-left: 15px;
 }
  .post-type-archive-customproduct{
 	 background-color:#E1E3E5;
+}
+.sp-page .wpcf7-submit:hover{
+	background-color:#0FEEA2;
+	color:#000000;
+	border:none;
 }
