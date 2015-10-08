@@ -23,8 +23,6 @@ get_header(); ?>
 		  $category = get_category_by_slug($sl);
       $cid[]=$category->term_id;
 		  }
-		  //$catid = implode(', ', $cid);
-				
 				$args=array(
 					'category__not_in' => $cid,
 					'post_type' => 'post',
