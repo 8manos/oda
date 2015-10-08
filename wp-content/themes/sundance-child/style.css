@@ -690,7 +690,7 @@ font-family:apercu-regular, sans;
 	margin-top:-75px;
 }	
 .prod-box{margin-bottom:20px;}
-.prod-img{border:4px solid #000;cursor:pointer;}
+.prod-img{border:4px solid #000;cursor:pointer; background-color:#FFF;}
 .prod-name{
 	font-size:25px;
 	color:#000;
@@ -905,5 +905,33 @@ margin-left: 15px;
 .sp-page .wpcf7-submit:hover{
 	background-color:#0FEEA2;
 	color:#000000;
-	border:none;
+	
+}
+.categoey{
+	border:0px solid #e2e2e2;
+	
+	background: #00FDA6;
+}
+.catbox1{
+	border:4px solid #535459;  
+	outline:7px solid #00FDA6;
+	background: #00FDA6;
+}
+.catbox1 .indiv1{
+	border:6px solid #fff;
+	outline:7px solid #535459;
+	}
+.catbox1 p {
+	padding:0px 0 0 10px ;
+	font-family:'stabile-regular';
+	color:#00583A;
+	font-size:35px
+}
+.catbox1 ul li{
+	color:#00583A;
+	font-size:15px;
+	font-family:apercu-regular, sans;
+}
+.catbox1 ul{
+margin-left: 15px;
 }
