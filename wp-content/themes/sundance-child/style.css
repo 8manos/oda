@@ -151,13 +151,14 @@ hgroup{
 	font-size:28px;
 	color:#00BFAA;
 }
-.siteInfoFooter{
+.site-info .textwidget{
 	margin-top:50px;
 	padding-bottom:20px;
 	padding-left:30px;
 	color:#00BFAA;
 	font-family:'stabile-regular';
 	font-size:28px;
+	text-align:center
 }
 .clsMenu{
 	background-color:transparent;
