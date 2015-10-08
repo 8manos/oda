@@ -162,16 +162,23 @@ hgroup{
 .clsMenu{
 	background-color:transparent;
 	font-size:14px;
-	border:1px solid black;
+/* 	border:1px solid black; */
 	display:inline-block;
 	padding:10px;
 	position:fixed;
 	right:0px;
 	z-index:10;
-	margin-right:20px;
+
 	margin-top:35px;
 	cursor:pointer;
 }
+.clsMenu1{
+		margin-right:20px;
+}
+.clsMenu2{
+		margin-right:50px;
+}
+	
 .withBg{
 	background:transparent url('img/menu-bg.png') no-repeat ;
 	background-color:#F5697A;
@@ -182,7 +189,8 @@ hgroup{
 	top:0px;
 	position:fixed;
 	z-index:20;
- 	display:none; 
+ 	display:none;
+	
 }
 .withBg .social-icons-widget ul li {
     display: inline;
@@ -451,7 +459,7 @@ hgroup{
 	border:1px solid #938D8B;
 }
 .work-auth{
-	font-family:'stabile-regular';
+	font-family:apercu-regular, sans;
 	padding:0px 0 10px 15px;
 	margin-top:10px;
 }
@@ -830,7 +838,7 @@ span .buy-img{
 }
 .caption .jbtn a span{
 	background:transparent url('img/juegos-button.png') no-repeat;
-	background-size:cover;
+	/*background-size:cover; */
 	 font-size: 30px;
     padding: 0 30px 20px;
 	font-family:'stabile-regular';
@@ -856,4 +864,6 @@ span .buy-img{
 	color:#68696D;
 	font-size:15px;
 }
- 
+ .home #huge_it_slideshow_left_2{
+	 background:transparent url('img/juegos-button.png') no-repeat;
+ }

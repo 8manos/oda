@@ -41,12 +41,16 @@
 					<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 				</a>
 				<div class="menuPanel ">
-					<div class="clsMenu menuFor" >
-						<span class='icon-lnr-menu'></span>
+					<div class="clsMenu clsMenu1 menuFor" >
+						<span>
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/navigation.svg">
+						</span>
 					</div>
 					<div class='withBg'>
-						<div class="clsMenu menuBg" >
-							<span class='icon-cross'></span>
+						<div class="clsMenu clsMenu2 menuBg" >
+							<span>
+							<img  class="clsMenu1" src="<?php echo get_stylesheet_directory_uri(); ?>/img/close.svg">
+							</span>
 						</div>
 
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
