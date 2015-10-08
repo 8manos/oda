@@ -43,13 +43,13 @@
 				<div class="menuPanel ">
 					<div class="clsMenu clsMenu1 menuFor" >
 						<span>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/navigation.svg">
+						<img class="clsMenu4" src="<?php echo get_stylesheet_directory_uri(); ?>/img/navigation.svg">
 						</span>
 					</div>
 					<div class='withBg'>
 						<div class="clsMenu clsMenu2 menuBg" >
 							<span>
-							<img  class="clsMenu1" src="<?php echo get_stylesheet_directory_uri(); ?>/img/close.svg">
+							<img  class="clsMenu3" src="<?php echo get_stylesheet_directory_uri(); ?>/img/close.svg">
 							</span>
 						</div>
 

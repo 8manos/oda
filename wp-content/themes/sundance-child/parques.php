@@ -55,7 +55,7 @@ get_header(); ?>
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full', array('class' => 'img-responsive parq-img')); ?></a>
 						<div class="parq-info">
 							<a href="<?php the_permalink(); ?>"><span class="parq-title"> <?php	the_title(); ?></span></a>
-							<div class="parq-content"><?php echo get_the_content(); ?> <a class="more-link" href="<?php the_permalink(); ?>">VER MAS+</a></div>
+							<div class="parq-content"><?php the_excerpt(); ?> <a class="more-link" href="<?php the_permalink(); ?>">VER MAS+</a></div>
 							<br/>
 							<div class="parq-date"><img src="<?php echo get_stylesheet_directory_uri();?>/img/btn-arrow.png"> <?php echo get_the_date(); ?></div>
 						</div>
