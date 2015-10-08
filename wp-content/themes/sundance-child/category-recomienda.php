@@ -23,7 +23,7 @@ get_header(); ?>
 											$args = array('child_of' => $parent,'hide_empty' => FALSE); 
 											$categories =get_categories( $args );
 											foreach($categories as $category){
-												echo '<li> + &nbsp;'.$category->name.'</li>';
+												echo '<li>+&nbsp;'.$category->name.'</li>';
 											} ?>
 									</ul>
 								</div>	
