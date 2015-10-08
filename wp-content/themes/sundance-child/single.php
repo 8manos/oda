@@ -26,6 +26,7 @@ get_header(); ?>
 		  $category = get_category_by_slug($sl);
       $cid[]=$category->term_id;
 		  } ?>
+		  <p><?php echo __('NUEYSTROS PROYECTOS', 'sundance'); ?></p>
 		  <ul class="list-unstyled">
 		  <?php
 			$args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0); 
