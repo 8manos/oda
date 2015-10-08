@@ -85,22 +85,22 @@ class ODA {
 			'menu_position'=> 6,
 			'supports'     => array( 'title', 'editor','excerpt', 'categories','thumbnail', 'revisions'),
 			'post-formats' => 'link',
-			'taxonomies' => array('category'),  
+			'taxonomies' => array('category'),
 		) );
 		flush_rewrite_rules();
-		
+
 		register_post_type( 'customproduct', array(
 			'labels'       => array(
-				'name'               => __('Custom Product', 'oda'),
-				'singular_name'      => __('Custom Product', 'oda'),
-				'add_new_item'       => __('Add new Custom Product', 'oda'),
-				'edit_item'          => __('Edit Custom Product', 'oda'),
-				'new_item'           => __('New Custom Product', 'oda'),
-				'view_item'          => __('View Custom Product', 'oda'),
-				'search_items'       => __('Search Custom Product', 'oda'),
-				'not_found'          => __('No Custom Product found', 'oda'),
-				'not_found_in_trash' => __('No Custom Product found in trash', 'oda'),
-				'parent_item_colon'  => __('Parent Custom Product', 'oda')
+				'name'               => __('Products', 'oda'),
+				'singular_name'      => __('Products', 'oda'),
+				'add_new_item'       => __('Add New Product', 'oda'),
+				'edit_item'          => __('Edit Product', 'oda'),
+				'new_item'           => __('New Product', 'oda'),
+				'view_item'          => __('View Product', 'oda'),
+				'search_items'       => __('Search Product', 'oda'),
+				'not_found'          => __('No Product found', 'oda'),
+				'not_found_in_trash' => __('No Product found in trash', 'oda'),
+				'parent_item_colon'  => __('Parent Product', 'oda')
 			),
 			'public'       => true,
 			'show_ui'      => true,
@@ -109,11 +109,11 @@ class ODA {
 			'menu_position'=> 6,
 			'supports'     => array( 'title', 'editor', 'custom-fields','thumbnail', 'revisions'),
 			'post-formats' => 'link',
-			'taxonomies' => array('category'),  
+			'taxonomies' => array('category'),
 		) );
 		flush_rewrite_rules();
 	}
-	
+
 	public static function metadata_post( $groups ) {
 		$groups[] = array(
 
