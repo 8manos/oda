@@ -169,14 +169,16 @@ hgroup{
 	right:0px;
 	z-index:10;
 
-	margin-top:35px;
+	
 	cursor:pointer;
 }
 .clsMenu1{
 		margin-right:20px;
+		margin-top:55px;
 }
 .clsMenu2{
-		margin-right:50px;
+		margin-right:40px;
+		margin-top:-30px;
 }
 	
 .withBg{
