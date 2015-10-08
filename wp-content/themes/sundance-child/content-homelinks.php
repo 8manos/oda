@@ -10,7 +10,7 @@
 	<header class="entry-header">
 
 		<h2 class="sub-homelink-title">
-			<?php echo __('atajos del oso','sundance'); ?>
+			<img src="<?php echo get_stylesheet_directory_uri();?>/img/title-bg-hp.png"><?php echo __('atajos del oso','sundance'); ?><img src="<?php echo get_stylesheet_directory_uri();?>/img/title-bg-hp.png">
 		</h2>
 
 	</header><!-- .entry-header -->
