@@ -36,8 +36,8 @@ get_header(); ?>
 		    while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
 					<?php if($i==2) { ?>
 						<div class="col-lg-4 grid-item " style="width:300px;">
-							<div class="">
-								<div class="">
+							<div class="catbox1">
+								<div class="indiv1">
 									<p><?php echo __('NUEYSTROS PROYECTOS', 'sundance'); ?></p>
 									<ul class="list-unstyled">
 								<?php $args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0); 
