@@ -3,7 +3,7 @@
 
 get_header(); ?>
 		<div class="recmd-banner text-center">
-			<div class="banner-txt"><span>OSO</span><p>RECOMIENDA</p></div>
+			<div class="banner-txt"><span><?php echo __('OSO', 'sundance'); ?></span><p><?php echo __('RECOMIENDA', 'sundance'); ?></p></div>
 		</div>
 		<br/><br/>
 		<div class="container">
@@ -17,7 +17,7 @@ get_header(); ?>
 						<div class="col-lg-4 recmd-item for-cat" style="width:300px;">
 							<div class="catbox">
 								<div class="indiv">
-									<p>TEMAS</p>
+									<p><?php echo __('TEMAS', 'sundance'); ?></p>
 									<ul class="list-unstyled">
 								<?php $parent=get_cat_ID( "recomienda");
 											$args = array('child_of' => $parent,'hide_empty' => FALSE); 
@@ -34,8 +34,8 @@ get_header(); ?>
 					<div  class="recmd-box">
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full', array('class' => 'img-responsive recmd-img')); ?></a>
 						<div class="recmd-info">
-							<a href="<?php the_permalink(); ?>"><span class="recmd-title"> <?php	the_title(); ?></span></a>
-							<div class="recmd-content"><?php echo get_the_content(); ?> <a class="more-link" href="<?php the_permalink(); ?>">VER MAS+</a></div>
+							<a href="<?php the_permalink(); ?>"><span class="recmd-title"> <?php 	the_title(); ?></span></a>
+							<div class="recmd-content"><?php echo get_the_content(); ?> <a class="more-link" href="<?php the_permalink(); ?>"><?php echo __('VER MAS+', 'sundance'); ?></a></div>
 							<br/>
 							<div class="recmd-date"><img src="<?php echo get_stylesheet_directory_uri();?>/img/btn-arrow.png"> <?php echo get_the_date(); ?></div>
 						</div> 

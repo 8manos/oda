@@ -14,11 +14,11 @@
 
 get_header(); ?>
 		<div class="talleres-banner text-center">
-			<div class="banner-txt"><span>TALLERES</span></div>
+			<div class="banner-txt"><span><?php echo __('TALLERES', 'sundance'); ?></span></div>
 		</div>
 		<div class="container workshops">
 		<div class="row">
-		<h1 class="head">? QUE TE GUSTA	HACER?</h1>				
+		<h1 class="head"><?php echo __('? QUE TE GUSTA	HACER?', 'sundance'); ?></h1>				
 		<div class="text-center  work-cat">
 			<ul id="source" class="list-inline">
 			<?php
@@ -67,7 +67,7 @@ get_header(); ?>
 														<div class="col-lg-4 text-center">
 															<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/taller_glass.png">
 															<div class="pdf"><?php echo pdf_attachment_file(1,"DESCARGA FICHA PDF");?></div>
-															<div class="wlink"><a href="">LEEVA ESTA TALLER A TU COLEGIO</a></div>
+															<div class="wlink"><a href=""><?php echo __('LEEVA ESTA TALLER A TU COLEGIO', 'sundance'); ?></a></div>
 															<div class="cimg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/taller_cloud.png"></div>
 															<div><?php echo do_shortcode("[contact-form-7 id='209; title='talleres popup']");?></div>
 														</div>

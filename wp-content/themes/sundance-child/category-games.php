@@ -14,7 +14,7 @@
 
 get_header(); ?>
 		<div class="juegos-banner text-center">
-			<div class="banner-txt"><span>JUEGOS</span></div>
+			<div class="banner-txt"><span><?php echo __('JUEGOS', 'sundance'); ?></span></div>
 			<div class="container text-center">
 				<?php	/*if ( is_active_sidebar( 'gamessidebar' ) ) : ?>
 			   <div class="gamessidebar">
@@ -51,7 +51,7 @@ get_header(); ?>
 								<?php the_excerpt();?>
 								<br/><br/>
 								<div class="text-center jbtn">
-									<a  href=""><span>DESCARGAR</span></a>
+									<a  href=""><span><?php echo __('DESCARGAR', 'sundance'); ?></span></a>
 								</div>
 							</div>
 						</div>
