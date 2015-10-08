@@ -18,7 +18,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="grid col-lg-offset-1 col-lg-10"> <!--style="border:1px solid red;">-->
 		  <?php
-		  $slug=array('games','recomienda');
+		  $slug=array('games','recomienda','cat_workshop');
 		  foreach($slug as $sl){;
 		  $category = get_category_by_slug($sl);
       $cid[]=$category->term_id;
@@ -31,7 +31,25 @@ get_header(); ?>
 				);
 				$my_query = null;
 				$my_query = new WP_Query($args);
+											
+				$i=0;
 		    while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
+					<?php if($i==2) { ?>
+						<div class="col-lg-4 grid-item " style="width:300px;">
+							<div class="">
+								<div class="">
+									<p><?php echo __('NUEYSTROS PROYECTOS', 'sundance'); ?></p>
+									<ul class="list-unstyled">
+								<?php $args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0); 
+											$categories =get_categories( $args );
+											foreach($categories as $category){
+												echo '<li>+&nbsp;'.$category->name.'</li>';
+											}?>
+									</ul>
+								</div>	
+						</div>	
+					</div>
+					<?php } ?>
 					<div class="col-lg-4 grid-item " style="width:300px;">
 					<div  class="parq-box">
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full', array('class' => 'img-responsive parq-img')); ?></a>
@@ -43,7 +61,9 @@ get_header(); ?>
 						</div>
 					</div>
 					</div>
-				<?php endwhile; ?>
+				<?php 
+				$i++;
+				endwhile; ?>
 			</div>
 			<div class="parq-btn text-center col-lg-12 clearfix">
 			<span><?php echo __('? QUiERES HACER UNA DONACION','sundance') ?></span>

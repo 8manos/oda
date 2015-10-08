@@ -20,7 +20,20 @@ get_header(); ?>
 			<?php endwhile; ?>
 		</div>
 		<div class="col-lg-4 row clearfix">
-		
+			<?php 
+			$slug=array('games','recomienda','cat_workshop');
+		  foreach($slug as $sl){;
+		  $category = get_category_by_slug($sl);
+      $cid[]=$category->term_id;
+		  } ?>
+		  <ul class="list-unstyled">
+		  <?php
+			$args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0); 
+			$categories =get_categories( $args );
+			foreach($categories as $category){
+				echo '<li>+&nbsp;'.$category->name.'</li>';
+			} ?>
+			</ul>
 		</div>
 		<div class="clearfix row col-lg-12">
 		<br/>
