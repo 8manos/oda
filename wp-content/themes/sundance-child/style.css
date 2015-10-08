@@ -179,7 +179,8 @@ hgroup{
 }
 .clsMenu2{
 		margin-right:40px;
-		margin-top:-30px;
+		margin-top:50px;
+		display: none;
 }
 	
 .withBg{
@@ -402,7 +403,7 @@ hgroup{
 }
 .mapFont{
 	font-family:'stabile-regular';
-	font-size:25px;
+	font-size:35px;
 	color:#F76BB5;
 	text-align:center;
 }
@@ -449,7 +450,7 @@ hgroup{
 	border-bottom:3px solid #E2452D;
 }
 .workshops .work-title{
-	font-family:'stabile-regular';
+	font-family:'apercu-regular,sans';
 	margin:0px;
 	padding:0px 0 10px 15px;
 	cursor:pointer;
@@ -591,8 +592,9 @@ hgroup{
 	font-weight:500;
 }
 .parq-box{
-	border:1px solid #e2e2e2;
+	border:0px solid #e2e2e2;
 	font-family:'stabile-regular';
+	background: #FFF;
 }
 .parq-box .parq-info{
 	padding:10px 25px 25px 25px;
@@ -663,6 +665,7 @@ font-family:apercu-regular, sans;
 	background-image:none;
 	box-shadow: -3px 2px 1px #909385;
 	padding: 0 15px;
+  margin-top: 20px;
 }
 .sp-page .wpcf7-form .ajax-loader{
 	margin-right:-25px;
@@ -881,3 +884,11 @@ span .buy-img{
     right: 0px;
     width: 71px;
  }
+ .parq-content p{
+	 color: #CFCFD1;
+	 
+	 
+}
+.page-template-parques {
+	background: #FBFFE8;
+}
