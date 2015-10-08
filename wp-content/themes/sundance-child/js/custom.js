@@ -2,11 +2,18 @@ jQuery(function($){
 	isMenuShow = false ;
 	$(".clsMenu").click(function(){
 		if(!isMenuShow){
-			$(".withBg").animate({width:'toggle'},350);
+			$(".withBg").animate({width:'toggle'},350,'',function(){
+					$(".clsMenu2").show();
+					
+			});
 			isMenuShow = true ;
 		}else{
 			isMenuShow = false;
-			$(".withBg").animate({width:'toggle'},350);
+			$(".clsMenu2").hide();
+			$(".withBg").animate({width:'toggle'},350,'',function(){
+				
+				
+			});
 		}
 	})
 	
