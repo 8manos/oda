@@ -687,12 +687,13 @@ font-family:apercu-regular, sans;
 	margin-top:-75px;
 }	
 .prod-box{margin-bottom:20px;}
-.prod-img{border:4px solid #000;}
+.prod-img{border:4px solid #000;cursor:pointer;}
 .prod-name{
-	font-size:30px;
+	font-size:25px;
 	color:#000;
 		font-family:apercu-regular, sans;
 		text-transform:capitalize;
+		cursor:pointer;
 }
 .prod-price{
 	font-size:20px;
@@ -702,12 +703,12 @@ font-family:apercu-regular, sans;
   box-shadow: -3px 2px 1px #909385;
 	color:#fff;
 	font-size:15px;
-	padding:8px 15px;
+	padding:8px 14px;
 	font-weight:bold;
 	cursor:pointer;
 }
 span .buy-img{
-	background:transparent url('img/eco-btn.png') no-repeat 0 -17px; 
+	background:transparent url('img/eco-btn.png') no-repeat 0 -31px; 
 	box-shadow:none !important;
 }
 .prod-box h3 span:hover .buy-img{
@@ -723,6 +724,7 @@ span .buy-img{
 }
 .ecotinda .modal-body{
 	padding:20px 20px 40px 40px;
+	background-color: #fdfefe;
 }
 .ecotinda .modal-body .head{
 	font-family:'stabile-regular';
@@ -730,7 +732,7 @@ span .buy-img{
 	margin-bottom:20px;
 	cursor:pointer;
 }
-.ecotinda .modal .pimg{border: 1px solid #777;}
+/*.ecotinda .modal .pimg{border: 1px solid #777;}*/
 .prod-img img , .pimg img{margin:0px auto;}
 .ecotinda .modal .pleft {
     padding-left: 40px;
@@ -755,7 +757,7 @@ span .buy-img{
 	background-image:none;
 	box-shadow: none;
 	padding: 0 15px;
-	background:#000000 url("img/eco-btn.png") no-repeat scroll right 5px top -9px; 
+	background:#000000 url("img/eco-btn.png") no-repeat scroll right 5px top -27px; 
 	padding:0px 40px 0px 10px;
 	text-indent:1;
 	font-size:22px;
@@ -855,7 +857,7 @@ span .buy-img{
 	outline:7px solid #535459;
 }
 .catbox .indiv{
-	border:6px solid #CF0456;
+	border:6px solid #CC004E;
 	}
 .catbox p {
 	padding:0px 0 0 10px ;
@@ -866,6 +868,10 @@ span .buy-img{
 .catbox ul li{
 	color:#68696D;
 	font-size:15px;
+	font-family:apercu-regular, sans;
+}
+.catbox ul{
+margin-left: 15px;
 }
  .home #huge_it_slideshow_left_2{
 	 background:transparent url('img/left-slider-arrow.svg') no-repeat;
@@ -881,3 +887,6 @@ span .buy-img{
     right: 0px;
     width: 71px;
  }
+ .post-type-archive-customproduct{
+	 background-color:#E1E3E5;
+}
