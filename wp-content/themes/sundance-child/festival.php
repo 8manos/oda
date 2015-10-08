@@ -45,7 +45,7 @@ $path = get_stylesheet_directory_uri() ;
 
 					while (have_posts()) { the_post();
 						$post1 = get_post(get_the_ID());
-						echo "<li><a href=''>" . get_the_title() . "</a></li>";
+						echo '<li><a href=#'.$post->post_name.'>' . get_the_title() . '</a></li>';
 					}
 				?>
 				</ul>
@@ -61,7 +61,7 @@ $path = get_stylesheet_directory_uri() ;
 						$post1 = get_post(get_the_ID());
     	?>
 
-            <div class="subpage-img">
+            <div class="subpage-img" id="<?php echo $post->post_name; ?>">
 						<?php
 							//echo $post1->post_name ;
 							get_template_part( 'content', $post1->post_name);
