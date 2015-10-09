@@ -442,12 +442,14 @@ hgroup{
 .work-cat li{
 	margin-right:15px;
 	display:inline;
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 	cursor:pointer;
 }
 .work-cat li:hover{
 	color:#E2452D;
-	border-bottom:3px solid #E2452D;
+	/*border-bottom:3px solid #E2452D;*/
+	background:transparent url('img/taller-link-color.svg') center bottom no-repeat;
+	background-size:100% 6px;
 }
 .workshops .work-title{
 	font-family:'apercu-regular,sans';
