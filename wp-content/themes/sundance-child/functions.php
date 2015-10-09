@@ -186,3 +186,8 @@ if(class_exists('Social_Icons_Widget')){
 //Added theme supports
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size( 80, 80, true );
+
+
+ include ('extend-carousel.php');
+ remove_shortcode("wp_posts_carousel");
+add_shortcode("wp_posts_carousel", array("custom_slider_shortcode", "initialize"));
