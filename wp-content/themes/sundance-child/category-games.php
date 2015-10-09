@@ -22,7 +22,7 @@ get_header(); ?>
 			  </div>
 		    <?php endif;*/ ?>
 		    <?php
-        $arr=get_page_by_title( "juegos video" );
+        $arr=get_page_by_title( "juegos video" ); // Might be kind of hardcoded.
         $id=$arr->ID;
        $my_query = new WP_Query( array( 'page_id' => $id ) );
 				while ($my_query->have_posts()) : $my_query->the_post(); ?>
@@ -51,7 +51,7 @@ get_header(); ?>
 								<?php the_excerpt();?>
 								<br/><br/>
 								<div class="text-center jbtn">
-									<a  href=""><span><?php echo __('DESCARGAR', 'sundance'); ?></span></a>
+									<a  href=""><span><?php echo __('DOWNLOAD', 'sundance'); ?></span></a>
 								</div>
 							</div>
 						</div>
