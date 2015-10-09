@@ -14,16 +14,16 @@
 
 get_header(); ?>
 		<div class="talleres-banner text-center">
-			<div class="banner-txt"><span><?php echo __('TALLERES', 'sundance'); ?></span></div>
+			<div class="banner-txt"><span><?php echo __('Workshop', 'sundance'); ?></span></div>
 		</div>
 		<div class="container workshops">
 		<div class="row">
-		<h1 class="head"><?php echo __('? QUE TE GUSTA	HACER?', 'sundance'); ?></h1>				
+		<h1 class="head"><?php echo __('WHAT DO YOU LIKE TO DO?', 'sundance'); ?></h1>
 		<div class="text-center  work-cat">
 			<ul id="source" class="list-inline">
 			<?php
 		  $parent=get_cat_ID( "cat_workshop");
-			$args = array('child_of'     => $parent); 
+			$args = array('child_of'     => $parent);
 			$categories =get_categories( $args );
 			foreach($categories as $category){
 				echo '<li data-id="'.$category->name.'">'.$category->name.'</li>';
@@ -31,7 +31,7 @@ get_header(); ?>
 			?>
 			</ul>
 		</div>
-			<?php 
+			<?php
 			query_posts($query_string . '&posts_per_page=-1&orderby=date&order=ASC');
 			if ( have_posts() ) : ?>
 				<div class="clearfix">
@@ -50,7 +50,7 @@ get_header(); ?>
 								</div>
 								<div class="work-info">
 									<span class="work-auth">
-										<?php $categories = get_the_category(); 
+										<?php $categories = get_the_category();
 									echo $cat_name = $categories[0]->cat_name;  ?>
 									</span>
 									<h3 class="work-title"  data-toggle="modal" data-target="#talleresModal<?php echo $i; ?>"><?php the_title();?> </h3>
@@ -77,9 +77,9 @@ get_header(); ?>
 														</div>
 												</div>
 										  </div>
-										</div> 
+										</div>
 									</div>
-								</div>	
+								</div>
 							</div>
 						</div>
 						</li>
@@ -87,7 +87,7 @@ get_header(); ?>
 				$i++;
 				endwhile; ?>
 				</ul>
-				</div>	
+				</div>
 				<?php sundance_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
