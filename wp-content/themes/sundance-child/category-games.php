@@ -14,32 +14,32 @@
 
 get_header(); ?>
 		<div class="juegos-banner text-center">
-			<div class="banner-txt"><span><?php echo __('JUEGOS', 'sundance'); ?></span></div>
+			<div class="banner-txt"><span><?php echo __('Games', 'sundance'); ?></span></div>
 			<div class="container text-center">
 				<?php	/*if ( is_active_sidebar( 'gamessidebar' ) ) : ?>
 			   <div class="gamessidebar">
 				<?php dynamic_sidebar( 'gamessidebar' ); ?>
 			  </div>
 		    <?php endif;*/ ?>
-		    <?php 
-        $arr=get_page_by_title( "juegos video" );
+		    <?php
+        $arr=get_page_by_title( "juegos video" ); // Might be kind of hardcoded.
         $id=$arr->ID;
-       $my_query = new WP_Query( array( 'page_id' => $id ) );
+       $my_query = new WP_Query( array( 'page_id' => $id, 'post_status'=>'publish') );
 				while ($my_query->have_posts()) : $my_query->the_post(); ?>
 					<?php the_content(); ?>
-				<?php endwhile; ?>   
+				<?php endwhile; ?>
 
 			</div>
 		</div>
 		<br/>
 		<div class="container games">
 			<div class="row">
-<?php 
+<?php
 			query_posts($query_string . '&orderby=date&order=ASC');
 			if ( have_posts() ) : ?>
-				
+
 				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="col-lg-4 col-sm-6 game-box">    	
+					<div class="col-lg-4 col-sm-6 game-box">
 						<div class="game-content">
 							<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
 							<div class="game-info">
@@ -51,13 +51,14 @@ get_header(); ?>
 								<?php the_excerpt();?>
 								<br/><br/>
 								<div class="text-center jbtn">
-									<a  href=""><span><?php echo __('DESCARGAR', 'sundance'); ?></span></a>
+									<a  href="<?php echo get_the_content();?>"><span><?php echo __('DESCARGAR', 'sundance'); ?></span></a>
+
 								</div>
 							</div>
 						</div>
 				  </div>
 				<?php endwhile; ?>
-			
+
 				<?php sundance_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
