@@ -10,7 +10,7 @@ get_header(); ?>
 		
 			<div class="recmd col-lg-offset-1 col-lg-10"> <!--style="border:1px solid red;">-->
 		  <?php 
-					query_posts($query_string . '&orderby=date&order=ASC&cat=-10');
+					query_posts($query_string . '&orderby=date&order=ASC&show_posts=-1&posts_per_page = -1');
 				$i=0;	
 		    while ( have_posts() ) : the_post(); ?>
 					<?php if($i==2) { ?>
