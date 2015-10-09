@@ -27,10 +27,9 @@
 	if ( $the_query->have_posts() ) :
 		while ( $the_query->have_posts() ) : $the_query->the_post();
 			//the_content();
-
 		?>
 			<div class='col-lg-4 linkBox'>
-				<a href='<?php $the_query->get_the_content();?>'>
+				<a href='<?php echo get_the_content();?>'>
          <?php the_post_thumbnail('large') ?>
         </a>
       </div>
