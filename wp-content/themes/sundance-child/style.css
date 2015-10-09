@@ -296,11 +296,11 @@ hgroup{
 }
 .clsFestMenu a {
 	text-transform:capitalize;
-	color:#00AA90;
+	color:#007391;
 }
 .clsFestMenu .nav > li > a:hover, .clsFestMenu .nav > li > a:active{
 	background-color:transparent;
-	border-bottom:2px solid #00AA90;
+/* 	border-bottom:2px solid #00AA90; */
 }
 .imgMPple{
 	margin-top:30px;
@@ -315,6 +315,7 @@ hgroup{
 	font-family:'stabile-regular';
 	font-weight:500;
 	color:#F565BD;
+	text-align: center;
 }
 .clsMapBtn, .clsActBtn{
 	color:white;
@@ -354,7 +355,7 @@ hgroup{
 }
 .clsLabel{
 	font-family:'stabile-regular';
-	font-size:18px;
+	font-size:26px;
 	color:#01AA90;
 }
 .clsFestPage3  .clsForm input[type='text'],
@@ -363,7 +364,8 @@ hgroup{
 {
 	border:0px;
 	background-color:transparent;
-	border-bottom:1px solid #01AA90;
+/* 	border-bottom:1px solid #01AA90; */
+background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	box-shadow:none;
 }
 .clsFestPage3  .clsForm input[type='submit']{
@@ -408,7 +410,7 @@ hgroup{
 	text-align:center;
 }
 .games .game-title{
-	font-family:'stabile-regular';
+	font-family:'apercu-regular,sans';
 	margin:0px;
 	padding:0px 0 10px 15px;
 }
@@ -423,6 +425,7 @@ hgroup{
 	border-left:1px solid #938D8B;
 	border-bottom:1px solid #938D8B;
 	border-right:1px solid #938D8B;
+	font-family:'apercu-regular,sans'!important;
 }
 .workshops h1.head{
 	font-family:'stabile-regular';
@@ -696,7 +699,7 @@ font-family:apercu-regular, sans;
 .prod-name{
 	font-size:25px;
 	color:#000;
-		font-family:apercu-regular, sans;
+		font-family:apercu-light, sans;
 		text-transform:capitalize;
 		cursor:pointer;
 		margin-top: 15px;
@@ -704,6 +707,7 @@ font-family:apercu-regular, sans;
 .prod-price{
 	font-size:20px;
 	font-weight: lighter;
+	font-family:apercu-light, sans;
 }
 .prod-box h3 span{ 
   background-color: #000000;
@@ -772,6 +776,7 @@ span .buy-img{
 .ecotinda .wpcf7-form input[type="text"], .ecotinda .wpcf7-form input[type="email"]{
 	border:2px solid #000;
 	border-radius:0px;
+	width: 100%;
 }
 .ecotinda div.wpcf7-validation-errors{
 	border:none;
@@ -852,9 +857,10 @@ span .buy-img{
 	background:transparent url('img/juegos-button.png') no-repeat;
 	/*background-size:cover; */
 	 font-size: 30px;
-    padding: 0 30px 20px;
+    padding: 0 11px 20px;
 	font-family:'stabile-regular';
 	color:#FF6708;
+	text-align: center;
 }
 .for-cat{
 	padding: 0 21px;
@@ -894,6 +900,31 @@ margin-left: 15px;
     right: 0px;
     width: 71px;
  }
+ .huge_it_slideshow_image_wrap_2{
+
+	 height: 582px;
+    width: 100%;
+}
+
+.page-template-festival .simple-theme.wp-posts-carousel .owl-controls .owl-nav div.owl-prev{
+	background:transparent url('img/left-slider-arrow.svg') no-repeat;
+	 height: 74px;
+    margin-top: -77px;
+    right: 0;
+    width: 71px;
+		content: none;
+		text-indent:-9999px;
+}
+.page-template-festival .simple-theme.wp-posts-carousel .owl-controls .owl-nav div.owl-next{
+	background:transparent url('img/right-slider-arrow.svg') no-repeat;
+	height: 74px;
+    margin-top: -77px;
+    right: 0;
+    width: 71px;
+		content: none;
+		text-indent:-9999px;
+}
+ 
 
  .parq-content p{
 	 color: #CFCFD1; 
@@ -909,19 +940,17 @@ margin-left: 15px;
 	color:#000000;
 	
 }
-.categoey{
-	border:0px solid #e2e2e2;
-	
-	background: #00FDA6;
-}
+
 .catbox1{
-	border:4px solid #535459;  
-	outline:7px solid #00FDA6;
+	border:7px solid #535459;
+	outline:4px solid #00FDA6;
 	background: #00FDA6;
+	padding: 4px;
 }
-.catbox1 .indiv1{
-	border:6px solid #fff;
-	outline:7px solid #535459;
+ .indiv1{
+	border:5px solid #fff;
+/* 	outline:7px solid #535459; */
+	padding:4px;
 	}
 .catbox1 p {
 	padding:0px 0 0 10px ;
@@ -936,4 +965,26 @@ margin-left: 15px;
 }
 .catbox1 ul{
 margin-left: 15px;
+}
+.nav li:hover{
+	color:#E2452D;
+	/*border-bottom:3px solid #E2452D;*/
+	background:transparent url('img/nav-border-bottom.svg') center bottom no-repeat;
+	background-size:100% 6px;
+}
+.wpcf7-form-control-wrap .your-name{
+	color:#E2452D;
+	border-bottom:3px solid #E2452D;
+	background:transparent url('img/nav-border-bottom.svg') center bottom no-repeat;
+	background-size:100% 6px;
+}
+.simple-theme.wp-posts-carousel .wp-posts-carousel-container:hover{
+	background-color:transparent !important;
+ border: none;
+}
+.simple-theme.wp-posts-carousel .wp-posts-carousel-title a{
+	font-family: "stabile-regular";
+    font-size: 30px;
+    font-weight: 200;
+		color:#000 !important;
 }
