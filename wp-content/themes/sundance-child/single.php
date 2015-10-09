@@ -19,13 +19,15 @@ get_header(); ?>
 				<div class="sp-content"><?php the_content(); ?></div>
 			<?php endwhile; ?>
 		</div>
-		<div class="col-lg-5 row clearfix">
+		<div class="col-lg-4 col-lg-offset-1 row clearfix">
 			<?php 
 			$slug=array('games','recomienda','cat_workshop');
 		  foreach($slug as $sl){;
 		  $category = get_category_by_slug($sl);
       $cid[]=$category->term_id;
 		  } ?>
+		           <div class="catbox1">
+								<div class="indiv1">
 		  <p><?php echo __('NUEYSTROS PROYECTOS', 'sundance'); ?></p>
 		  <ul class="list-unstyled">
 		  <?php
@@ -35,6 +37,8 @@ get_header(); ?>
 				echo '<li>+&nbsp;'.$category->name.'</li>';
 			} ?>
 			</ul>
+		</div>
+		</div>
 		</div>
 		<div class="clearfix row col-lg-12">
 		<br/>
