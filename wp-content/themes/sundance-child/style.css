@@ -300,7 +300,7 @@ hgroup{
 }
 .clsFestMenu .nav > li > a:hover, .clsFestMenu .nav > li > a:active{
 	background-color:transparent;
-	border-bottom:2px solid #00AA90;
+/* 	border-bottom:2px solid #00AA90; */
 }
 .imgMPple{
 	margin-top:30px;
@@ -354,7 +354,7 @@ hgroup{
 }
 .clsLabel{
 	font-family:'stabile-regular';
-	font-size:18px;
+	font-size:26px;
 	color:#01AA90;
 }
 .clsFestPage3  .clsForm input[type='text'],
@@ -363,7 +363,8 @@ hgroup{
 {
 	border:0px;
 	background-color:transparent;
-	border-bottom:1px solid #01AA90;
+/* 	border-bottom:1px solid #01AA90; */
+background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	box-shadow:none;
 }
 .clsFestPage3  .clsForm input[type='submit']{
@@ -895,6 +896,26 @@ margin-left: 15px;
     width: 71px;
  }
 
+.page-template-festival .simple-theme.wp-posts-carousel .owl-controls .owl-nav div.owl-prev{
+	background:transparent url('img/left-slider-arrow.svg') no-repeat;
+	 height: 74px;
+    margin-top: -77px;
+    right: 0;
+    width: 71px;
+		content: none;
+		text-indent:-9999px;
+}
+.page-template-festival .simple-theme.wp-posts-carousel .owl-controls .owl-nav div.owl-next{
+	background:transparent url('img/right-slider-arrow.svg') no-repeat;
+	height: 74px;
+    margin-top: -77px;
+    right: 0;
+    width: 71px;
+		content: none;
+		text-indent:-9999px;
+}
+ 
+
  .parq-content p{
 	 color: #CFCFD1; 
 }
@@ -934,4 +955,26 @@ margin-left: 15px;
 }
 .catbox1 ul{
 margin-left: 15px;
+}
+.nav li:hover{
+	color:#E2452D;
+	/*border-bottom:3px solid #E2452D;*/
+	background:transparent url('img/nav-border-bottom.svg') center bottom no-repeat;
+	background-size:100% 6px;
+}
+.wpcf7-form-control-wrap .your-name{
+	color:#E2452D;
+	border-bottom:3px solid #E2452D;
+	background:transparent url('img/nav-border-bottom.svg') center bottom no-repeat;
+	background-size:100% 6px;
+}
+.simple-theme.wp-posts-carousel .wp-posts-carousel-container:hover{
+	background-color:transparent !important;
+
+}
+.simple-theme.wp-posts-carousel .wp-posts-carousel-title a{
+	font-family: "stabile-regular";
+    font-size: 30px;
+    font-weight: 200;
+		color:#000 !important;
 }
