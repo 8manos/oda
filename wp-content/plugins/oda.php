@@ -37,6 +37,7 @@ class ODA {
 			'public'       => true,
 			'show_ui'      => true,
 			'has_archive'  => false,
+			'public_queryable'=> true,
 			'hierarchical' => true,
 			'menu_position'=> 7,
 			'supports'     => array( 'title', 'editor', 'thumbnail', 'revisions','custom-fields' ),
