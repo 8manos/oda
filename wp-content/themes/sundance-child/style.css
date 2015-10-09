@@ -315,6 +315,7 @@ hgroup{
 	font-family:'stabile-regular';
 	font-weight:500;
 	color:#F565BD;
+	text-align: center;
 }
 .clsMapBtn, .clsActBtn{
 	color:white;
@@ -409,7 +410,7 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	text-align:center;
 }
 .games .game-title{
-	font-family:'stabile-regular';
+	font-family:'apercu-regular,sans';
 	margin:0px;
 	padding:0px 0 10px 15px;
 }
@@ -424,6 +425,7 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	border-left:1px solid #938D8B;
 	border-bottom:1px solid #938D8B;
 	border-right:1px solid #938D8B;
+	font-family:'apercu-regular,sans'!important;
 }
 .workshops h1.head{
 	font-family:'stabile-regular';
@@ -697,7 +699,7 @@ font-family:apercu-regular, sans;
 .prod-name{
 	font-size:25px;
 	color:#000;
-		font-family:apercu-regular, sans;
+		font-family:apercu-light, sans;
 		text-transform:capitalize;
 		cursor:pointer;
 		margin-top: 15px;
@@ -705,6 +707,7 @@ font-family:apercu-regular, sans;
 .prod-price{
 	font-size:20px;
 	font-weight: lighter;
+	font-family:apercu-light, sans;
 }
 .prod-box h3 span{ 
   background-color: #000000;
@@ -773,6 +776,7 @@ span .buy-img{
 .ecotinda .wpcf7-form input[type="text"], .ecotinda .wpcf7-form input[type="email"]{
 	border:2px solid #000;
 	border-radius:0px;
+	width: 100%;
 }
 .ecotinda div.wpcf7-validation-errors{
 	border:none;
@@ -853,9 +857,10 @@ span .buy-img{
 	background:transparent url('img/juegos-button.png') no-repeat;
 	/*background-size:cover; */
 	 font-size: 30px;
-    padding: 0 30px 20px;
+    padding: 0 11px 20px;
 	font-family:'stabile-regular';
 	color:#FF6708;
+	text-align: center;
 }
 .for-cat{
 	padding: 0 21px;
@@ -895,6 +900,11 @@ margin-left: 15px;
     right: 0px;
     width: 71px;
  }
+ .huge_it_slideshow_image_wrap_2{
+
+	 height: 582px;
+    width: 100%;
+}
 
 .page-template-festival .simple-theme.wp-posts-carousel .owl-controls .owl-nav div.owl-prev{
 	background:transparent url('img/left-slider-arrow.svg') no-repeat;
@@ -970,7 +980,7 @@ margin-left: 15px;
 }
 .simple-theme.wp-posts-carousel .wp-posts-carousel-container:hover{
 	background-color:transparent !important;
-
+ border: none;
 }
 .simple-theme.wp-posts-carousel .wp-posts-carousel-title a{
 	font-family: "stabile-regular";
