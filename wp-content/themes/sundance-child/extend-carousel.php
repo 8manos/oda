@@ -171,9 +171,17 @@ class custom_carousel extends WpPostsCarouselGenerator {
                         $created_date = '';
                         $category = '';
                         $buttons = '';
+                        $fancybox='';
 
                         $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),$params['image_source']);
-
+													
+											$images = get_attached_media('image', $post->ID);
+												foreach($images as $img) { 
+												$img_src=wp_get_attachment_image_src($img->ID,'full');
+  													$fancybox .='<a class="fancybox" rel="gallery'.$post->ID.'" href="'.$img_src[0].'" title=" ">';
+														$fancybox .='<img src="'.$img_src[0].'" alt="'.$post->post_title.'" />';
+														$fancybox .='</a>';
+												 } 
                         /*
                          * if no featured image for the product
                          */
@@ -194,10 +202,11 @@ class custom_carousel extends WpPostsCarouselGenerator {
                                     $image_class = 'class="owl-lazy"';
                                 }
 
-                                $featured_image = '<div class="wp-posts-carousel-image" data-toggle="modal" data-target="#'.$post->post_name.'">';
+                                $featured_image = '<div class="wp-posts-carousel-image">';
                                         //$featured_image .= '<a href="'. $post_url .'" title="'. __('Read more', 'wp-posts-carousel') .' '. $post->post_title .'">';
-                                               $featured_image .= '<img alt="'. $post->post_title .'" style="max-width:'. $params['image_width'] .'%;max-height:'. $params['image_height'] .'%" '. $data_src . $image_class .'>';
+                                               $featured_image .= '<img alt="'. $post->post_title .'" style="max-width:'. $params['image_width'] .'%;max-height:'. $params['image_height'] .'%" '. $data_src .' '. $image_class .'>';
                                         //$featured_image .= '</a>';
+                                         $featured_image .='<div class="fcb">'.$fancybox.'</div>';
                                 $featured_image .= '</div>';
                         }
 
@@ -206,8 +215,8 @@ class custom_carousel extends WpPostsCarouselGenerator {
                          */
                         if ($params['show_title'] === 'true') {
                                 $title = '<h3 class="wp-posts-carousel-title">';
-                                       // $title .= '<a href="'. $post_url .'" title="'. $post->post_title .'">'. $post->post_title .'</a>';
-                                       $title.='<span data-toggle="modal" data-target="#'.$post->post_name.'">'.$post->post_title.'</span>';
+                                       $title .= '<a href="'. $post_url .'" title="'. $post->post_title .'">'. $post->post_title .'</a>';
+                                     
                                 $title .= '</h3>';
                         }
 
