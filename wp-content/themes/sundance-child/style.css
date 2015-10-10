@@ -77,7 +77,7 @@ hgroup{
 	padding:0px;
 }
 .home .site-footer{
- background:#DEFDB2 url('img/footerBg.png') bottom left repeat-x;	
+ background:#DEFDB2 url('img/footerBg.png') bottom left repeat-x;
 }
 .clsHomeHead{
 	text-align:center;
@@ -170,7 +170,7 @@ hgroup{
 	right:0px;
 	z-index:10;
 
-	
+
 	cursor:pointer;
 }
 .clsMenu1{
@@ -182,7 +182,7 @@ hgroup{
 		margin-top:50px;
 		display: none;
 }
-	
+
 .withBg{
 	background:transparent url('img/menu-bg.png') no-repeat ;
 	background-color:#F5697A;
@@ -194,7 +194,7 @@ hgroup{
 	position:fixed;
 	z-index:20;
  	display:none;
-	
+
 }
 .withBg .social-icons-widget ul li {
     display: inline;
@@ -280,12 +280,12 @@ hgroup{
     margin-top: 25px;
 }
 .page1 .mimg{
-	background:url('img/festival-page1-middle.png') ; 
+	background:url('img/festival-page1-middle.png') ;
 	background-size:cover;
 	height: 538px;
 }
 .page1 .bimg{
-	  background:url('img/festival-page1-bottom.png') ; 
+	  background:url('img/festival-page1-bottom.png') ;
 		background-size:cover;
 		height:226px;
 }
@@ -515,7 +515,7 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	width:85%;
 	margin:0px auto;
 }
-.workshops .pdf a , .workshops .wlink a{ 
+.workshops .pdf a , .workshops .wlink a{
 	padding:2px 15px 8px;
 	background-color:#00cc99;
 	border-radius :15px;
@@ -549,14 +549,14 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	font-size:25px;
 	color:#fff;
 }
-.talleres-banner{	
+.talleres-banner{
 	height:500px;
 	border:0px solid black;
 	background:transparent url('img/tallerers-banner.png') center center no-repeat;
 	background-size: cover;
 	padding-top:83px;
 }
-.talleres-banner .banner-txt{	
+.talleres-banner .banner-txt{
 	background:transparent url('img/taller-title-deco.png') center center no-repeat;
 	font-family:'stabile-regular';
 	font-size:100px;
@@ -564,13 +564,13 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	height:280px;
 	padding-top:55px;
 }
-.juegos-banner{	
+.juegos-banner{
 	height:900px;
 	background:transparent url('img/juegos-banner.png') center bottom no-repeat;
 	background-size: cover;
 	padding-top:100px;
 }
-.juegos-banner .banner-txt{	
+.juegos-banner .banner-txt{
 	background:transparent url('img/juegos-title.png') center center no-repeat;
 	font-family:'stabile-regular';
 	font-size:145px;
@@ -582,13 +582,13 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 .juegos-banner .banner-txt > span {
     padding-right: 25px;
 }
-.parques-banner{	
+.parques-banner{
 	height:470px;
 	background:transparent url('img/parques-banner.png') center center no-repeat;
 	background-size: cover;
 	padding-top:75px;
 }
-.parques-banner .banner-txt{	
+.parques-banner .banner-txt{
 	background:transparent url('img/parques-title.png') center center no-repeat;
 	font-family:'stabile-regular';
 	font-size:120px;
@@ -629,7 +629,7 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 .parq-btn span{
 	background-color:#96BD11;
 	color:#FFF;
- 	padding:0px 20px 12px; 
+ 	padding:0px 20px 12px;
   font-size:40px;
   border-radius:50px;
 	font-family:'stabile-regular';
@@ -676,14 +676,14 @@ font-family:apercu-regular, sans;
 .sp-page .wpcf7-form .ajax-loader{
 	margin-right:-25px;
 }
-.eco-banner{	
- 	height:470px; 
+.eco-banner{
+ 	height:470px;
 	background:transparent url('img/eco-banner.png') center center no-repeat;
 	background-size: cover;
- 	padding-top:75px; 
+ 	padding-top:75px;
 }
-.eco-banner .banner-txt{	
- 	background:transparent url('img/eco-titlebg.png') center center no-repeat; 
+.eco-banner .banner-txt{
+ 	background:transparent url('img/eco-titlebg.png') center center no-repeat;
 	font-family:'stabile-regular';
 	font-size:120px;
 	color:#fff;
@@ -691,10 +691,10 @@ font-family:apercu-regular, sans;
 }
 .eco-banner .banner-txt span{
 	font-size:140px;
-}	
+}
 .eco-banner .banner-txt p{
 	margin-top:-75px;
-}	
+}
 .prod-box{margin-bottom:20px;}
 .prod-img{border:4px solid #000;cursor:pointer; background-color:#FFF;}
 .prod-name{
@@ -710,7 +710,7 @@ font-family:apercu-regular, sans;
 	font-weight: lighter;
 	font-family:apercu-light, sans;
 }
-.prod-box h3 span{ 
+.prod-box h3 span{
   background-color: #000000;
   box-shadow: -3px 2px 1px #909385;
 	color:#fff;
@@ -724,7 +724,7 @@ span .buy-img{
 	box-shadow:none !important;
 }
 .prod-box h3 span:hover .buy-img{
-	background:#0FEEA2 url('img/eco-btn.png') no-repeat 0 5px; 
+	background:#0FEEA2 url('img/eco-btn.png') no-repeat 0 5px;
 }
 .prod-box h3 span:hover {
 	background-color:#0FEEA2;
@@ -769,7 +769,7 @@ span .buy-img{
 	background-image:none;
 	box-shadow: none;
 	padding: 0 15px;
-	background:#000000 url("img/eco-btn.png") no-repeat scroll right 5px top -27px; 
+	background:#000000 url("img/eco-btn.png") no-repeat scroll right 5px top -27px;
 	padding:0px 40px 0px 10px;
 	text-indent:1;
 	font-size:22px;
@@ -792,14 +792,14 @@ body .ecotinda .eco-text input[type="text"]{
 	background:#0FEEA2 url("img/eco-btn.png") no-repeat scroll right 5px top 11px;
 }
  .ecotinda .wpcf7-form .note{padding-top:25px}
- 
- .recmd-banner{	
+
+ .recmd-banner{
 	height:470px;
 	background:transparent url('img/recmd-banner.png') center center no-repeat;
 	background-size: cover;
 	padding-top:25px;
 }
-.recmd-banner .banner-txt{	
+.recmd-banner .banner-txt{
 	background:transparent url('img/recmd-title.png') center center no-repeat;
 	font-family:'stabile-regular';
 	color:#fff;
@@ -828,7 +828,7 @@ body .ecotinda .eco-text input[type="text"]{
 }
 .recmd-box .recmd-img{
 	width:100%;
-}   
+}
 .recmd-item{margin-bottom:20px;}
 .caption , .wrk-cap {
     background: #FF6708;
@@ -841,7 +841,7 @@ body .ecotinda .eco-text input[type="text"]{
     bottom: 0;
     min-height: 0px;
 		height:0px;
-    visibility: hidden; 
+    visibility: hidden;
 		padding:20px;
 }
 .game-box .game-content ,.work-box .img-div{
@@ -851,7 +851,7 @@ body .ecotinda .eco-text input[type="text"]{
     min-height: 100%;
 		 visibility: visible;
 }
-.caption p , .wrk-cap p{ 
+.caption p , .wrk-cap p{
 	font-size:20px;
 	font-family:apercu-regular, sans;
 	text-align:center;
@@ -930,10 +930,10 @@ margin-left: 15px;
 		content: none;
 		text-indent:-9999px;
 }
- 
+
 
  .parq-content p{
-	 color: #CFCFD1; 
+	 color: #CFCFD1;
 }
 .page-template-parques {
 	background: #FBFFE8;
@@ -944,7 +944,7 @@ margin-left: 15px;
 .sp-page .wpcf7-submit:hover{
 	background-color:#0FEEA2;
 	color:#000000;
-	
+
 }
 
 .catbox1{
@@ -1016,15 +1016,18 @@ margin-left: 15px;
 .guest-title{
 	cursor:pointer;
 }
-div.masonary_flex { 
-  display: flex; 
+div.masonary_flex {
+  display: flex;
 	flex-wrap:wrap;
 	margin:20px 0;
 }
 @supports not (flex-wrap: wrap) {
   div.masonary_flex { display: block; }
-  div.masonary_flex img {  
+  div.masonary_flex img {
   display: inline-block;
   vertical-align: top;
   }
+}
+.game-img{
+	width:100%;
 }

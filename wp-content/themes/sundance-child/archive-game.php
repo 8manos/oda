@@ -42,27 +42,27 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="col-lg-4 col-sm-6 game-box">
 						<div class="game-content">
-							<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
+							<?php the_post_thumbnail('large', array('class' => 'game-img img-responsive')); ?>
 							<div class="game-info">
 							 <span class="game-auth"><?php
-
+							unset($_category);
 							 $post_categories = get_the_terms( get_the_ID(),'cat_games' );
+							 //print_r($post_categories);
 							 foreach($post_categories as $c){
-								$cat = get_category( $c );
-								$category[] =  $cat->name ;
+								//$cat = get_category( $c );
+								$_category[] =  $c->name ;
 							 }
-							 if(count($category)){
-								echo "test";
-								echo implode($category);
+							 if(count($_category)){
+								echo implode($_category);
 							 }?></span>
 						  	<h3 class="game-title"><?php the_title();?> </h3>
 							</div>
 							<div class="caption">
 								<br/><br/>
-								<?php the_excerpt();?>
+								<?php the_content(); ?>
 								<br/><br/>
 								<div class="text-center jbtn">
-									<a  href="<?php echo get_the_content();?>"><span><?php echo __('DESCARGAR', 'sundance'); ?></span></a>
+									<a  href="<?php echo get_the_excerpt();?>"><span><?php echo __('DOWNLOAD ', 'sundance'); ?></span></a>
 
 								</div>
 							</div>
