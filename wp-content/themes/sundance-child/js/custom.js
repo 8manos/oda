@@ -28,5 +28,15 @@ jQuery(function($){
   // set itemSelector so .grid-sizer is not used in layout
   itemSelector: '.recmd-item',
    })
-	
+			var fan=$(".fancybox").fancybox({
+					openEffect	: 'none',
+					closeEffect	: 'none'
+			})
+	$(".wp-posts-carousel-image img.owl-lazy").click(function(event){
+
+			console.log($(".fancybox:first",$(this).parent()).length);
+			$(".fancybox:first",$(this).parent()).fancybox().trigger('click');
+			event.stopPropagation();
+	});
+ 
 });
