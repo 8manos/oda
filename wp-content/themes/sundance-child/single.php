@@ -35,18 +35,18 @@ get_header(); ?>
 		  $category = get_category_by_slug($sl);
       $cid[]=$category->term_id;
 		  } ?>
-		           <div class="catbox1">
-								<div class="indiv1">
-		  <p><?php echo __('NUEYSTROS PROYECTOS', 'sundance'); ?></p>
-		  <ul class="list-unstyled">
-		  <?php
-			$args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0); 
-			$categories =get_categories( $args );
-			foreach($categories as $category){
-				echo '<li>+&nbsp;'.$category->name.'</li>';
-			} ?>
-			</ul>
-		</div>
+		<div class="catbox1">
+			<div class="indiv1">
+				<p><?php echo __('NUEYSTROS PROYECTOS', 'sundance'); ?></p>
+				<ul class="list-unstyled">
+					<?php
+					$args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0); 
+					$categories =get_categories( $args );
+					foreach($categories as $category){
+						echo '<li><a href="'.get_category_link( $category->term_id ).'">+&nbsp;'.$category->name.'</a></li>';
+					} ?>
+				</ul>
+			</div>
 		</div>
 		</div>
 		<div class="clearfix row col-lg-12">

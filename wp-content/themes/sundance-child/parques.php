@@ -43,7 +43,7 @@ get_header(); ?>
 								<?php $args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0); 
 											$categories =get_categories( $args );
 											foreach($categories as $category){
-												echo '<li>+&nbsp;'.$category->name.'</li>';
+													echo '<li><a href="'.get_category_link( $category->term_id ).'">+&nbsp;'.$category->name.'</a></li>';
 											}?>
 									</ul>
 								</div>	
