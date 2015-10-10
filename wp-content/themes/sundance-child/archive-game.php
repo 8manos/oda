@@ -35,6 +35,7 @@ get_header(); ?>
 		<div class="container games">
 			<div class="row">
 <?php
+			//array( 'post_type' => 'games', 'post_status'=>'publish'
 			query_posts($query_string . '&orderby=date&order=ASC');
 			if ( have_posts() ) : ?>
 
@@ -43,7 +44,17 @@ get_header(); ?>
 						<div class="game-content">
 							<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
 							<div class="game-info">
-							 <span class="game-auth"><?php echo get_post_meta($post->ID, 'author', true); ?></span>
+							 <span class="game-auth"><?php
+
+							 $post_categories = get_the_terms( get_the_ID(),'cat_games' );
+							 foreach($post_categories as $c){
+								$cat = get_category( $c );
+								$category[] =  $cat->name ;
+							 }
+							 if(count($category)){
+								echo "test";
+								echo implode($category);
+							 }?></span>
 						  	<h3 class="game-title"><?php the_title();?> </h3>
 							</div>
 							<div class="caption">
