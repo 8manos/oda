@@ -10,7 +10,16 @@ get_header(); ?>
   <div class="parques-banner text-center">
 		<div class="banner-txt"><span>PARQUES</span></div>
 	</div>
-	<br/><br/>
+	<div class="masonary_flex">
+		<?php
+				$images = get_attached_media('image', $post->ID);
+				foreach($images as $img) { 
+				$img_src=wp_get_attachment_image_src($img->ID,'medium'); ?>
+							<img  class="" src="<?php echo $img_src[0]; ?>" alt="" />
+				<?php
+				} 
+		?>
+	</div>
 	<div class="container sp-page">
 		<div class="col-lg-7 row">
 			<?php while (have_posts()) : the_post(); ?>

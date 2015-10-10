@@ -1015,3 +1015,15 @@ margin-left: 15px;
 .guest-title{
 	cursor:pointer;
 }
+div.masonary_flex { 
+  display: flex; 
+	flex-wrap:wrap;
+	margin:20px 0;
+}
+@supports not (flex-wrap: wrap) {
+  div.masonary_flex { display: block; }
+  div.masonary_flex img {  
+  display: inline-block;
+  vertical-align: top;
+  }
+}
