@@ -215,8 +215,8 @@ class custom_carousel extends WpPostsCarouselGenerator {
                          */
                         if ($params['show_title'] === 'true') {
                                 $title = '<h3 class="wp-posts-carousel-title">';
-                                       $title .= '<a href="'. $post_url .'" title="'. $post->post_title .'">'. $post->post_title .'</a>';
-                                     
+                                      // $title .= '<a href="'. $post_url .'" title="'. $post->post_title .'">'. $post->post_title .'</a>';
+                                     $title .= '<span class="guest-title">'. $post->post_title .'</span>';
                                 $title .= '</h3>';
                         }
 
