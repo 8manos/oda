@@ -33,10 +33,13 @@ jQuery(function($){
 					closeEffect	: 'none'
 			})
 	$(".wp-posts-carousel-image img.owl-lazy").click(function(event){
-
-			console.log($(".fancybox:first",$(this).parent()).length);
 			$(".fancybox:first",$(this).parent()).fancybox().trigger('click');
 			event.stopPropagation();
 	});
- 
+	
+	$(".wp-posts-carousel-container span.guest-title").click(function(event){
+			$(".fancybox:first",$(this).parents('.wp-posts-carousel-container')).fancybox().trigger('click');
+			event.stopPropagation();
+	});
+	
 });
