@@ -4,19 +4,19 @@ jQuery(function($){
 		if(!isMenuShow){
 			$(".withBg").animate({width:'toggle'},350,'',function(){
 					$(".clsMenu2").show();
-					
+
 			});
 			isMenuShow = true ;
 		}else{
 			isMenuShow = false;
 			$(".clsMenu2").hide();
 			$(".withBg").animate({width:'toggle'},350,'',function(){
-				
-				
+
+
 			});
 		}
 	})
-	
+
 	$('.grid').masonry({
   // set itemSelector so .grid-sizer is not used in layout
   itemSelector: '.grid-item',
@@ -36,10 +36,32 @@ jQuery(function($){
 			$(".fancybox:first",$(this).parent()).fancybox().trigger('click');
 			event.stopPropagation();
 	});
-	
+
 	$(".wp-posts-carousel-container span.guest-title").click(function(event){
 			$(".fancybox:first",$(this).parents('.wp-posts-carousel-container')).fancybox().trigger('click');
 			event.stopPropagation();
 	});
-	
+	//Qucksand
+	/*
+	$('#source1').quicksand( $('#destination1 li') ,{
+		name: value
+	}, function(){
+			console.log('working');
+		}
+	);
+*/
+	var $container = $('#destination').isotope({
+		itemSelector: '.work-box',
+	})
+  $('#source').on( 'click', 'li', function() {
+
+    var filterValue = $( this ).attr('data-filter');
+		console.log(filterValue);
+    // use filterFn if matches value
+    //filterValue = filterFns[ filterValue ] || filterValue;
+		//Above line does not needed
+    $container.isotope({ filter: filterValue });
+  });
+
+
 });
