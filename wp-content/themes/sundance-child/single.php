@@ -21,48 +21,52 @@ get_header(); ?>
 		?>
 	</div>
 	<div class="container sp-page">
-		<div class="col-lg-6 row">
-			<?php while (have_posts()) : the_post(); ?>
-				<h1 class="sp-head"><?php the_title(); ?></h1>
-				<p class="sp-date"> <span><?php echo get_the_date(); ?></span></p>
-				<p class="sp-cat">
-						<?php $cat=get_the_category($post->ID); 
-						foreach($cat as $cat_name){
-								$cats[]='<a href="'.get_category_link( $cat_name->term_id ).'">'.$cat_name->name.'</a>';
-						}
-					echo __('THEMES : ', 'sundance');	
-					echo implode(' / ',$cats);
-					?>
-				</p>
-				<div class="sp-content"><?php the_content(); ?></div>
-			<?php endwhile; ?>
-		</div>
-		<div class="col-lg-5 col-lg-offset-1 row clearfix">
-			<?php 
-			$slug=array('games','recomienda','cat_workshop');
-		  foreach($slug as $sl){;
-		  $category = get_category_by_slug($sl);
-      $cid[]=$category->term_id;
-		  } ?>
-		<div class="catbox1">
-			<div class="indiv1">
-				<p><?php echo __('NUEYSTROS PROYECTOS', 'sundance'); ?></p>
-				<ul class="list-unstyled">
-					<?php
-					$args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0); 
-					$categories =get_categories( $args );
-					foreach($categories as $category){
-						echo '<li><a href="'.get_category_link( $category->term_id ).'">+&nbsp;'.$category->name.'</a></li>';
+		<div class="col-lg-10 col-lg-offset-1">
+				<div class="col-lg-8">
+					<?php while (have_posts()) : the_post(); ?>
+						<h1 class="sp-head"><?php the_title(); ?></h1>
+						<p class="sp-date"> <span><?php echo get_the_date(); ?></span></p>
+						<p class="sp-cat">
+								<?php $cat=get_the_category($post->ID); 
+								foreach($cat as $cat_name){
+										$cats[]='<a href="'.get_category_link( $cat_name->term_id ).'">'.$cat_name->name.'</a>';
+								}
+							echo __('THEMES : ', 'sundance');	
+							echo implode(' / ',$cats);
+							?>
+						</p>
+						<div class="sp-content"><?php the_content(); ?></div>
+					<?php endwhile; ?>
+					
+					<span class="coment">COMENTAR</span><br/><br/>
+		      <?php echo do_shortcode("[contact-form-7 id='185' title='single post page']"); ?>
+				</div>
+				<div class="col-lg-4 clearfix">
+					<?php 
+					$slug=array('games','recomienda','cat_workshop');
+					foreach($slug as $sl){;
+					$category = get_category_by_slug($sl);
+					$cid[]=$category->term_id;
 					} ?>
-				</ul>
-			</div>
-		</div>
+				<div class="catbox1">
+					<div class="indiv1">
+						<p><?php echo __('NUEYSTROS PROYECTOS', 'sundance'); ?></p>
+						<ul class="list-unstyled">
+							<?php
+							$args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0); 
+							$categories =get_categories( $args );
+							foreach($categories as $category){
+								echo '<li><a href="'.get_category_link( $category->term_id ).'">+&nbsp;'.$category->name.'</a></li>';
+							} ?>
+						</ul>
+					</div>
+				</div>
+				</div>
 		</div>
 		<div class="clearfix row col-lg-12">
 		<br/>
 		<br/>
-		<span class="coment">COMENTAR</span><br/><br/>
-		 <?php echo do_shortcode("[contact-form-7 id='185' title='single post page']"); ?>
+		
 		</div> 
 	</div>
 <?php get_footer(); ?>
