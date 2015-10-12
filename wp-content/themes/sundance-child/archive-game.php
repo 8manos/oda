@@ -53,7 +53,7 @@ get_header(); ?>
 								$_category[] =  $c->name ;
 							 }
 							 if(count($_category)){
-								echo implode('+',$_category);
+								echo implode(' + ',$_category);
 							 }?></span>
 						  	<h3 class="game-title"><?php the_title();?> </h3>
 							</div>
