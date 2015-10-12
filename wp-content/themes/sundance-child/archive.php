@@ -13,9 +13,12 @@ get_header(); ?>
 		<div class="parques-banner text-center">
 			<div class="banner-txt"><span><?php echo __('Parks', 'sundance'); ?></span></div>
 		</div>
-		<br/><br/>
 		<div class="container">
-			<div class="grid col-lg-offset-1 col-lg-10"> <!--style="border:1px solid red;">-->
+			<div class="text-center archive-heading">
+				<?php echo single_cat_title( '', true );?>
+			</div>
+			<div class="grid col-lg-offset-1 col-lg-10"> 
+				
 		  <?php
 
 				$i=0;

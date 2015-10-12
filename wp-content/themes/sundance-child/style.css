@@ -961,7 +961,7 @@ margin-left: 15px;
 }
 
 
- .parq-content p{
+ .parq-content {
 	 color: #CFCFD1;
 }
 .page-template-parques {
@@ -1060,4 +1060,9 @@ div.masonary_flex {
 }
 .game-img{
 	width:100%;
+}
+.archive-heading{
+	font-family: "stabile-regular";
+  font-size: 45px;
+	margin:10px 0 30px;
 }
