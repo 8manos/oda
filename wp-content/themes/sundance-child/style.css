@@ -550,7 +550,17 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 }
 .workshops .wpcf7-submit:hover{background:#00cc99;}
 .workshops .wpcf7-form .ajax-loader{margin-right:-15px;}
-.workshops .cimg{margin-top:25px;}
+.workshops .cimg{
+  background:transparent url('img/taller_cloud.png') center center no-repeat;
+	height: 120px;
+    margin-top: 25px;
+    width: 250px;
+		    color: #fff;
+    font-family: "stabile-regular";
+    font-size: 18px;
+    padding:16px 14px 4px;
+    
+}
 .workshops .ftitle{
 	font-family:'stabile-regular';
 	font-size:25px;
@@ -803,6 +813,7 @@ span .buy-img{
 	text-indent:1;
 	font-size:22px;
 	font-family:apercu-light, sans !important;
+	box-shadow: -3px 2px 1px #909385;
 }
 body .ecotinda .eco-text input[type="text"]{
 	width: 75%;
