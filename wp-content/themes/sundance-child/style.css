@@ -634,6 +634,7 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
   border-radius:50px;
 	font-family:'stabile-regular';
 }
+.parq-btn a{text-decoration:none;}
 .more-link,.more-link:hover {background-color:#5B5B5F;
 	color:#fff;
 	padding:0px 2px 1px 2px;
