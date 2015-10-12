@@ -645,7 +645,7 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 
 .more-link,.more-link:hover {background-color:#5B5B5F;
 	color:#fff;
-	padding:0px 2px 1px 2px;
+	padding:0 2px 3px;
 }
 .sp-page{margin-top:50px;}
 .sp-page .sp-head{
