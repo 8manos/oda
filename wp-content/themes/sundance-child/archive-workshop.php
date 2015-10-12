@@ -22,7 +22,6 @@ get_header(); ?>
 		<div class="text-center  work-cat">
 			<ul id="source" class="list-inline">
 			<?php
-		  $parent= get_category_by_slug( "cat_workshop");
 			$categories = get_terms("cat_workshop");
 			foreach($categories as $category){
 				echo '<li data-id="'.$category->name.'">'.$category->name.'</li>';
