@@ -638,15 +638,20 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	color:#fff;
 	padding:0px 2px 1px 2px;
 }
+.sp-page{margin-top:50px;}
 .sp-page .sp-head{
 	font-family:'stabile-regular';
 	font-size:45px;
+	 margin-top: -15px;
 }
 .sp-date span{
 	background-color:#000;
 	color:#fff;
 	padding:0 5px 5px;
 	font-family:'stabile-regular';
+}
+.sp-page input[type="text"],.sp-page input[type="email"]{
+	width:100%;
 }
 .sp-cat , .sp-cat a{
 	font-family:'stabile-regular';
@@ -655,6 +660,7 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 }
 .sp-content{
 font-family:apercu-regular, sans;
+margin-bottom:50px;
 }
 .sp-page .coment {
 	font-family:'stabile-regular';
