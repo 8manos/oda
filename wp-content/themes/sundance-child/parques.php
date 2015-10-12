@@ -47,7 +47,17 @@ get_header(); ?>
 					<?php } ?>
 					<div class="col-lg-4 grid-item " style="width:300px;">
 					<div  class="parq-box">
-						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full', array('class' => 'img-responsive parq-img')); ?></a>
+						<a href="<?php the_permalink(); ?>">
+							<?php 
+							if($video_thumbnail = get_video_thumbnail()!=""){ ?>
+								<img class="img-responsive" src="<?php echo $video_thumbnail = get_video_thumbnail(); ?>" /> 
+							<?php 
+							}else{
+							the_post_thumbnail('full', array('class' => 'img-responsive parq-img')); 
+							}
+							?>
+						
+						</a>
 						<div class="parq-info">
 							<a href="<?php the_permalink(); ?>"><span class="parq-title"> <?php	the_title(); ?></span></a>
 							<div class="parq-content"><?php echo get_the_excerpt(); ?> <a class="more-link" href="<?php the_permalink(); ?>"><?php echo __('View More','sundance'); ?>+</a></div>
