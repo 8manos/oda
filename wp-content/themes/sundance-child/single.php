@@ -21,14 +21,14 @@ get_header(); ?>
 		?>
 	</div>
 	<div class="container sp-page">
-		<div class="col-lg-7 row">
+		<div class="col-lg-6 row">
 			<?php while (have_posts()) : the_post(); ?>
 				<h1 class="sp-head"><?php the_title(); ?></h1>
 				<p class="sp-date"> <span><?php echo get_the_date(); ?></span></p>
 				<div class="sp-content"><?php the_content(); ?></div>
 			<?php endwhile; ?>
 		</div>
-		<div class="col-lg-4 col-lg-offset-1 row clearfix">
+		<div class="col-lg-5 col-lg-offset-1 row clearfix">
 			<?php 
 			$slug=array('games','recomienda','cat_workshop');
 		  foreach($slug as $sl){;
