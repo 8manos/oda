@@ -108,7 +108,7 @@ class ODA {
 			'has_archive'  => true,
 			'hierarchical' => true,
 			'menu_position'=> 5,
-			'supports'     => array( 'title', 'editor','categories','thumbnail', 'revisions'),
+			'supports'     => array( 'title', 'editor', 'excerpt','categories','thumbnail', 'revisions'),
 			'post-formats' => 'link',
 			//'taxonomies' => array('category'),
 		) );
