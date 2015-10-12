@@ -17,11 +17,6 @@ get_header(); ?>
 		<div class="container">
 			<div class="grid col-lg-offset-1 col-lg-10"> <!--style="border:1px solid red;">-->
 		  <?php
-			$slug=array('games','recomienda','cat_workshop');
-		  foreach($slug as $sl){;
-		  $category = get_category_by_slug($sl);
-      $cid[]=$category->term_id;
-		  }
 
 				$i=0;
 		    while (have_posts() ) :the_post(); ?>
@@ -31,7 +26,7 @@ get_header(); ?>
 								<div class="indiv1">
 									<p><?php echo __('NUEYSTROS PROJECTS', 'sundance'); ?></p>
 									<ul class="list-unstyled">
-								<?php $args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0);
+								<?php $args = array('hide_empty' => FALSE);
 											$categories =get_categories( $args );
 											foreach($categories as $category){
 												echo '<li><a href="'.get_category_link( $category->term_id ).'">+&nbsp;'.$category->name.'</a></li>';
