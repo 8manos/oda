@@ -410,14 +410,14 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	color:#F76BB5;
 	text-align:center;
 }
-.games .game-title{
+.game-title{
 	font-family:'apercu-regular,sans';
 	margin:0px;
 	padding:0px 0 10px 15px;
 }
 .game-box{margin-bottom:20px;}
 .game-auth{
-	font-family:'stabile-regular';
+	font-family:'apercu-regular,sans';
 	padding:0px 0 10px 15px;
 	margin-top:10px;
 }
@@ -454,11 +454,10 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	background:transparent url('img/taller-link-color.svg') center bottom no-repeat;
 	background-size:100% 6px;
 }
-.workshops .work-title{
-	font-family:'apercu-regular,sans';
-	margin:0px;
-	padding:0px 0 10px 15px;
-	cursor:pointer;
+.work-title {
+	font-family:apercu-regular,sans;
+    margin-top: 0 !important;
+		font-size: 26px;
 }
 .work-box{
 	margin-bottom:20px;
@@ -469,11 +468,13 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 }
 .work-auth{
 	font-family:apercu-regular, sans;
-	padding:0px 0 10px 15px;
+	padding:0px 0 10px 2px;
 	margin-top:10px;
 }
 .work-info{
 	padding-top:10px;
+	margin-left: 20px;
+
 }
 .workshops .modal-content{
 /* 	padding:10px; */
@@ -873,7 +874,7 @@ body .ecotinda .eco-text input[type="text"]{
 	background:transparent url('img/juegos-button.png') no-repeat;
 	/*background-size:cover; */
 	 font-size: 30px;
-    padding: 0 11px 20px;
+    padding: 0 15px 20px;
 	font-family:'stabile-regular';
 	color:#FF6708;
 	text-align: center;

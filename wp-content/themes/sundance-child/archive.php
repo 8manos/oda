@@ -11,7 +11,7 @@
 get_header(); ?>
 
 		<div class="parques-banner text-center">
-			<div class="banner-txt"><span><?php echo __('Park', 'sundance'); ?></span></div>
+			<div class="banner-txt"><span><?php echo __('Parks', 'sundance'); ?></span></div>
 		</div>
 		<br/><br/>
 		<div class="container">
@@ -57,7 +57,7 @@ get_header(); ?>
 				endwhile; ?>
 			</div>
 			<div class="parq-btn text-center col-lg-12 clearfix">
-			<span><?php echo __('? QUiERES HACER UNA DONACION','sundance') ?></span>
+			<span><?php echo __('You want to make a donation?','sundance') ?></span>
 			</div>
 		</div>
 <?php get_footer(); ?>
