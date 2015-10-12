@@ -23,8 +23,7 @@ get_header(); ?>
 			<ul id="source" class="list-inline">
 			<?php
 		  $parent= get_category_by_slug( "cat_workshop");
-			$args = array('child_of'     => $parent->term_id);
-			$categories =get_categories( $args );
+			$categories = get_terms("cat_workshop");
 			foreach($categories as $category){
 				echo '<li data-id="'.$category->name.'">'.$category->name.'</li>';
 			}
@@ -50,8 +49,18 @@ get_header(); ?>
 								</div>
 								<div class="work-info">
 									<span class="work-auth">
-										<?php $categories = get_the_category();
-									echo $cat_name = $categories[0]->cat_name;  ?>
+										<?php
+										unset($_category);
+										$post_categories = get_the_terms( get_the_ID(),'cat_workshop' );
+										foreach($post_categories as $c){
+											//$cat = get_category( $c );
+											$_category[] =  $c->name ;
+										}
+										if(count($_category)){
+											echo implode($_category);
+										}
+
+									?>
 									</span>
 									<h3 class="work-title"  data-toggle="modal" data-target="#talleresModal<?php echo $i; ?>"><?php the_title();?> </h3>
 								</div>

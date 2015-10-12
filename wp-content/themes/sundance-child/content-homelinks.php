@@ -29,8 +29,8 @@
 			//the_content();
 		?>
 			<div class='col-lg-4 linkBox'>
-				<a href='<?php echo get_the_content();?>'>
-         <?php the_post_thumbnail('large') ?>
+				<a href='<?php echo get_the_excerpt();?>'>
+         <?php the_post_thumbnail('medium') ?>
         </a>
       </div>
 
