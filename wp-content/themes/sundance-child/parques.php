@@ -61,7 +61,10 @@ get_header(); ?>
 				endwhile; ?>
 			</div>
 			<div class="parq-btn text-center col-lg-12 clearfix">
-			<span><?php echo __('You want to make a donation?','sundance') ?></span>
+			<?php  $page_id     = get_queried_object_id();?>
+			<a href="<?php  echo get_post_meta($page_id, 'donation_link', true);?>">
+				<span><?php echo __('You want to make a donation?','sundance'); ?></span>
+			</a>
 			</div>
 		</div>
 <?php get_footer(); ?>
