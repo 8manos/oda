@@ -884,10 +884,11 @@ body .ecotinda .eco-text input[type="text"]{
 	color:#BF004C;
 	font-size:35px
 }
-.catbox ul li{
+.catbox ul li a{
 	color:#68696D;
 	font-size:15px;
 	font-family:apercu-regular, sans;
+	text-decoration:none;
 }
 .catbox ul{
 margin-left: 15px;
