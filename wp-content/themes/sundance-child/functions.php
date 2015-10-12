@@ -197,3 +197,9 @@ set_post_thumbnail_size( 80, 80, true );
  include ('extend-carousel.php');
  remove_shortcode("wp_posts_carousel");
 add_shortcode("wp_posts_carousel", array("custom_slider_shortcode", "initialize"));
+
+function trim_excerpt($text) {
+     $text = str_replace('[&hellip;]', '', $text);
+     return $text;
+    }
+add_filter('get_the_excerpt', 'trim_excerpt');

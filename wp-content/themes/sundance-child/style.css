@@ -414,12 +414,14 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	font-family:apercu-regular,sans;
     margin-top: 0 !important;
 		font-size: 26px;
+		text-transform: capitalize;
 }
 .game-box{margin-bottom:20px;}
 .game-auth{
 	font-family:apercu-regular, sans;
 	padding:0px 0 10px 2px;
 	margin-top:10px;
+	text-transform: uppercase;
 }
 .game-info{
 	padding-top:10px;
@@ -460,6 +462,8 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	font-family:apercu-regular,sans;
     margin-top: 0 !important;
 		font-size: 26px;
+		text-transform: capitalize;
+		cursor: pointer;
 }
 .work-box{
 	margin-bottom:20px;
@@ -472,6 +476,7 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	font-family:apercu-regular, sans;
 	padding:0px 0 10px 2px;
 	margin-top:10px;
+	text-transform: uppercase;
 }
 .work-info{
 	padding-top:10px;
@@ -691,7 +696,11 @@ margin-bottom:50px;
 	background-image:none;
 	box-shadow: -3px 2px 1px #909385;
 	padding: 0 15px;
-  margin-top: 20px;
+  height: 35px;
+    margin-top: 15px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    width: 50px;
 }
 .sp-page .wpcf7-form .ajax-loader{
 	margin-right:-25px;
@@ -953,7 +962,7 @@ margin-left: 15px;
 }
 
 
- .parq-content p{
+ .parq-content {
 	 color: #CFCFD1;
 }
 .page-template-parques {
@@ -990,7 +999,7 @@ margin-left: 15px;
 	color:#00583A;
 	font-size:15px;
 	font-family:apercu-regular, sans;
-	text-decoration:none;
+/* 	text-decoration:none; */
 }
 .catbox1 ul{
 margin-left: 15px;
