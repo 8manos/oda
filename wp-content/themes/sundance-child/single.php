@@ -42,19 +42,14 @@ get_header(); ?>
 		      <?php echo do_shortcode("[contact-form-7 id='185' title='single post page']"); ?>
 				</div>
 				<div class="col-lg-4 clearfix">
-					<?php
-					$slug=array('games','recomienda','cat_workshop');
-					foreach($slug as $sl){;
-					$category = get_category_by_slug($sl);
-					$cid[]=$category->term_id;
-					} ?>
+					
 				<div class="catbox1">
 					<div class="indiv1">
 						<p><?php echo __('NUEYSTROS PROJECTOS', 'sundance'); ?></p>
 						<ul class="list-unstyled">
 							<?php
-							$args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0);
-							$categories =get_categories( $args );
+							$args = array('hide_empty' => FALSE);
+							$categories =get_categories();
 							foreach($categories as $category){
 								echo '<li><a href="'.get_category_link( $category->term_id ).'">+&nbsp;'.$category->name.'</a></li>';
 							} ?>
