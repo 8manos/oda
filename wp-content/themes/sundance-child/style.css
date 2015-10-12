@@ -584,7 +584,7 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 }
 .parques-banner{
 	height:470px;
-	background:transparent url('img/parques-banner.png') center center no-repeat;
+	background: #FBFFE8 url('img/parques-banner.png') center center no-repeat;
 	background-size: cover;
 	padding-top:75px;
 }
