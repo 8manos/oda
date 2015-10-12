@@ -463,6 +463,7 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
     margin-top: 0 !important;
 		font-size: 26px;
 		text-transform: capitalize;
+		cursor: pointer;
 }
 .work-box{
 	margin-bottom:20px;
@@ -998,7 +999,7 @@ margin-left: 15px;
 	color:#00583A;
 	font-size:15px;
 	font-family:apercu-regular, sans;
-	text-decoration:none;
+/* 	text-decoration:none; */
 }
 .catbox1 ul{
 margin-left: 15px;
