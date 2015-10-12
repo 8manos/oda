@@ -9,7 +9,8 @@ get_header(); ?>
 		<div class="container">
 		
 			<div class="recmd col-lg-offset-1 col-lg-10"> <!--style="border:1px solid red;">-->
-		  <?php 
+		  
+		  <?php
 					query_posts($query_string . '&orderby=date&order=ASC&show_posts=-1&posts_per_page = -1');
 				$i=0;	
 		    while ( have_posts() ) : the_post(); ?>
@@ -19,11 +20,14 @@ get_header(); ?>
 								<div class="indiv">
 									<p><?php echo __('TEMAS', 'sundance'); ?></p>
 									<ul class="list-unstyled">
-								<?php $parent=get_cat_ID( "recomienda");
-											$args = array('child_of' => $parent,'hide_empty' => FALSE); 
-											$categories =get_categories( $args );
-											foreach($categories as $category){
-												echo '<li><a href="'.get_category_link( $category->term_id ).'">+&nbsp;'.$category->name.'</a></li>';
+								<?php
+											$terms =get_terms('recomienda' );
+											foreach ( $terms as $term ) {
+												$term_link = get_term_link( $term );
+												if ( is_wp_error( $term_link ) ) {
+														continue;
+												}
+											  echo '<li><a href="' . esc_url( $term_link ) . '">+&nbsp;' . $term->name . '</a></li>';
 											} ?>
 									</ul>
 								</div>	
