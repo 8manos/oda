@@ -28,7 +28,7 @@ get_header(); ?>
 				<p class="sp-cat">
 						<?php $cat=get_the_category($post->ID); 
 						foreach($cat as $cat_name){
-								$cats[]=$cat_name->name;
+								$cats[]='<a href="'.get_category_link( $cat_name->term_id ).'">'.$cat_name->name.'</a>';
 						}
 					echo __('THEMES : ', 'sundance');	
 					echo implode(' / ',$cats);

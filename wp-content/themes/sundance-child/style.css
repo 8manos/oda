@@ -648,8 +648,10 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	padding:0 5px 5px;
 	font-family:'stabile-regular';
 }
-.sp-cat{
+.sp-cat , .sp-cat a{
 	font-family:'stabile-regular';
+	color:#3c3d47;
+	text-decoration:none;
 }
 .sp-content{
 font-family:apercu-regular, sans;
