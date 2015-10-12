@@ -411,14 +411,14 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	text-align:center;
 }
 .game-title{
-	font-family:'apercu-regular,sans';
-	margin:0px;
-	padding:0px 0 10px 15px;
+	font-family:apercu-regular,sans;
+    margin-top: 0 !important;
+		font-size: 26px;
 }
 .game-box{margin-bottom:20px;}
 .game-auth{
-	font-family:'apercu-regular,sans';
-	padding:0px 0 10px 15px;
+	font-family:apercu-regular, sans;
+	padding:0px 0 10px 2px;
 	margin-top:10px;
 }
 .game-info{
@@ -427,6 +427,8 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	border-bottom:1px solid #938D8B;
 	border-right:1px solid #938D8B;
 	font-family:'apercu-regular,sans'!important;
+	padding-left:20px;
+	margin-left:2px;
 }
 .workshops h1.head{
 	font-family:'stabile-regular';
@@ -627,12 +629,16 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	height:200px;
 }
 .parq-btn span{
-	background-color:#96BD11;
+	background-color:rgb(150, 189, 17);
 	color:#FFF;
  	padding:0px 20px 12px;
   font-size:40px;
   border-radius:50px;
 	font-family:'stabile-regular';
+}
+.parq-btn span:hover{
+	background-color:rgba(150, 189, 17,0.9);
+
 }
 .more-link,.more-link:hover {background-color:#5B5B5F;
 	color:#fff;
