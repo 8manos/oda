@@ -20,25 +20,35 @@ get_header(); ?>
 		<div class="row">
 		<h1 class="head"><?php echo __('WHAT DO YOU LIKE TO DO?', 'sundance'); ?></h1>
 		<div class="text-center  work-cat">
-			<ul id="source" class="list-inline">
+			<ul id="source" class='list-unstyled list-inline'>
 			<?php
 			$categories = get_terms("cat_workshop");
 			foreach($categories as $category){
-				echo '<li data-id="'.$category->name.'">'.$category->name.'</li>';
+				echo '<li data-filter=".'.$category->slug.'">'.$category->name.'</li>';
 			}
+				echo '<li data-filter="*">' . __('All Previous', 'sundance') . "</li>";
 			?>
+
 			</ul>
-		</div>
-			<?php
+			</div>
+			<div class='clearfix'>
+				<?php
 			query_posts($query_string . '&posts_per_page=-1&orderby=date&order=ASC');
 			if ( have_posts() ) : ?>
-				<div class="clearfix">
-				<ul id="destination">
+				<ul id="destination" class='list-unstyled'>
 				<?php
 				$i=0;
-				while ( have_posts() ) : the_post(); ?>
-				<li data-id="<?php $cat = get_the_category();echo $cat[0]->name;?>" class="list-unstyled">
-					<div class="col-lg-4 work-box col-sm-6">
+				while ( have_posts() ) : the_post();
+					unset($_category); $_category_first = "" ; // Reset
+					$post_categories = get_the_terms( get_the_ID(),'cat_workshop' );
+					foreach($post_categories as $c){
+						//$cat = get_category( $c );
+						$_category[] =  $c->name ;
+						if($_category_first == "")
+						$_category_first = $c->slug ;
+					}
+				?>
+				<li class='col-lg-4 work-box col-sm-6 <?php echo $_category_first ;?>' >
 							<div>
 								<div class="clearfix img-div"><?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
 									<div class="wrk-cap">
@@ -49,12 +59,7 @@ get_header(); ?>
 								<div class="work-info">
 									<span class="work-auth">
 										<?php
-										unset($_category);
-										$post_categories = get_the_terms( get_the_ID(),'cat_workshop' );
-										foreach($post_categories as $c){
-											//$cat = get_category( $c );
-											$_category[] =  $c->name ;
-										}
+
 										if(count($_category)){
 											echo implode($_category);
 										}
@@ -74,8 +79,8 @@ get_header(); ?>
 												<div class="clearfix">
 														<div class="col-lg-4 text-center">
 															<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/taller_glass.png">
-															<div class="pdf"><?php echo pdf_attachment_file(1,"DESCARGA FICHA PDF");?></div>
-															<div class="wlink"><a href=""><?php echo __('LEEVA ESTA TALLER A TU COLEGIO', 'sundance'); ?></a></div>
+															<div class="pdf"><?php echo pdf_attachment_file(1,__("DOWNLOAD PDF SHEET",'sundance'));?></div>
+															<div class="wlink"><a href=""><?php echo __('WORKSHOP TO YOUR SCHOOL', 'sundance'); ?></a></div>
 															<div class="cimg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/taller_cloud.png"></div>
 															<div><?php echo do_shortcode("[contact-form-7 id='209; title='talleres popup']");?></div>
 														</div>
@@ -89,7 +94,6 @@ get_header(); ?>
 									</div>
 								</div>
 							</div>
-						</div>
 						</li>
 				<?php
 				$i++;

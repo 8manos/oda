@@ -445,7 +445,6 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 }
 .work-cat li{
 	margin-right:15px;
-	display:inline;
 	padding-bottom: 10px;
 	cursor:pointer;
 }
