@@ -25,6 +25,15 @@ get_header(); ?>
 			<?php while (have_posts()) : the_post(); ?>
 				<h1 class="sp-head"><?php the_title(); ?></h1>
 				<p class="sp-date"> <span><?php echo get_the_date(); ?></span></p>
+				<p class="sp-cat">
+						<?php $cat=get_the_category($post->ID); 
+						foreach($cat as $cat_name){
+								$cats[]='<a href="'.get_category_link( $cat_name->term_id ).'">'.$cat_name->name.'</a>';
+						}
+					echo __('THEMES : ', 'sundance');	
+					echo implode(' / ',$cats);
+					?>
+				</p>
 				<div class="sp-content"><?php the_content(); ?></div>
 			<?php endwhile; ?>
 		</div>
