@@ -452,9 +452,8 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	padding-bottom: 10px;
 	cursor:pointer;
 }
-.work-cat li:hover{
+.work-cat li:hover , .active_cat {
 	color:#E2452D;
-	/*border-bottom:3px solid #E2452D;*/
 	background:transparent url('img/taller-link-color.svg') center bottom no-repeat;
 	background-size:100% 6px;
 }
