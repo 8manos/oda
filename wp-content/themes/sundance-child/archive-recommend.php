@@ -15,7 +15,7 @@ get_header(); ?>
 				$i=0;	
 		    while ( have_posts() ) : the_post(); ?>
 					<?php if($i==2) { ?>
-						<div class="col-lg-4 recmd-item for-cat" style="width:300px;">
+						<div class="col-lg-4 recmd-item for-cat">
 							<div class="catbox">
 								<div class="indiv">
 									<p><?php echo __('TEMAS', 'sundance'); ?></p>
@@ -34,7 +34,7 @@ get_header(); ?>
 						</div>	
 					</div>
 					<?php } ?>
-					<div class="col-lg-4 recmd-item " style="width:300px;">
+					<div class="col-lg-4 recmd-item ">
 					<div  class="recmd-box">
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full', array('class' => 'img-responsive recmd-img')); ?></a>
 						<div class="recmd-info">

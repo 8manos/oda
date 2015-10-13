@@ -1089,7 +1089,7 @@ body .lpad0{
 	background: #fbffe8 none repeat scroll 0 0;
 }
 
-.events-table{
+.events-middle{
 	background-color:#9DFEDB;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9afedc+0,32fda9+100 */
 	background: #9afedc; /* Old browsers */
@@ -1101,6 +1101,19 @@ body .lpad0{
 	background: linear-gradient(to bottom,  #9afedc 0%,#32fda9 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9afedc', endColorstr='#32fda9',GradientType=0 ); /* IE6-9 */
 }
+.events-table{
+	padding-top:100px;
+	padding-bottom:100px;
+	font-family: "stabile-regular";
+  font-size: 30px;
+	color:#fff;
+}
+.events-table h1{
+	margin-bottom:0px;
+	font-size:50px;
+}
+.events-table tr , .events-table h1 {border-bottom:5px solid #fff;}
+.recmd .recmd-item{width:300px;}
 .archive{
 	background: #fbffe8 none repeat scroll 0 0;
 }
