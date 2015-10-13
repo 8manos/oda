@@ -29,7 +29,7 @@ get_header(); ?>
 				$i=1 ; $my_query->found_posts;
 
 		    while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
-					<div class="col-lg-4 grid-item " style="width:300px;">
+					<div class="col-lg-4 grid-item " >
 						<div  class="parq-box">
 							<a  href="<?php the_permalink(); ?>">
 								<?php
@@ -54,7 +54,7 @@ get_header(); ?>
 					</div>
 					<?php
 					if( $i==2 || ( $i == $my_query->found_posts &&  $my_query->found_posts < 3 ) ) { ?>
-						<div class="col-lg-4 grid-item <?php echo $i;?>" style="width:300px;">
+						<div class="col-lg-4 grid-item <?php echo $i;?>" >
 							<div class="catbox1">
 								<div class="indiv1">
 									<p><?php echo __('NUEYSTROS PROJECTS', 'sundance'); ?></p>
