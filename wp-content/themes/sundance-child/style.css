@@ -1084,6 +1084,10 @@ body .rpad0{
 body .lpad0{
 	padding-left:0px;
 }
+.single-post{
+	background: #fbffe8 none repeat scroll 0 0;
+}
+
 @media only screen and (max-width : 320px) {
 	.header1-image-link img{
 		width:120px;
