@@ -21,7 +21,7 @@ get_header(); ?>
 				
 		  <?php
 
-				$i=1; wp_count_posts();
+				$i=0; wp_count_posts();
 		   while ( have_posts() ) : the_post(); ?>
 		   
 					<div class="col-lg-4 grid-item " style="width:300px;">
@@ -47,7 +47,7 @@ get_header(); ?>
 					</div>
 					
 					<?php
-					if( $i==1 || ( $i ==wp_count_posts() && wp_count_posts() < 3 ) ) { ?>
+					if( $i==1 || ( $i ==wp_count_posts() && wp_count_posts() < 2 ) ) { ?>
 						<div class="col-lg-4 grid-item " style="width:300px;">
 							<div class="catbox1">
 								<div class="indiv1">
