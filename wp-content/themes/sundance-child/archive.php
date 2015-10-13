@@ -27,20 +27,13 @@ get_header(); ?>
 						<div  class="parq-box">
 							<a href="<?php the_permalink(); ?>">
 								<?php
-
-								/*
-
 								if(get_video_thumbnail(get_the_ID() )!=""){
-										$video_thumbnail = get_video_thumbnail(get_the_ID()) ;
 									?>
 									<img class="img-responsive" src="<?php echo get_video_thumbnail(get_the_ID()); ?>" />
 								<?php
 								}else{
 									the_post_thumbnail('full', array('class' => 'img-responsive parq-img'));
 								}
-
-								*/
-
 								?>
 
 							</a>
