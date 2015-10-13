@@ -1087,7 +1087,19 @@ body .lpad0{
 .single-post{
 	background: #fbffe8 none repeat scroll 0 0;
 }
+.events-table{
+	background-color:#9DFEDB;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9afedc+0,32fda9+100 */
+	background: #9afedc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #9afedc 0%, #32fda9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9afedc), color-stop(100%,#32fda9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #9afedc 0%,#32fda9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #9afedc 0%,#32fda9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #9afedc 0%,#32fda9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #9afedc 0%,#32fda9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9afedc', endColorstr='#32fda9',GradientType=0 ); /* IE6-9 */
 
+}
 @media only screen and (max-width : 320px) {
 	.header1-image-link img{
 		width:120px;
