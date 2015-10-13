@@ -1088,6 +1088,9 @@ body .lpad0{
 .single-post{
 	background: #fbffe8 none repeat scroll 0 0;
 }
+
+
+
 .events-table{
 	background-color:#9DFEDB;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9afedc+0,32fda9+100 */
@@ -1100,7 +1103,7 @@ body .lpad0{
 	background: linear-gradient(to bottom,  #9afedc 0%,#32fda9 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9afedc', endColorstr='#32fda9',GradientType=0 ); /* IE6-9 */
 }
-.category-parq1{
+.archive{
 	background: #fbffe8 none repeat scroll 0 0;
 }
 
