@@ -1130,3 +1130,6 @@ body .lpad0{
     max-width: 100%;
 	}
 }
+ .grid-item{
+	width:300px;
+}
