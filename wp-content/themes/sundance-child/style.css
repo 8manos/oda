@@ -1099,8 +1099,11 @@ body .lpad0{
 	background: -ms-linear-gradient(top,  #9afedc 0%,#32fda9 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #9afedc 0%,#32fda9 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9afedc', endColorstr='#32fda9',GradientType=0 ); /* IE6-9 */
-
 }
+.category-parq1{
+	background: #fbffe8 none repeat scroll 0 0;
+}
+
 @media only screen and (max-width : 320px) {
 	.header1-image-link img{
 		width:120px;
