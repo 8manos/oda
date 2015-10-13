@@ -33,22 +33,14 @@ get_header(); ?>
 						<div  class="parq-box">
 							<a href="<?php the_permalink(); ?>">
 								<?php
-								
-								/*
-								
 								if(get_video_thumbnail(get_the_ID() )!=""){
-										$video_thumbnail = get_video_thumbnail(get_the_ID()) ;
 									?>
 									<img class="img-responsive" src="<?php echo get_video_thumbnail(get_the_ID()); ?>" />
 								<?php
 								}else{
 									the_post_thumbnail('full', array('class' => 'img-responsive parq-img'));
 								}
-								
-								*/
-								
 								?>
-
 							</a>
 							<div class="parq-info">
 								<a href="<?php the_permalink(); ?>"><span class="parq-title"> <?php	the_title(); ?></span></a>
@@ -59,8 +51,8 @@ get_header(); ?>
 						</div>
 					</div>
 					<?php
-					if( $i==3 || ( $i == $my_query->found_posts &&  $my_query->found_posts < 3 ) ) { ?>
-						<div class="col-lg-4 grid-item " style="width:300px;">
+					if( $i==2 || ( $i == $my_query->found_posts &&  $my_query->found_posts < 3 ) ) { ?>
+						<div class="col-lg-4 grid-item <?php echo $i;?>" style="width:300px;">
 							<div class="catbox1">
 								<div class="indiv1">
 									<p><?php echo __('NUEYSTROS PROJECTS', 'sundance'); ?></p>
