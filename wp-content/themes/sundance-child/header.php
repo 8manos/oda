@@ -38,7 +38,7 @@
 			if ( ! empty( $header_image ) ) { ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
 					rel="home" class="sliderLogo header1-image-link">
-					<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+					<img src="<?php header_image(); ?>" width="<?php //echo HEADER_IMAGE_WIDTH; ?>" height="<?php //echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 				</a>
 				<div class="menuPanel ">
 					<div class="clsMenu clsMenu1 menuFor" >

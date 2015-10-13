@@ -587,15 +587,16 @@ background:transparent url('img/contact-us-border.png') center bottom no-repeat;
 	padding-top:100px;
 }
 .juegos-banner .banner-txt{
-	background:transparent url('img/juegos-title.png') center center no-repeat;
+/* 	background:transparent url('img/juegos-title.png') center center no-repeat; */
 	font-family:'stabile-regular';
-	font-size:145px;
+	font-size:160px;
 	color:#fff;
-	height:280px;
+	/*height:280px;
 	padding-top:10px;
-	font-weight:500;
+	font-weight:500;*/
+	margin-bottom: 25px;
 }
-.juegos-banner .banner-txt > span {
+.juegos-banner .banner-txt  span {
     padding-right: 25px;
 }
 .parques-banner{
@@ -1077,6 +1078,36 @@ div.masonary_flex {
   font-size: 45px;
 	margin:10px 0 30px;
 }
+body .rpad0{
+	padding-right:0px;
+}
+body .lpad0{
+	padding-left:0px;
+}
 .single-post{
 	background: #fbffe8 none repeat scroll 0 0;
+}
+
+@media only screen and (max-width : 320px) {
+	.header1-image-link img{
+		width:120px;
+	}
+	.juegos-banner {
+		padding-top:130px;
+		height:400px;
+	}
+	.juegos-banner .banner-txt{
+		font-size:40px;
+	}
+	.juegos-banner .banner-txt span{
+		margin-top:-10px;
+	}
+	.juegos-banner iframe{
+		height:auto;
+	}
+	.juegos-banner .dec-img {
+		display: block;
+    height: auto;
+    max-width: 100%;
+	}
 }

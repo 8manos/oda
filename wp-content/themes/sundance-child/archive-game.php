@@ -12,9 +12,23 @@
  * @since Sundance 1.0
  */
 
-get_header(); ?>
+get_header(); 
+
+$path=get_stylesheet_directory_uri();
+?>
 		<div class="juegos-banner text-center">
-			<div class="banner-txt"><span><?php echo __('Games', 'sundance'); ?></span></div>
+			<div class="banner-txt  container">
+				<div class="text-right col-lg-4 col-xs-4  rpad0">
+					<img class="dec-img" src="<?php echo $path;?>/img/juegos-title-left.png"/>	
+				</div>
+				<div class="col-lg-4 col-xs-4 lpad0">
+					<span><?php echo __('Games', 'sundance'); ?></span>
+				</div>
+				<div class="col-lg-4 col-xs-4 lpad0 text-left">
+					<img class="dec-img" src="<?php echo $path;?>/img/juegos-title-right.png"/>	
+				</div>
+			</div>
+				
 			<div class="container text-center">
 				<?php	/*if ( is_active_sidebar( 'gamessidebar' ) ) : ?>
 			   <div class="gamessidebar">
