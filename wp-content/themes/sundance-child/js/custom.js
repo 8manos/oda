@@ -66,6 +66,7 @@ jQuery(function($){
 	  var $li = $('.work-cat li').click(function() {
         $li.removeClass('active_cat');
         $(this).addClass('active_cat');
+				$('.all').removeClass('active_cat');
     });
 
 });

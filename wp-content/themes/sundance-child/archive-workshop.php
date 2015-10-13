@@ -26,7 +26,7 @@ get_header(); ?>
 			foreach($categories as $category){
 				echo '<li data-filter=".'.$category->slug.'">'.$category->name.'</li>';
 			}
-				echo '<li data-filter="*">' . __('All Previous', 'sundance') . "</li>";
+				echo '<li class="all" data-filter="*">' . __('All Previous', 'sundance') . "</li>";
 			?>
 
 			</ul>
