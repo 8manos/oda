@@ -31,11 +31,13 @@ get_header(); ?>
 		    while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
 					<div class="col-lg-4 grid-item " style="width:300px;">
 						<div  class="parq-box">
-							<a href="<?php the_permalink(); ?>">
+							<a  href="<?php the_permalink(); ?>">
 								<?php
 								if(get_video_thumbnail(get_the_ID() )!=""){
 									?>
-									<img class="img-responsive" src="<?php echo get_video_thumbnail(get_the_ID()); ?>" />
+										<img class="OverlayIcon" src="<?php echo get_stylesheet_directory_uri();?>/img/play-button.png"/>
+										<img class="img-responsive" src="<?php echo get_video_thumbnail(get_the_ID()); ?>" />
+								
 								<?php
 								}else{
 									the_post_thumbnail('full', array('class' => 'img-responsive parq-img'));

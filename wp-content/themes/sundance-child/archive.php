@@ -21,21 +21,22 @@ get_header(); ?>
 				
 		  <?php
 
-				$i=1; wp_count_posts();
+				$i=0; wp_count_posts();
 		   while ( have_posts() ) : the_post(); ?>
+		   
 					<div class="col-lg-4 grid-item " style="width:300px;">
 						<div  class="parq-box">
 							<a href="<?php the_permalink(); ?>">
 								<?php
 								if(get_video_thumbnail(get_the_ID() )!=""){
 									?>
+									<img class="OverlayIcon" src="<?php echo get_stylesheet_directory_uri();?>/img/play-button.png"/>
 									<img class="img-responsive" src="<?php echo get_video_thumbnail(get_the_ID()); ?>" />
 								<?php
 								}else{
 									the_post_thumbnail('full', array('class' => 'img-responsive parq-img'));
 								}
 								?>
-
 							</a>
 							<div class="parq-info">
 								<a href="<?php the_permalink(); ?>"><span class="parq-title"> <?php	the_title(); ?></span></a>
@@ -45,8 +46,9 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
+					
 					<?php
-					if( $i==3 || ( $i ==wp_count_posts() && wp_count_posts() < 3 ) ) { ?>
+					if( $i==1 || ( $i ==wp_count_posts() && wp_count_posts() < 2 ) ) { ?>
 						<div class="col-lg-4 grid-item " style="width:300px;">
 							<div class="catbox1">
 								<div class="indiv1">
