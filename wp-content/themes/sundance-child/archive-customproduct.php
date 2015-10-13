@@ -35,7 +35,15 @@ get_header(); ?>
 					                 	<div><?php echo __('DESCRIPCIÓN', 'sundance'); ?></div>
 					                 	<div> <?php the_content(); ?></div>
 												</div>
-												<?php echo do_shortcode("[contact-form-7 id='205' title='eco tienda form']"); ?>
+												<?php
+               $currentlang = get_bloginfo('language');
+              if($currentlang=="en-US"):
+              ?>
+           <div><?php echo do_shortcode("[contact-form-7 id='329' title='eco tienda form-en']"); ?></div>
+           <?php else: ?>
+           <div><?php echo do_shortcode("[contact-form-7 id='186' title='eco tienda form']"); ?></div>
+           <?php endif; ?>
+												
 											</div>
 										</div>
 									</div>

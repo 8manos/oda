@@ -46,12 +46,11 @@ get_header(); ?>
                $currentlang = get_bloginfo('language');
               if($currentlang=="en-US"):
               ?>
-           <?php echo do_shortcode("[contact-form-7 id='316' title='single post page_en']"); ?>
+           <?php echo do_shortcode("[contact-form-7 id='328' title='single post page_en']"); ?>
            <?php else: ?>
-           <?php echo do_shortcode("[contact-form-7 id='185' title='single post page']"); ?>
+           <?php echo do_shortcode("[contact-form-7 id='85' title='single post page']"); ?>
            <?php endif; ?>
-					
-		     
+				
 				</div>
 				<div class="col-lg-4 clearfix">
 					
