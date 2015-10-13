@@ -82,7 +82,16 @@ get_header(); ?>
 															<div class="pdf"><?php echo pdf_attachment_file(1,__("DOWNLOAD PDF SHEET",'sundance'));?></div>
 															<div class="wlink"><a href=""><?php echo __('WORKSHOP TO YOUR SCHOOL', 'sundance'); ?></a></div>
 															<div class="cimg"><?php echo __('You have <br>questions about the workshop?', 'sundance'); ?></div>
-															<div><?php echo do_shortcode("[contact-form-7 id='209; title='talleres popup']");?></div>
+
+															<?php
+               $currentlang = get_bloginfo('language');
+              if($currentlang=="en-US"):
+              ?>
+           <div><?php echo do_shortcode("[contact-form-7 id='315; title='talleres popup_en']");?></div>
+           <?php else: ?>
+           <div><?php echo do_shortcode("[contact-form-7 id='209; title='talleres popup']");?></div>
+           <?php endif; ?>
+															
 														</div>
 														<div class="col-lg-8">
 																<div class="main-title"> <?php the_title();?> </div>
