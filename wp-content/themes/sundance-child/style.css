@@ -76,7 +76,7 @@ hgroup{
 	min-height:450px;
 	padding:0px;
 }
-.home .site-footer{
+.home .site-footer , .page-template-events .site-footer{
  background:#DEFDB2 url('img/footerBg.png') bottom left repeat-x;
 }
 .clsHomeHead{
@@ -1112,7 +1112,22 @@ body .lpad0{
 	margin-bottom:0px;
 	font-size:50px;
 }
-.events-table tr , .events-table h1 {border-bottom:5px solid #fff;}
+.events-table tr , .events-table h1 {
+	border-bottom:5px solid #fff;
+}
+.events-foot{
+	background:rgba(0, 0, 0, 0) linear-gradient(to bottom, #9afedc 0%, #32fda9 100%) repeat scroll 0 0;
+}
+.events-hill{
+	height:300px;
+	border:0px solid black;
+	background:transparent url('img/hillsTop.png') bottom left repeat-x;
+}
+.events-bottom{
+	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #dbffd2 0%, #e0ffb4 100%) repeat scroll 0 0;
+    min-height: 400px;
+    padding: 100px 0;
+}
 .recmd .recmd-item{width:300px;}
 .archive{
 	background: #fbffe8 none repeat scroll 0 0;
