@@ -56,12 +56,17 @@ jQuery(function($){
   $('#source').on( 'click', 'li', function() {
 
     var filterValue = $( this ).attr('data-filter');
-		console.log(filterValue);
+	//	console.log(filterValue);
     // use filterFn if matches value
     //filterValue = filterFns[ filterValue ] || filterValue;
 		//Above line does not needed
     $container.isotope({ filter: filterValue });
   });
-
+	
+	  var $li = $('.work-cat li').click(function() {
+        $li.removeClass('active_cat');
+        $(this).addClass('active_cat');
+				$('.all').removeClass('active_cat');
+    });
 
 });
