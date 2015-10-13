@@ -14,9 +14,12 @@ get_header(); ?>
 		<?php
 				$images = get_attached_media('image', $post->ID);
 				foreach($images as $img) {
-				$img_src=wp_get_attachment_image_src($img->ID,'medium'); ?>
+				$img_src=wp_get_attachment_image_src($img->ID,'medium');
+				$vid_thumb=wp_get_attachment_image_src($img->ID,'full');
+					if($vid_thumb[0]!= get_video_thumbnail()) { ?>
 							<img  class="" src="<?php echo $img_src[0]; ?>" alt="" />
-				<?php
+				  <?php
+				  }
 				}
 		?>
 	</div>
