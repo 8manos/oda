@@ -21,10 +21,11 @@ get_header(); ?>
 				
 		  <?php
 
-				$i=0; wp_count_posts();
+				$i=1;
+				$cnt = $GLOBALS['wp_query']->post_count;
 		   while ( have_posts() ) : the_post(); ?>
-		   
-					<div class="col-lg-4 grid-item " style="width:300px;">
+					<!---This is POST <?php print_r ( $cnt); ?> -->
+					<div class="col-lg-4 grid-item " >
 						<div  class="parq-box">
 							<a href="<?php the_permalink(); ?>">
 								<?php
@@ -47,8 +48,9 @@ get_header(); ?>
 					</div>
 					
 					<?php
-					if( $i==1 || ( $i ==wp_count_posts() && wp_count_posts() < 2 ) ) { ?>
-						<div class="col-lg-4 grid-item " style="width:300px;">
+					if( $i==2 || ( $i == $cnt && $cnt < 3 ) ) { ?>
+						<!---This is Category -->
+						<div class="col-lg-4 grid-item " >
 							<div class="catbox1">
 								<div class="indiv1">
 									<p><?php echo __('NUEYSTROS PROJECTS', 'sundance'); ?></p>
@@ -66,7 +68,27 @@ get_header(); ?>
 					<?php }
 
 				$i++;
-				endwhile; ?>
+				endwhile;
+				//If there is not post for the category
+				if($cnt == 0){ ?>
+						<div class="col-lg-4 col-lg-offset-8  grid-item " >
+							<div class="catbox1">
+								<div class="indiv1">
+									<p><?php echo __('NUEYSTROS PROJECTS', 'sundance'); ?></p>
+									<ul class="list-unstyled">
+								<?php
+											$args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0);
+											$categories =get_categories( $args );
+											foreach($categories as $category){
+													echo '<li><a href="'.get_category_link( $category->term_id ).'">+&nbsp;'.$category->name.'</a></li>';
+											}?>
+									</ul>
+								</div>
+							</div>
+						</div>
+					<?php
+				}
+				?>
 			</div>
 			<div class="parq-btn text-center col-lg-12 clearfix">
 			<span><?php echo __('You want to make a donation?','sundance') ?></span>
