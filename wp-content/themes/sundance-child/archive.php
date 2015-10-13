@@ -30,6 +30,7 @@ get_header(); ?>
 								<?php
 								if(get_video_thumbnail(get_the_ID() )!=""){
 									?>
+									<img class="OverlayIcon" src="<?php echo get_stylesheet_directory_uri();?>/img/play-button.png"/>
 									<img class="img-responsive" src="<?php echo get_video_thumbnail(get_the_ID()); ?>" />
 								<?php
 								}else{
