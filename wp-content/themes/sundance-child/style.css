@@ -1140,6 +1140,50 @@ body .lpad0{
   margin: 0 auto;
 	top: 10%;
 }
+ .grid-item{
+	width:300px;
+}
+.secondary_menu{
+position:fixed;
+right:0;
+z-index:9999;
+margin-right: 90px;
+padding-top: 55px;
+}
+.secondary_menu ul{
+list-style-type:none;
+display:inline;
+font-family: "stabile-regular";
+font-size: 30px;
+}
+.secondary_menu ul li a{	
+color:#8A8481;
+}
+.join-page , .login-page{
+	margin:80px 0 40px ;
+}
+body .formErrorContent {
+    border: medium none;
+}
+.join-page .swpm-registration-widget-form table tr td label {
+	width:210px;
+}
+.join-page .swpm-registration-widget-form input[type="submit"]{
+	font-family: "stabile-regular";
+    font-size: 15px;
+    margin-left: 60px;
+}
+.join-page input[type="password"] , .join-page input{
+	margin-bottom:20px;
+}
+.swpm-registration-widget-form label , .swpm-login-widget-form label{
+font-family: "stabile-regular";
+font-size: 25px;
+	
+}
+.login-page .swpm-rember-label , .swpm-forgot-pass-link , .swpm-join-us-link{
+	font-family: "stabile-regular";
+}
 @media only screen and (max-width : 320px) {
 	.header1-image-link img{
 		width:120px;
@@ -1162,7 +1206,4 @@ body .lpad0{
     height: auto;
     max-width: 100%;
 	}
-}
- .grid-item{
-	width:300px;
 }

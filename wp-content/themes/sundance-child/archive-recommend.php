@@ -3,7 +3,7 @@
 
 get_header(); ?>
 		<div class="recmd-banner text-center">
-			<div class="banner-txt"><span><?php echo __('OSO', 'sundance'); ?></span><p><?php echo __('RECOMIENDA', 'sundance'); ?></p></div>
+			<div class="banner-txt"><span><?php echo __('BEAR', 'sundance'); ?></span><p><?php echo __('RECOMMENDATION', 'sundance'); ?></p></div>
 		</div>
 		<br/><br/>
 		<div class="container">
