@@ -99,8 +99,8 @@ function footer_sidebar_init() {
         'name' => __( 'Footer Section', 'sundance' ),
         'id' => 'footersidebar',
         'description' => __( 'Widgets in this area will be shown on all footer sections', 'sundance' ),
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</li>',
+        'before_widget' => '<div class="col-xs-12"><li id="%1$s" class="widget %2$s "">',
+				'after_widget'  => '</li></div>',
 				'before_title'  => '<h2 class="widgettitle">',
 				'after_title'   => '</h2>',
     ) );
