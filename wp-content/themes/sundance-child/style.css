@@ -1061,16 +1061,43 @@ margin-left: 15px;
 }
 div.masonary_flex {
   display: flex;
-	flex-wrap:wrap;
+	display: -webkit-flex; /* Safari */
+
+  -webkit-flex-direction: row; /* Safari */
+  flex-direction:         row;
+	
+	-webkit-flex-wrap: no-wrap; /* Safari */
+	flex-wrap:no-wrap;  /* This will allow multiple lines */
+
+  -webkit-justify-content: flex-start; /* Safari */
+  justify-content:        flex-start;
+	align-items:         flex-end;
+	align-content:         flex-end;
+	
 	margin:20px 0;
+  overflow:hidden;
+
 }
-@supports not (flex-wrap: wrap) {
+.masonary_flex div{
+}
+.masonary_flex img{
+	/* align-self:         stretch; */
+	
+	
+	
+}
+
+
+/*@supports not (flex-wrap: wrap) {
   div.masonary_flex { display: block; }
   div.masonary_flex img {
   display: inline-block;
   vertical-align: top;
+	position:absolute;
+	max-width: 100%;
+    max-height: 100%;
   }
-}
+}*/
 .game-img{
 	width:100%;
 }
