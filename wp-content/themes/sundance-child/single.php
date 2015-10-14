@@ -29,6 +29,7 @@ get_header(); ?>
 		<div class="col-lg-10 col-lg-offset-1">
 				<div class="col-lg-8">
 					<?php while (have_posts()) : the_post(); ?>
+					
 						<h1 class="sp-head"><?php the_title(); ?></h1>
 						<p class="sp-date"> <span><?php echo get_the_date(); ?></span></p>
 						<p class="sp-cat">
@@ -54,6 +55,7 @@ get_header(); ?>
            <?php endif; ?>
 				
 				</div>
+				<br>
 				<div class="col-lg-4 clearfix">
 					
 				<div class="catbox1">
