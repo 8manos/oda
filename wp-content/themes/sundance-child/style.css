@@ -1241,6 +1241,7 @@ font-size: 25px;
 		font-size: 66px;
 		height: 222px;
 	}
+	
 	.clearfix{margin: 0 0 0 -10px;}
 
 	.site-footer {
@@ -1267,16 +1268,21 @@ font-size: 25px;
 		padding-top: 53px;
 	}
 	.parq-btn span{
-			font-size: 18px;
+			font-size: 17px;
 			padding: 10px 15px 14px;
 			 margin-left: 24px;
 	}
+	
 
 .container {
     margin-left: -6px;
     margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.parques-banner .container {
+	padding-left: 0!important;
+    padding-right: 0 !important;
 }
 .container .sp-page{
 	 padding-left: -1;
@@ -1287,6 +1293,21 @@ font-size: 25px;
 	.catbox1{
 		margin-left:15px;
 	}
+.recmd-banner{
+		height: 260px;
+		padding-top: 46px;
+	}
+	.recmd-banner .banner-txt span{
+		background-size:70% 70%;
+		font-size: 66px;
+		height: 222px;
+	}
+.recmd-banner .banner-txt p{
+font-size: 66px;}
+
+
+
+	
 }
 
  .grid-item{

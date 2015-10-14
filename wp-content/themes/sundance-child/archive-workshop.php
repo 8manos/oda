@@ -77,7 +77,7 @@ get_header(); ?>
 													<img data-dismiss="modal" class="pull-right cls" src="<?php echo get_stylesheet_directory_uri(); ?>/img/taller_close.png">
 												</div>
 												<div class="clearfix">
-														<div class="col-lg-4 text-center">
+														<div class="col-lg-4 col-xs-12 text-center">
 															<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/taller_glass.png">
 															<div class="pdf"><?php echo pdf_attachment_file(1,__("DOWNLOAD PDF SHEET",'sundance'));?></div>
 															<div class="wlink"><a href=""><?php echo __('WORKSHOP TO YOUR SCHOOL', 'sundance'); ?></a></div>
@@ -93,7 +93,7 @@ get_header(); ?>
            <?php endif; ?>
 															
 														</div>
-														<div class="col-lg-8">
+														<div class="col-lg-8 col-xs-12">
 																<div class="main-title"> <?php the_title();?> </div>
 																<div class="work-descp"> <?php the_content();?> </div>
 														</div>
