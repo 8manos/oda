@@ -17,6 +17,7 @@ get_header(); ?>
 		<br/><br/>
 		<div class="container">
 			<div class="grid col-lg-offset-1 col-lg-10"> <!--style="border:1px solid red;">-->
+				<div class='row'>
 		  <?php
 				$args=array(
 					//'category__not_in' => $cid,
@@ -29,6 +30,24 @@ get_header(); ?>
 				$i=1 ; $my_query->found_posts;
 
 		    while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
+		    <?php
+					if( $i==1 ) { ?>
+						<div class="col-xs-12 grid-item visible-xs <?php echo $i;?>" >
+							<div class="catbox1">
+								<div class="indiv1">
+									<p><?php echo __('NUEYSTROS PROJECTS', 'sundance'); ?></p>
+									<ul class="list-unstyled">
+								<?php
+											$args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0);
+											$categories =get_categories( $args );
+											foreach($categories as $category){
+													echo '<li><a href="'.get_category_link( $category->term_id ).'">+&nbsp;'.$category->name.'</a></li>';
+											}?>
+									</ul>
+								</div>
+							</div>
+						</div>
+					<?php } ?>
 					<div class="col-lg-4 grid-item " >
 						<div  class="parq-box">
 							<a  href="<?php the_permalink(); ?>">
@@ -54,7 +73,7 @@ get_header(); ?>
 					</div>
 					<?php
 					if( $i==2 || ( $i == $my_query->found_posts &&  $my_query->found_posts < 3 ) ) { ?>
-						<div class="col-lg-4 grid-item <?php echo $i;?>" >
+						<div class="col-lg-4 grid-item visible-lg <?php echo $i;?>" >
 							<div class="catbox1">
 								<div class="indiv1">
 									<p><?php echo __('NUEYSTROS PROJECTS', 'sundance'); ?></p>
@@ -73,12 +92,13 @@ get_header(); ?>
 				
 				$i++;
 				endwhile; ?>
-			</div>
-			<div class="parq-btn text-center col-lg-12 clearfix">
-			<?php  $page_id     = get_queried_object_id();?>
-			<a href="<?php  echo get_post_meta($page_id, 'donation_link', true);?>">
-				<span><?php echo __('You want to make a donation?','sundance'); ?></span>
-			</a>
+				</div> <!--row -->
+			</div> <!-- col-lg-10 grid -->
+			<div class="parq-btn text-center col-lg-12 col-xs-12 clearfix">
+				<?php  $page_id     = get_queried_object_id();?>
+				<a href="<?php  echo get_post_meta($page_id, 'donation_link', true);?>">
+					<span><?php echo __('You want to make a donation?','sundance'); ?></span>
+				</a>
 			</div>
 		</div>
 <?php get_footer(); ?>
