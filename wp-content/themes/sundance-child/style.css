@@ -1225,8 +1225,24 @@ body .lpad0{
 	.parq-btn span{
 			font-size: 18px;
 			padding: 10px 15px 14px;
+			 margin-left: 24px;
 	}
 
+.container {
+    margin-left: -6px;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+.container .sp-page{
+	 padding-left: -1;
+}
+.sp-content iframe{
+		height:auto;
+	}
+	.catbox1{
+		margin-left:15px;
+	}
 }
 
 
