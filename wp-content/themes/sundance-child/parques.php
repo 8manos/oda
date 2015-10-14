@@ -16,6 +16,7 @@ get_header(); ?>
 		</div>
 		<br/><br/>
 		<div class="container">
+		 <div class="parq_container">
 			<div class="grid col-lg-offset-1 col-lg-10"> <!--style="border:1px solid red;">-->
 				<div class='row'>
 		  <?php
@@ -94,6 +95,7 @@ get_header(); ?>
 				endwhile; ?>
 				</div> <!--row -->
 			</div> <!-- col-lg-10 grid -->
+			</div>
 			<div class="parq-btn text-center col-lg-12 col-xs-12 clearfix">
 				<?php  $page_id     = get_queried_object_id();?>
 				<a href="<?php  echo get_post_meta($page_id, 'donation_link', true);?>">
