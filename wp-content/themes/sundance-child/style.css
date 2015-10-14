@@ -992,8 +992,6 @@ margin-left: 15px;
 	border:7px solid #535459;
 	outline:4px solid #00FDA6;
 	background: #00FDA6;
-	padding: 4px;
-	width: 270px;
 }
  .indiv1{
 	border:5px solid #fff;
@@ -1190,33 +1188,50 @@ body .lpad0{
 	}
 
 
-.talleres-banner{
-	height: 260px;
-  padding-top: 46px;
-}
-.talleres-banner .banner-txt{
-	background-size:70% 70%;
-	font-size: 66px;
-	height: 222px;
-}
-.clearfix{margin: 0 0 0 -10px;}
+	.talleres-banner{
+		height: 260px;
+		padding-top: 46px;
+	}
+	.talleres-banner .banner-txt{
+		background-size:70% 70%;
+		font-size: 66px;
+		height: 222px;
+	}
+	.clearfix{margin: 0 0 0 -10px;}
 
-.site-footer {
-	background-size:807% 127%;
+	.site-footer {
+		background-size:807% 127%;
+	}
+	.footersidebar{padding-top: 35px;}
+	.footersidebar #widget_sp_image-3,.footersidebar #widget_sp_image-2{
+		text-align:center;
+	}
+	.siteInfoFooter{padding: 0 0 30px;}
+	.siteinfo{padding-bottom: 0;
+			padding-left: 30px;}
+
+	.widget-text{margin: 0 0 10px;}
+
+	.parques-banner{
+		height: 260px;
+		padding-top: 46px;
+	}
+	.parques-banner .banner-txt{
+		background-size:70% 70%;
+		font-size: 66px;
+		height: 222px;
+		padding-top: 53px;
+	}
+	.parq-btn span{
+			font-size: 18px;
+			padding: 10px 15px 14px;
+	}
+
 }
-.footersidebar{padding-top: 35px;}
-.footersidebar #widget_sp_image-3,.footersidebar #widget_sp_image-2{
-	text-align:center;
-}
-.siteInfoFooter{padding: 0 0 30px;}
-.siteinfo{padding-bottom: 0;
-    padding-left: 30px;}
-
-.widget-text{margin: 0 0 10px;}
 
 
 
-}
+
 
 
 
