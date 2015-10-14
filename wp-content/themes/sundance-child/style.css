@@ -120,8 +120,7 @@ hgroup{
 	width:100%;
 
 }
-.footersidebar .widget_sp_image:nth-child(3){
-
+.footersidebar #widget_sp_image-3{
 	text-align:right;
 	padding-right:20px;
 }
