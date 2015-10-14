@@ -36,7 +36,7 @@ get_header(); ?>
 						<div class="col-xs-12 grid-item visible-xs <?php echo $i;?>" >
 							<div class="catbox1">
 								<div class="indiv1">
-									<p><?php echo __('NUEYSTROS PROJECTS', 'sundance'); ?></p>
+									<p><?php echo __('OUR PROJECTS', 'sundance'); ?></p>
 									<ul class="list-unstyled">
 								<?php
 											$args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0);
@@ -77,7 +77,7 @@ get_header(); ?>
 						<div class="col-lg-4 grid-item visible-lg <?php echo $i;?>" >
 							<div class="catbox1">
 								<div class="indiv1">
-									<p><?php echo __('NUEYSTROS PROJECTS', 'sundance'); ?></p>
+									<p><?php echo __('OUR PROJECTS', 'sundance'); ?></p>
 									<ul class="list-unstyled">
 								<?php
 											$args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0);
