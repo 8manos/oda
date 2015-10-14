@@ -48,7 +48,7 @@ get_header(); ?>
 						$_category_first = $c->slug ;
 					}
 				?>
-				<li class='col-lg-4 work-box col-sm-6 <?php echo $_category_first ;?>' >
+				<li class='col-lg-4 col-xs-12 work-box col-sm-6 <?php echo $_category_first ;?>' >
 							<div>
 								<div class="clearfix img-div"><?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
 									<div class="wrk-cap">
