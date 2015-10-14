@@ -17,7 +17,9 @@ get_header(); ?>
 				$img_src=wp_get_attachment_image_src($img->ID,'medium');
 				$vid_thumb=wp_get_attachment_image_src($img->ID,'full');
 					if($vid_thumb[0]!= get_video_thumbnail()) { ?>
+							<div>
 							<img  class="" src="<?php echo $img_src[0]; ?>" alt="" />
+							</div>
 				  <?php
 				  }
 				}
