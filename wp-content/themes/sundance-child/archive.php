@@ -17,7 +17,7 @@ get_header(); ?>
 			<div class="text-center archive-heading">
 				<?php echo single_cat_title( '', true );?>
 			</div>
-			<div class="grid col-lg-offset-1 col-lg-10"> 
+			<div class="grid parq_grid col-lg-offset-1 col-lg-10">
 				
 		  <?php
 
@@ -31,7 +31,6 @@ get_header(); ?>
 								<?php
 								if(get_video_thumbnail(get_the_ID() )!=""){
 									?>
-									<img class="OverlayIcon" src="<?php echo get_stylesheet_directory_uri();?>/img/play-button.png"/>
 									<img class="img-responsive" src="<?php echo get_video_thumbnail(get_the_ID()); ?>" />
 								<?php
 								}else{
@@ -72,7 +71,7 @@ get_header(); ?>
 				endwhile;
 				//If there is not post for the category
 				if($cnt == 0){ ?>
-						<div class="col-lg-4 col-lg-offset-8  grid-item " >
+						<div class="col-lg-4  grid-item " >
 							<div class="catbox1">
 								<div class="indiv1">
 									<p><?php echo __('NUEYSTROS PROJECTS', 'sundance'); ?></p>

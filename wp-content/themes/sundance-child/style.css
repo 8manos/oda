@@ -120,8 +120,7 @@ hgroup{
 	width:100%;
 
 }
-.footersidebar .widget_sp_image:nth-child(3){
-
+.footersidebar #widget_sp_image-3{
 	text-align:right;
 	padding-right:20px;
 }
@@ -993,8 +992,6 @@ margin-left: 15px;
 	border:7px solid #535459;
 	outline:4px solid #00FDA6;
 	background: #00FDA6;
-	padding: 4px;
-	width: 270px;
 }
  .indiv1{
 	border:5px solid #fff;
@@ -1061,16 +1058,43 @@ margin-left: 15px;
 }
 div.masonary_flex {
   display: flex;
-	flex-wrap:wrap;
+	display: -webkit-flex; /* Safari */
+
+  -webkit-flex-direction: row; /* Safari */
+  flex-direction:         row;
+	
+	-webkit-flex-wrap: no-wrap; /* Safari */
+	flex-wrap:no-wrap;  /* This will allow multiple lines */
+
+  -webkit-justify-content: flex-start; /* Safari */
+  justify-content:        flex-start;
+	align-items:         flex-end;
+	align-content:         flex-end;
+	
 	margin:20px 0;
+  overflow:hidden;
+
 }
-@supports not (flex-wrap: wrap) {
+.masonary_flex div{
+}
+.masonary_flex img{
+	/* align-self:         stretch; */
+	
+	
+	
+}
+
+
+/*@supports not (flex-wrap: wrap) {
   div.masonary_flex { display: block; }
   div.masonary_flex img {
   display: inline-block;
   vertical-align: top;
+	position:absolute;
+	max-width: 100%;
+    max-height: 100%;
   }
-}
+}*/
 .game-img{
 	width:100%;
 }
@@ -1206,4 +1230,65 @@ font-size: 25px;
     height: auto;
     max-width: 100%;
 	}
+
+
+	.talleres-banner{
+		height: 260px;
+		padding-top: 46px;
+	}
+	.talleres-banner .banner-txt{
+		background-size:70% 70%;
+		font-size: 66px;
+		height: 222px;
+	}
+	.clearfix{margin: 0 0 0 -10px;}
+
+	.site-footer {
+		background-size:807% 127%;
+	}
+	.footersidebar{padding-top: 35px;}
+	.footersidebar #widget_sp_image-3,.footersidebar #widget_sp_image-2{
+		text-align:center;
+	}
+	.siteInfoFooter{padding: 0 0 30px;}
+	.siteinfo{padding-bottom: 0;
+			padding-left: 30px;}
+
+	.widget-text{margin: 0 0 10px;}
+
+	.parques-banner{
+		height: 260px;
+		padding-top: 46px;
+	}
+	.parques-banner .banner-txt{
+		background-size:70% 70%;
+		font-size: 66px;
+		height: 222px;
+		padding-top: 53px;
+	}
+	.parq-btn span{
+			font-size: 18px;
+			padding: 10px 15px 14px;
+			 margin-left: 24px;
+	}
+
+.container {
+    margin-left: -6px;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+.container .sp-page{
+	 padding-left: -1;
+}
+.sp-content iframe{
+		height:auto;
+	}
+	.catbox1{
+		margin-left:15px;
+	}
+}
+
+ .grid-item{
+	width:300px;
 }

@@ -17,10 +17,22 @@ jQuery(function($){
 		}
 	})
 
+	if($('.grid').length){ //
+		//check screen resolution
+		if($(window).width() >= 768){ //XS
+			$('.grid-item.visible-xs',$('.grid')).remove();//destroy element
+		}
+	}
+	
 	$('.grid').masonry({
   // set itemSelector so .grid-sizer is not used in layout
-  itemSelector: '.grid-item',
-	 //columnWidth: 200,
+		itemSelector: '.grid-item',
+		containerStyle: {position:'relative'},
+		/*columnWidth: function( containerWidth ) {
+			console.log(containerWidth);
+			return containerWidth / 3;
+		}
+		*/
   // use element for option
   })
 
