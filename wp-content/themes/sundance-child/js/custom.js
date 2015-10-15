@@ -80,5 +80,15 @@ jQuery(function($){
 		$("#view_map , #view_act").fancybox({
 			
       });
-
+			
+			
+		$(".work-title").click(function(){
+			var id=$(this).attr("data-target");
+			window.location.hash = id;
+		})
+			
+		var modid=window.location.hash;
+		if(modid!=""){
+     $(modid).modal('show');
+		}
 });
