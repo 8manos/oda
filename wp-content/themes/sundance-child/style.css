@@ -108,6 +108,7 @@ hgroup{
 	text-align:justify;
 /* 	color:#00BFAA; */
 	color:#02966E;
+	font-family: apercu-regular,sans;
 }
 .widget,.site-footer {
 	border-top:0px;
@@ -315,7 +316,7 @@ hgroup{
 	font-family:'stabile-regular';
 	font-weight:500;
 	color:#F565BD;
-	text-align: center;
+	text-align: left;
 }
 .clsMapBtn, .clsActBtn{
 	color:white;
