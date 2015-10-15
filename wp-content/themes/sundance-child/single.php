@@ -6,10 +6,21 @@
  * @since Sundance 1.0
  */
 
-get_header(); ?>
-  <div class="parques-banner text-center">
-		<div class="banner-txt"><span><?php echo __('Parks', 'sundance'); ?></span></div>
-	</div>
+get_header(); 
+
+		
+		$p_type = get_post_type();
+    if($p_type == post){ ?>
+		<div class="parques-banner text-center">
+			<div class="banner-txt"><span><?php echo __('Parks', 'sundance'); ?></span></div>
+		</div>
+     <?php  }
+      else {  ?>
+      <div class="recmd-banner text-center">
+			<div class="banner-txt"><span><?php echo __('BEAR', 'sundance'); ?></span><p><?php echo __('RECOMMENDATION', 'sundance'); ?></p></div>
+		  </div>
+</span>
+	<?php } ?>
 	<div class="masonary_flex">
 		<?php
 				$images = get_attached_media('image', $post->ID);
@@ -38,6 +49,7 @@ get_header(); ?>
 										$cats[]='<a href="'.get_category_link( $cat_name->term_id ).'">'.$cat_name->name.'</a>';
 								}
 							echo __('THEMES : ', 'sundance');
+							if (is_array($cats))
 							echo implode(' / ',$cats);
 							?>
 						</p>
@@ -56,6 +68,9 @@ get_header(); ?>
 				
 				</div>
 				<br>
+				<?php
+				if($p_type == post){?>
+				
 				<div class="col-lg-4 clearfix">
 					
 				<div class="catbox1">
@@ -72,6 +87,28 @@ get_header(); ?>
 					</div>
 				</div>
 				</div>
+				
+				<?php } else { ?>
+				<div class="col-lg-4 recmd-item for-cat">
+							<div class="catbox">
+								<div class="indiv">
+									<p><?php echo __('TEMAS', 'sundance'); ?></p>
+									<ul class="list-unstyled">
+								<?php
+											$terms =get_terms('recomienda' );
+											foreach ( $terms as $term ) {
+												$term_link = get_term_link( $term );
+												if ( is_wp_error( $term_link ) ) {
+														continue;
+												}
+											  echo '<li><a href="' . esc_url( $term_link ) . '">+&nbsp;' . $term->name . '</a></li>';
+											} ?>
+									</ul>
+								</div>
+						</div>
+					</div>
+					<?php }?>
+				
 		</div>
 		<div class="clearfix row col-lg-12">
 		<br/>
