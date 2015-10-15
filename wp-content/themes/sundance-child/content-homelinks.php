@@ -28,7 +28,7 @@
 		while ( $the_query->have_posts() ) : $the_query->the_post();
 			//the_content();
 		?>
-			<div class='col-lg-4 linkBox'>
+			<div class='col-lg-4 col-sm-6 linkBox'>
 				<a href='<?php echo get_the_excerpt();?>'>
          <?php the_post_thumbnail('medium') ?>
         </a>
