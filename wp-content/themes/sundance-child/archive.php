@@ -8,11 +8,25 @@
  * @since Sundance 1.0
  */
 
-get_header(); ?>
-
+get_header();
+  $p_type =  get_post_type();
+  $p_tax= get_queried_object(); //This will give object for taxonomy 
+//	 print_r($p_tax);
+//	 die;
+   $taxonomy = $p_tax->taxonomy;
+   
+    if($taxonomy == 'category'){ ?>
 		<div class="parques-banner text-center">
 			<div class="banner-txt"><span><?php echo __('Parks', 'sundance'); ?></span></div>
 		</div>
+     <?php  }
+      else {  ?>
+      <div class="recmd-banner text-center">
+			<div class="banner-txt"><span><?php echo __('BEAR', 'sundance'); ?></span><p><?php echo __('RECOMMENDATION', 'sundance'); ?></p></div>
+		  </div>
+</span>
+	<?php } ?>
+
 		<div class="container">
 			<div class="text-center archive-heading">
 				<?php echo single_cat_title( '', true );?>
@@ -48,7 +62,9 @@ get_header(); ?>
 					</div>
 					
 					<?php
-					if( $i==2 || ( $i == $cnt && $cnt < 3 ) ) { ?>
+					if( $i==2 || ( $i == $cnt && $cnt < 3 ) ) {
+					if($taxonomy == 'category'){ ?>
+					
 						<!---This is Category -->
 						<div class="col-lg-4 grid-item " >
 							<div class="catbox1">
@@ -57,20 +73,43 @@ get_header(); ?>
 									<ul class="list-unstyled">
 								<?php
 											$args = array('exclude'=>$cid,'hide_empty' => FALSE,'parent' => 0);
-											$categories =get_categories( $args );
-											foreach($categories as $category){
-													echo '<li><a href="'.get_category_link( $category->term_id ).'">+&nbsp;'.$category->name.'</a></li>';
+											$categories = get_categories( $args );
+											foreach($categories as $p_tax){											
+													echo '<li><a href="'.get_category_link( $p_tax->term_id ).'">+&nbsp;'.$p_tax->name.'</a></li>';
 											}?>
 									</ul>
 								</div>
 							</div>
 						</div>
+						<?php } else { ?>
+				<div class="col-lg-4 recmd-item for-cat grid-item">
+							<div class="catbox">
+								<div class="indiv">
+									<p><?php echo __('TEMAS', 'sundance'); ?></p>
+									<ul class="list-unstyled">
+								<?php
+											$terms = get_terms('recomienda' );
+											foreach ( $terms as $term ) {
+												$term_link = get_term_link( $term );
+												/*
+												if ( is_wp_error( $term_link ) ) { // ???
+														continue;
+												}
+												*/
+											  echo '<li><a href="' . esc_url( $term_link ) . '">+&nbsp;' . $term->name . '</a></li>';
+											} ?>
+									</ul>
+								</div>
+						</div>
+					</div>
+					<?php }?>
 					<?php }
 
 				$i++;
 				endwhile;
 				//If there is not post for the category
-				if($cnt == 0){ ?>
+				if($cnt == 0){
+				if($taxonomy == 'category'){ ?>
 						<div class="col-lg-4  grid-item " >
 							<div class="catbox1">
 								<div class="indiv1">
@@ -86,6 +125,28 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
+						<?php } else { ?>
+				<div class="col-lg-4 recmd-item for-cat grid-item">
+							<div class="catbox">
+								<div class="indiv">
+									<p><?php echo __('Terms', 'sundance'); ?></p>
+									<ul class="list-unstyled">
+								<?php
+											$terms =get_terms('recomienda' );
+											foreach ( $terms as $term ) {
+												$term_link = get_term_link( $term );
+												/*
+												if ( is_wp_error( $term_link ) ) {
+														continue;
+												}
+												*/
+											  echo '<li><a href="' . esc_url( $term_link ) . '">+&nbsp;' . $term->name . '</a></li>';
+											} ?>
+									</ul>
+								</div>
+						</div>
+					</div>
+					<?php }?>
 					<?php
 				}
 				?>
