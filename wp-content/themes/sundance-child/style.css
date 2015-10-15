@@ -76,7 +76,7 @@ hgroup{
 	min-height:450px;
 	padding:0px;
 }
-.home .site-footer , .page-template-events .site-footer{
+.home .site-footer , .page-template-default .site-footer{
  background:#DEFDB2 url('img/footerBg.png') bottom left repeat-x;
 }
 .clsHomeHead{
@@ -933,14 +933,14 @@ body .ecotinda .eco-text input[type="text"]{
 .catbox ul{
 margin-left: 15px;
 }
- .home #huge_it_slideshow_left_2 , .page-template-events  #huge_it_slideshow_left_2 {
+ .home #huge_it_slideshow_left_2  {
 	 background:transparent url('img/left-slider-arrow.svg') no-repeat;
 	 height: 74px;
     left: 0;
     margin-top: -24px;
     width: 86px;
  }
- .home #huge_it_slideshow_right_2  , .page-template-events #huge_it_slideshow_right_2{
+ .home #huge_it_slideshow_right_2  {
 	 background:transparent url('img/right-slider-arrow.svg') no-repeat;
 	 height: 75px;
     margin-top: -24px;
@@ -1112,7 +1112,9 @@ body .lpad0{
 .single-post{
 	background: #fbffe8 none repeat scroll 0 0;
 }
-
+.events-page .ban-image{
+	width:100%;
+}
 .events-middle{
 	background-color:#9DFEDB;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9afedc+0,32fda9+100 */
@@ -1151,6 +1153,18 @@ body .lpad0{
 	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #dbffd2 0%, #e0ffb4 100%) repeat scroll 0 0;
     min-height: 400px;
     padding: 100px 0;
+}
+.event-abt-title{
+	 color: #01b9a5;
+    font-family: "stabile-regular";
+    font-size: 55px;
+    padding: 0 100px;
+}
+.event-abtus{
+	color: #02966e;
+    font-size: 20px;
+    padding: 0 100px;
+    text-align: justify;
 }
 .recmd .recmd-item{width:300px;}
 .archive{
