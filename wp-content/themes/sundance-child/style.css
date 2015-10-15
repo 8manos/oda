@@ -1224,6 +1224,10 @@ font-size: 25px;
 .login-page .swpm-rember-label , .swpm-forgot-pass-link , .swpm-join-us-link{
 	font-family: "stabile-regular";
 }
+.grid-item{
+	width:300px;
+}
+
 @media only screen and (max-width : 320px) {
 	.header1-image-link img{
 		width:120px;
@@ -1290,16 +1294,19 @@ font-size: 25px;
 	}
 	
 
-.container {
+.workshops .container {
     margin-left: -6px;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
 }
-.parques-banner .container {
-	padding-left: 0!important;
-    padding-right: 0 !important;
+.page-template-parques .container, .post-type-archive-recommend .container {
+    margin-left: -6px;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 15px;
 }
+
 .container .sp-page{
 	 padding-left: -1;
 }
@@ -1366,8 +1373,58 @@ font-size: 25px;
 .recmd-banner .banner-txt p{
 font-size: 66px;}
  .menuPanel .menu-item{font-size: 51%;}
+
+ .eco-banner{
+		height: 260px;
+		padding-top: 0;
+	}
+	.eco-banner .banner-txt{background-size:80% 80%;}
+	.eco-banner .banner-txt span{
+		font-size: 64px;
+		height: 222px;
+	}
+ .eco-banner .banner-txt p{
+ font-size: 78px;
+    padding-top: 13px;
+ }
+	.sub-homelink-title {
+    font-size: 23px;}
+
+  .homepage .row{
+		margin-left: -20px;
+	}
+	.clsHomeHead .entry-title {
+    font-size: 38px;
+    padding: 0 10px;
+}
+.clsHomeBody {
+    font-size: 17px;
+    padding: 0 49px;}
+   
+.clsHomeMiddle {padding: 0px 0px;}
+.clsLinkSecfooter {height:34px;}
+
+}
+@media only screen and (max-width : 768px) and (min-width : 321px) {
+	.site-footer {
+		background-size:807% 127%;
+	}
+	.footersidebar{padding-top: 35px;}
+	.footersidebar #widget_sp_image-3,.footersidebar #widget_sp_image-2{
+		text-align:center;
+		padding-right: 110px;
+		padding-left: 73px;
+	}
+	.footersidebar .widget {
+		text-align:center;
+		padding-left: 40px;
+	}
+
+	.siteInfoFooter {
+    padding: 0 130px 30px 0;
+    }
+	
+	
 }
 
- .grid-item{
-	width:300px;
-}
+
