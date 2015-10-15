@@ -307,16 +307,17 @@ hgroup{
 	margin-top:30px;
 }
 .clsFestPage2{
-	background:#47FDBE url('img/festival-page2.png') top left no-repeat;
-	height:1346px;
+	background:#47FDBE url('img/festival-page2.png') center center no-repeat;
+	height:1500px;
 	padding-top:106px;
+	background-size: 100% auto;
 }
 .clsMapHead{
 	font-size:60px;
 	font-family:'stabile-regular';
 	font-weight:500;
 	color:#F565BD;
-	text-align: left;
+/* 	text-align: left; */
 }
 .clsMapBtn, .clsActBtn{
 	color:white;
@@ -341,7 +342,7 @@ hgroup{
 	width:223px;
 	height:110px;
 	padding-top:10px;
-	margin-top:750px;
+	margin-top:860px;
 }
 .clsActBtn:hover, .clsActBtn:active, .clsMapBtn:hover, .clsMapBtn:active{
 	text-decoration:none;

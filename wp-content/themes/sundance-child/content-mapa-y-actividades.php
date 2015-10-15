@@ -25,7 +25,7 @@ $path = get_stylesheet_directory_uri() ;
 			</div>
 			<span class='clsDecoFont'></span>
 		</div>
-		<div class="col-lg-2 col-lg-offset-2 clsMapPageDesc">
+		<div class="col-lg-2 col-lg-offset-3 clsMapPageDesc">
 			<?php
 				$link2 = get_post_meta ( $post->ID , 'link_actividadas',true);
 			?>
