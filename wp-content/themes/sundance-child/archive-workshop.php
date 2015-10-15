@@ -63,12 +63,13 @@ get_header(); ?>
 										if(count($_category)){
 											echo implode($_category);
 										}
-
+										$post = get_post($post_id);
+										//echo " --- " . $post->post_name;
 									?>
 									</span>
-									<h3 class="work-title"  data-toggle="modal" data-target="#talleresModal<?php echo $i; ?>"><?php the_title();?> </h3>
+									<h3 class="work-title"  data-toggle="modal" data-target="#<?php echo $post->post_name; ?>"><?php the_title();?> </h3>
 								</div>
-								<div class="modal fade" id="talleresModal<?php echo $i; ?>" role="dialog">
+								<div class="modal fade" id="<?php echo $post->post_name; ?>" role="dialog">
 						      <div class="modal-dialog modal-lg">
 									  <div class="modal-content">
 										  <div class="modal-body">
@@ -84,6 +85,7 @@ get_header(); ?>
 															<div class="cimg"><?php echo __('You have <br>questions about the workshop?', 'sundance'); ?></div>
 
 															<?php
+															//echo $c->slug;
                $currentlang = get_bloginfo('language');
               if($currentlang=="en-US"):
               ?>
