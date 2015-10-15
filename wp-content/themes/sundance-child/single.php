@@ -12,15 +12,15 @@ get_header();
 		$p_type = get_post_type();
     if($p_type == post){ ?>
 		<div class="parques-banner text-center">
-			<div class="banner-txt"><span><?php echo __('Parks', 'sundance'); ?></span></div>
+			<div class="banner-txt"><span><?php echo __('Parks', 'sundance');  echo  get_post_type(); ?></span></div>
 		</div>
      <?php  }
       else {  ?>
       <div class="recmd-banner text-center">
-			<div class="banner-txt"><span><?php echo __('BEAR', 'sundance'); ?></span><p><?php echo __('RECOMMENDATION', 'sundance'); ?></p></div>
+			<div class="banner-txt"><span><?php echo __('BEAR', 'sundance'); ?></span><p><?php echo __('RECOMMENDATION', 'sundance');echo  get_post_type(); ?></p></div>
 		  </div>
 </span>
-	<?php } ?>
+	<?php }?>
 	<div class="masonary_flex">
 		<?php
 				$images = get_attached_media('image', $post->ID);
