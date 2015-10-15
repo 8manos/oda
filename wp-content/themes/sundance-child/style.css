@@ -280,12 +280,12 @@ hgroup{
     margin-top: 25px;
 }
 .page1 .mimg{
-	background:url('img/festival-page1-middle.png') ;
+	background:url('img/festival-page1-middle.png') no-repeat;
 	background-size:cover;
 	height: 538px;
 }
 .page1 .bimg{
-	  background:url('img/festival-page1-bottom.png') ;
+	  background:url('img/festival-page1-bottom.png') no-repeat ;
 		background-size:cover;
 		height:226px;
 }
@@ -1325,6 +1325,51 @@ font-size: 25px;
 		font-size: 66px;
 		height: 222px;
 	}
+ .recmd-banner .banner-txt p{
+  font-size: 66px;
+ }
+ .fes-vid{
+	 margin-left: 10.667%;
+}
+ .fes-vid iframe{
+	 height:auto;
+ }	
+ .timg{
+	padding-top:40px; 
+ }
+ .page1 .mimg{
+	background-size:100% auto;
+	height:auto;
+ }	
+ .page1 .bimg{
+	background-size:100% auto;
+	height:60px;
+	margin-top:-5px;
+ }		
+.page1 .himg{
+	width:50px;
+}	
+.clsxs{
+	background-color:#00CA86;
+}
+.clsFestMenu ul{
+	margin:0px;
+	padding-left:15px;
+}
+.clsPageHead{
+	font-size:50px;
+	padding:60px 0;
+}
+.clsFirstPageDesc{
+	padding:0 15px 0 30px;
+}
+.mapFont{
+	font-size:10px;
+}
+.clsFestPage2{
+	height:auto;
+	padding-top:0px;
+}
 .recmd-banner .banner-txt p{
 font-size: 66px;}
  .menuPanel .menu-item{font-size: 51%;}
@@ -1358,9 +1403,6 @@ font-size: 66px;}
 		text-align:center;
 		padding-left: 40px;
 	}
-	/*.siteInfoFooter{padding: 0 0 30px;}
-	.siteinfo{padding-bottom: 0;
-			padding-left: 30px;}*/
 
 	.siteInfoFooter {
     padding: 0 130px 30px 0;
