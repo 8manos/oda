@@ -12,11 +12,11 @@ $path = get_stylesheet_directory_uri() ;
 	</div> <!-- row -->
 
 	<div class='row'>
-		<div class='col-lg-2 col-lg-offset-2'>
+		<div class='col-lg-2 col-lg-offset-2 col-xs-4 col-xs-offset-1'>
 			<?php
-				$link1= get_post_meta ( $post1->ID , 'link_mapa');
+				$link1= get_post_meta ( $post->ID , 'link_mapa',true);
 			?>
-			<a class='clsMapBtn' href='<?php echo $link1 ; ?>'>
+			<a id="view_map" class='clsMapBtn' href='<?php echo $link1 ; ?>'>
 				<?php echo __( 'View Map', 'sundance' ); ?>
 			</a>
 			<span class='clsDecoFont'></span>
@@ -25,15 +25,15 @@ $path = get_stylesheet_directory_uri() ;
 			</div>
 			<span class='clsDecoFont'></span>
 		</div>
-		<div class="col-lg-2 col-lg-offset-2 clsMapPageDesc">
+		<div class="col-lg-2 col-lg-offset-3 clsMapPageDesc col-xs-4 col-xs-offset-3">
 			<?php
-				$link2 = get_post_meta ( $post1->ID , 'link_actividadas');
+				$link2 = get_post_meta ( $post->ID , 'link_actividadas',true);
 			?>
-			<a class='clsActBtn' href='<?php echo $link2 ?>'>
+			<a id="view_act" class='clsActBtn' href='<?php echo $link2 ?>'>
 				<?php echo __( 'View Activities', 'sundance' ); ?>
 			</a>
 		</div>
-		<div class='col-lg-4'></div>
+		<div class='col-lg-4 hidden-xs'></div>
 	</div>
 
 </article><!-- #post-<?php the_ID(); ?> -->

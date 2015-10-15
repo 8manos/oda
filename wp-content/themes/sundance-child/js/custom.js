@@ -24,22 +24,18 @@ jQuery(function($){
 		}
 	}
 	
-	$('.grid').masonry({
-  // set itemSelector so .grid-sizer is not used in layout
-		itemSelector: '.grid-item',
-		containerStyle: {position:'relative'},
-		/*columnWidth: function( containerWidth ) {
-			console.log(containerWidth);
-			return containerWidth / 3;
-		}
-		*/
-  // use element for option
-  })
 
-	$('.recmd').masonry({
-  // set itemSelector so .grid-sizer is not used in layout
-  itemSelector: '.recmd-item',
-   })
+	
+	var posts = document.querySelectorAll('.grid, .recmd');
+	imagesLoaded( posts, function() {
+				$('.grid , .recmd').masonry({
+				itemSelector: '.grid-item , .recmd-item',
+				containerStyle: {position:'relative'},
+		})
+  });
+	
+	
+	
 			var fan=$(".fancybox").fancybox({
 					openEffect	: 'none',
 					closeEffect	: 'none'
@@ -80,5 +76,9 @@ jQuery(function($){
         $(this).addClass('active_cat');
 				$('.all').removeClass('active_cat');
     });
+		
+		$("#view_map , #view_act").fancybox({
+			
+      });
 
 });

@@ -15,7 +15,7 @@ $path = get_stylesheet_directory_uri() ;
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sundance' ) ); ?>
 		</div>
 		<div class='col-xs-4'>
-			<div class='tinybear'>
+			<div class='tinybear hidden-xs'>
 			<?php
 			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 				the_post_thumbnail('full');
