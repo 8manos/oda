@@ -1387,9 +1387,25 @@ font-size: 66px;}
  font-size: 78px;
     padding-top: 13px;
  }
-	
+	.sub-homelink-title {
+    font-size: 23px;}
+
+  .homepage .row{
+		margin-left: -20px;
+	}
+	.clsHomeHead .entry-title {
+    font-size: 38px;
+    padding: 0 10px;
 }
-@media only screen and (max-width : 768px) {
+.clsHomeBody {
+    font-size: 17px;
+    padding: 0 49px;}
+   
+.clsHomeMiddle {padding: 0px 0px;}
+.clsLinkSecfooter {height:34px;}
+
+}
+@media only screen and (max-width : 768px) and (min-width : 321px) {
 	.site-footer {
 		background-size:807% 127%;
 	}
