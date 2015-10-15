@@ -12,7 +12,7 @@ $path = get_stylesheet_directory_uri() ;
 	</div> <!-- row -->
 
 	<div class='row'>
-		<div class='col-lg-2 col-lg-offset-2'>
+		<div class='col-lg-2 col-lg-offset-2 col-xs-4 col-xs-offset-1'>
 			<?php
 				$link1= get_post_meta ( $post->ID , 'link_mapa',true);
 			?>
@@ -25,7 +25,7 @@ $path = get_stylesheet_directory_uri() ;
 			</div>
 			<span class='clsDecoFont'></span>
 		</div>
-		<div class="col-lg-2 col-lg-offset-3 clsMapPageDesc">
+		<div class="col-lg-2 col-lg-offset-3 clsMapPageDesc col-xs-4 col-xs-offset-3">
 			<?php
 				$link2 = get_post_meta ( $post->ID , 'link_actividadas',true);
 			?>
@@ -33,7 +33,7 @@ $path = get_stylesheet_directory_uri() ;
 				<?php echo __( 'View Activities', 'sundance' ); ?>
 			</a>
 		</div>
-		<div class='col-lg-4'></div>
+		<div class='col-lg-4 hidden-xs'></div>
 	</div>
 
 </article><!-- #post-<?php the_ID(); ?> -->
