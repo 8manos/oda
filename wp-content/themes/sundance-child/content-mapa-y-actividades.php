@@ -14,9 +14,9 @@ $path = get_stylesheet_directory_uri() ;
 	<div class='row'>
 		<div class='col-lg-2 col-lg-offset-2'>
 			<?php
-				$link1= get_post_meta ( $post1->ID , 'link_mapa');
+				$link1= get_post_meta ( $post->ID , 'link_mapa',true);
 			?>
-			<a class='clsMapBtn' href='<?php echo $link1 ; ?>'>
+			<a id="view_map" class='clsMapBtn' href='<?php echo $link1 ; ?>'>
 				<?php echo __( 'View Map', 'sundance' ); ?>
 			</a>
 			<span class='clsDecoFont'></span>
@@ -27,9 +27,9 @@ $path = get_stylesheet_directory_uri() ;
 		</div>
 		<div class="col-lg-2 col-lg-offset-2 clsMapPageDesc">
 			<?php
-				$link2 = get_post_meta ( $post1->ID , 'link_actividadas');
+				$link2 = get_post_meta ( $post->ID , 'link_actividadas',true);
 			?>
-			<a class='clsActBtn' href='<?php echo $link2 ?>'>
+			<a id="view_act" class='clsActBtn' href='<?php echo $link2 ?>'>
 				<?php echo __( 'View Activities', 'sundance' ); ?>
 			</a>
 		</div>

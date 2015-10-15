@@ -76,5 +76,9 @@ jQuery(function($){
         $(this).addClass('active_cat');
 				$('.all').removeClass('active_cat');
     });
+		
+		$("#view_map , #view_act").fancybox({
+			
+      });
 
 });
