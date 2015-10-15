@@ -11,7 +11,7 @@ get_header(); ?>
 				<?php
 				$i=0;
 				while ( have_posts() ) : the_post(); ?>
-					<div class="col-lg-4 prod-box">
+					<div class="col-lg-4 col-sm-6 prod-box">
 						<div class="prod-img text-center" data-toggle="modal" data-target="#ecoModal<?php echo $i; ?>">
 						  <?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?>
 						</div>
