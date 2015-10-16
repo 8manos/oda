@@ -280,12 +280,12 @@ hgroup{
     margin-top: 25px;
 }
 .page1 .mimg{
-	background:url('img/festival-page1-middle.png') no-repeat;
+	background:url('img/festival-page1-middle.png') center center no-repeat;
 	background-size:cover;
 	height: 538px;
 }
 .page1 .bimg{
-	  background:url('img/festival-page1-bottom.png') no-repeat ;
+	  background:url('img/festival-page1-bottom.png') center center no-repeat ;
 		background-size:cover;
 		height:226px;
 }
@@ -1470,6 +1470,21 @@ font-size: 66px;}
   .mapFont{
 		font-size: 25px;
     padding: 0 25px;
+	}
+	.himg{
+	width: 150px;
+	}
+	.fes-vid{text-align:left;}
+	.fes-vid iframe{ width:500px;
+	height:280px;
+	}
+	.page1 .mimg 	{
+		background-size:100% auto;
+		height:290px;
+	}
+	.page1 .bimg {
+		background-size:100% auto;
+		height:122px;
 	}
 }
 

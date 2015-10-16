@@ -14,7 +14,7 @@ $path = get_stylesheet_directory_uri() ;
 			<div class="timg"> <img src='<?php echo $path ?>/img/festival-page1-top.png' class='img-responsive' /></div>
 			<div class="text-center mimg">
 				<div class=" clsxs">
-					<div class="col-lg-8 fes-vid">
+					<div class="col-lg-8 col-sm-8 fes-vid">
 							<img src='<?php echo $path ?>/img/bear-hand.png' class='himg' />
 						<?php while ( have_posts() ) : the_post(); 
 						remove_filter ('the_content',  'wpautop'); 
@@ -23,7 +23,7 @@ $path = get_stylesheet_directory_uri() ;
 							wp_reset_query(); 
 					?>
 					</div>
-					<div class="col-lg-2 hidden-xs">
+					<div class="col-lg-2 col-sm-2 hidden-xs">
 					<img class='sbear img-responsive' src='<?php echo $path ?>/img/small-bear.png'  />
 					</div>
 				</div>
