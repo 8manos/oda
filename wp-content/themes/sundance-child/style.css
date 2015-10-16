@@ -1425,6 +1425,9 @@ font-size: 66px;}
     margin-top: 167px;
     width: 100%;
   }
+  .clsFestPage3 .clsForm input[type="text"], .clsFestPage3 .clsForm input[type="email"], .clsFestPage3 .clsForm textarea{
+		background-size:100% auto;
+	}
 }
 @media only screen and (max-width : 768px) and (min-width : 321px) {
 	.site-footer {
