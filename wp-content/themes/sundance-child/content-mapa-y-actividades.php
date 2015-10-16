@@ -19,13 +19,13 @@ $path = get_stylesheet_directory_uri() ;
 			<a id="view_map" class='clsMapBtn' href='<?php echo $link1 ; ?>'>
 				<?php echo __( 'View Map', 'sundance' ); ?>
 			</a>
-			<span class='clsDecoFont'></span>
+			<span class='clsDecoFont hidden-xs'></span>
 			<div class='mapFont'>
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sundance' ) ); ?>
 			</div>
-			<span class='clsDecoFont'></span>
+			<span class='clsDecoFont hidden-xs'></span>
 		</div>
-		<div class="col-lg-2 col-lg-offset-3 clsMapPageDesc col-xs-4 col-xs-offset-3">
+		<div class="col-lg-2 col-lg-offset-3 clsMapPageDesc col-xs-5 col-xs-offset-0">
 			<?php
 				$link2 = get_post_meta ( $post->ID , 'link_actividadas',true);
 			?>

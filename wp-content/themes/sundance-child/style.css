@@ -1334,9 +1334,6 @@ font-size: 25px;
  .fes-vid iframe{
 	 height:auto;
  }	
- .timg{
-	padding-top:40px; 
- }
  .page1 .mimg{
 	background-size:100% auto;
 	height:auto;
@@ -1362,12 +1359,14 @@ font-size: 25px;
 }
 .clsFirstPageDesc{
 	padding:0 15px 0 30px;
+	font-size:17px;
 }
 .mapFont{
 	font-size:10px;
+	padding-left: 15px;
 }
 .clsFestPage2{
-	height:auto;
+	height:310px;
 	padding-top:0px;
 }
 .recmd-banner .banner-txt p{
@@ -1406,7 +1405,27 @@ font-size: 66px;}
 
 .clsFestPage3 .clsMapHead {
         font-size: 48px;
-    }
+  }
+  .clsFestPage2 .clsMapHead {
+		font-size:30px;
+	}
+	.clsMapBtn
+	{ background-size: 80px 37px;
+    height: 40px;
+		width: 80px;
+		  margin-top: 17px;
+	}
+    .clsMapBtn, .clsActBtn{
+			font-size:20px;
+			padding:0;
+		}
+		.clsActBtn {
+    background-size: 100% 35px;
+    height: 40px;
+    margin-top: 167px;
+    width: 100%;
+  }
+}
 @media only screen and (max-width : 768px) and (min-width : 321px) {
 	.site-footer {
 		background-size:807% 127%;
