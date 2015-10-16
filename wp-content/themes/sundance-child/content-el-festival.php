@@ -5,13 +5,13 @@ $path = get_stylesheet_directory_uri() ;
 <article id="post-<?php the_ID(); ?>" class='clsFestPage1'>
 
 	<div class='row'>
-		<div class='col-lg-4 text-right hidden-xs'>
+		<div class='col-lg-4 text-right hidden-sm hidden-xs'>
 			<img src='<?php echo $path ; ?>/img/people-moutain.png' class='imgMPple' />
 		</div>
-		<div class='col-lg-4 col-xs-12 text-center clsPageHead'>
+		<div class='col-lg-4 col-xs-12  col-sm-12 text-center clsPageHead'>
 				<?php the_title(); ?>
 		</div>
-		<div class='col-lg-4 hidden-xs'>
+		<div class='col-lg-4 hidden-xs  hidden-sm'>
 			<img src='<?php echo $path ; ?>/img/people-moutain.png ' class='imgMPple reverseImg' />
 		</div>
 

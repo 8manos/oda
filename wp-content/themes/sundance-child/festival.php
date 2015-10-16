@@ -36,7 +36,7 @@ $path = get_stylesheet_directory_uri() ;
      
 		 
 		<div class='clearfix clsFestMenu'>
-			<div class='col-lg-10 col-lg-offset-1' >
+			<div class='col-lg-10 col-lg-offset-1 col-sm-12' >
 				<ul class=' nav nav-justified'>
 				<?php
 				//Creating menu

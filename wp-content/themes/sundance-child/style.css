@@ -1440,25 +1440,37 @@ font-size: 66px;}
 	}
 }
 @media only screen and (max-width : 768px) and (min-width : 321px) {
-	.site-footer {
-		background-size:807% 127%;
+	.clsFestMenu{
+		font-size: 25px;
 	}
-	.footersidebar{padding-top: 35px;}
-	.footersidebar #widget_sp_image-3,.footersidebar #widget_sp_image-2{
-		text-align:center;
-		padding-right: 110px;
-		padding-left: 73px;
+	.clsFestMenu ul{margin:0px;}
+	.clsFestPage2{
+		height:810px;
+		padding-top:55px;
 	}
-	.footersidebar .widget {
-		text-align:center;
-		padding-left: 40px;
+	.clsActBtn{
+		background-size: 200px 58px;
+    height: 60px;
+    margin-top: 455px;
+    padding-top: 0;
+    width: 200px;
 	}
-
-	.siteInfoFooter {
-    padding: 0 130px 30px 0;
-    }
-	
-	
+	.clsFestPage2 .clsMapHead {
+		font-size:45px;
+	}
+	.clsMapBtn, .clsActBtn{
+		font-size:30px;
+	}
+	.clsMapBtn{ background-size: 130px 50px;
+    height: 70px;
+    margin-top: 50px;
+    width: 130px;
+		margin-left:25%;
+  }
+  .mapFont{
+		font-size: 25px;
+    padding: 0 25px;
+	}
 }
 
 
