@@ -12,12 +12,12 @@ get_header();
 		$p_type = get_post_type();
     if($p_type == post){ ?>
 		<div class="parques-banner text-center">
-			<div class="banner-txt"><span><?php echo __('Parks', 'sundance');  echo  get_post_type(); ?></span></div>
+			<div class="banner-txt"><span><?php echo __('Parks', 'sundance'); ?></span></div>
 		</div>
      <?php  }
       else {  ?>
       <div class="recmd-banner text-center">
-			<div class="banner-txt"><span><?php echo __('BEAR', 'sundance'); ?></span><p><?php echo __('RECOMMENDATION', 'sundance');echo  get_post_type(); ?></p></div>
+			<div class="banner-txt"><span><?php echo __('BEAR', 'sundance'); ?></span><p><?php echo __('RECOMMENDATION', 'sundance'); ?></p></div>
 		  </div>
 </span>
 	<?php }?>
@@ -38,7 +38,7 @@ get_header();
 	</div>
 	<div class="container sp-page">
 		<div class="col-lg-10 col-lg-offset-1">
-				<div class="col-lg-8">
+				<div class="col-lg-8 col-sm-7">
 					<?php while (have_posts()) : the_post(); ?>
 					
 						<h1 class="sp-head"><?php the_title(); ?></h1>
@@ -71,7 +71,7 @@ get_header();
 				<?php
 				if($p_type == post){?>
 				
-				<div class="col-lg-4 clearfix">
+				<div class="col-lg-4 col-sm-5 clearfix">
 					
 				<div class="catbox1">
 					<div class="indiv1">
@@ -89,7 +89,7 @@ get_header();
 				</div>
 				
 				<?php } else { ?>
-				<div class="col-lg-4 recmd-item for-cat">
+				<div class="col-lg-4 col-sm-5 recmd-item for-cat">
 							<div class="catbox">
 								<div class="indiv">
 									<p><?php echo __('TEMAS', 'sundance'); ?></p>
