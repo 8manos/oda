@@ -91,4 +91,25 @@ jQuery(function($){
 		if(modid!=""){
      $(modid).modal('show');
 		}
+		
+		$('.prod-box').each(function(i){
+					$(".wpcf7-form .btn-size",$(this)).remove();
+					//$(".wpcf7-form .pleft",$(this)).append("<div>Tallas</div>");
+					$that = $(this) ;
+					
+		   //console.log(prod_sizes);
+					$(".p_size",$that).each(function(i){
+							$obj = $('<input>') // Create element on the fly 
+								.attr("name","size")
+								.attr("type","radio")
+								.attr("value",$(this).val())
+							$div = $("<div>").append($obj).append(" " + $(this).val());
+							$(".wpcf7-form .pleft",$that).append($div);
+					})
+					
+					
+					
+			 
+		})
+
 });

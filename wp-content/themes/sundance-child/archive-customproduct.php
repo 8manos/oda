@@ -26,6 +26,15 @@ get_header(); ?>
 											  <div class="col-lg-12 head row"><?php echo __('CANASTO DE COMPRA', 'sundance'); ?>
 												  <img src="<?php echo get_stylesheet_directory_uri();?>/img/modal-close.png" data-dismiss="modal" class="pull-right">
 												</div>
+												
+														<?php
+													unset($_category);
+													$post_categories = get_the_terms( get_the_ID(),'product_size' );
+													if($post_categories!=""){
+													foreach($post_categories as $c){
+														 echo '<input class="p_size" type="hidden" value='. $c->name .' >';
+													} 
+													}?>
 												<div class="col-lg-4 pimg">
 												  <?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?>
 												</div>
@@ -39,7 +48,7 @@ get_header(); ?>
                $currentlang = get_bloginfo('language');
               if($currentlang=="en-US"):
               ?>
-           <div><?php echo do_shortcode("[contact-form-7 id='329' title='eco tienda form-en']"); ?></div>
+           <div><?php echo do_shortcode("[contact-form-7 id='205' title='eco tienda form']"); ?></div>
            <?php else: ?>
            <div><?php echo do_shortcode("[contact-form-7 id='186' title='eco tienda form']"); ?></div>
            <?php endif; ?>
