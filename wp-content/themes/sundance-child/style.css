@@ -1438,6 +1438,19 @@ font-size: 66px;}
 		padding-bottom:60px;
 		margin-top:0px;
 	}
+
+.modal-content .prod-name{
+	font-size:23px;
+}
+.post-type-archive-workshop .img-div{ padding-left:10px;}
+
+.ecotinda .wpcf7-form {
+    padding-right: 44px;
+}
+.ecotinda .modal .pleft {
+    padding-left: 1px;
+}
+	
 }
 @media only screen and (max-width : 768px) and (min-width : 321px) {
 	.clsFestMenu{
@@ -1486,6 +1499,16 @@ font-size: 66px;}
 		background-size:100% auto;
 		height:122px;
 	}
+	.withBg .text-center {
+    padding-right: 78px;}
+.ecotinda .wpcf7-form {
+    padding-right: 58px;
+}
+.ecotinda .modal .pleft {
+    padding-left: 1px;
+}
+
+    
 }
 
 
