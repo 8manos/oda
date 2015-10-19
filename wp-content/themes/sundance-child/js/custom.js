@@ -97,7 +97,8 @@ jQuery(function($){
 					//$(".wpcf7-form .pleft",$(this)).append("<div>Tallas</div>");
 					$that = $(this) ;
 					
-		   //console.log(prod_sizes);
+		   //console.log($(".p_size",$that).length);
+				if($(".p_size",$that).length!=0){	
 					$(".p_size",$that).each(function(i){
 							$obj = $('<input>') // Create element on the fly 
 								.attr("name","size")
@@ -106,8 +107,12 @@ jQuery(function($){
 							$div = $("<div>").append($obj).append(" " + $(this).val());
 							$(".wpcf7-form .pleft",$that).append($div);
 					})
-					
-						$(".p_color",$that).each(function(i){
+				}else{
+					$(".wpcf7-form .pleft",$that).hide();
+				}
+				
+				if($(".p_color",$that).length!=0){	
+					$(".p_color",$that).each(function(i){
 							$obj = $('<input>') // Create element on the fly 
 								.attr("name","color")
 								.attr("type","radio")
@@ -115,7 +120,11 @@ jQuery(function($){
 							$div = $("<div>").append($obj).append(" " + $(this).val());
 							$(".wpcf7-form .colors-div",$that).append($div);
 					})
-					
+				}else{
+					$(".wpcf7-form .colors-div",$that).hide();
+				}
+				
+				if($(".p_others",$that).length!=0){	
 					$(".p_others",$that).each(function(i){
 							$obj = $('<input>') // Create element on the fly 
 								.attr("name","others")
@@ -123,7 +132,10 @@ jQuery(function($){
 								.attr("value",$(this).val())
 							$div = $("<div>").append($obj).append(" " + $(this).val());
 							$(".wpcf7-form .others-div",$that).append($div);
-					})	
+					})
+				}else{
+					$(".wpcf7-form .others-div",$that).hide();
+				}	
 		})
 
 });
