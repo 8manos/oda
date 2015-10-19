@@ -35,16 +35,21 @@ class ODA {
 								 'label' => 'Rec. Categories',
 								 'query_var' => true,
 								 'rewrite' => true ));
-		register_taxonomy( 'product_size', 'customproduct', // This will set parent category as parques
+		register_taxonomy( 'product_size', 'customproduct', 
 					array( 'hierarchical' => true,
 								 'label' => 'Product Sizes',
 								 'query_var' => true,
 								 'rewrite' => true ));	
-		register_taxonomy( 'product_color', 'customproduct', // This will set parent category as parques
+		register_taxonomy( 'product_color', 'customproduct', 
 					array( 'hierarchical' => true,
 								 'label' => 'Product Color',
 								 'query_var' => true,
-								 'rewrite' => true ));						 
+								 'rewrite' => true ));		
+		register_taxonomy( 'other_attributes', 'customproduct', 
+					array( 'hierarchical' => true,
+								 'label' => 'Other Attributes',
+								 'query_var' => true,
+								 'rewrite' => true ));							 
 	}
 
 	public function renameExcerpt(){

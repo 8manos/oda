@@ -28,18 +28,24 @@ get_header(); ?>
 												</div>
 												
 													<?php // for product size
-													$post_categories = get_the_terms( get_the_ID(),'product_size' );
-													if($post_categories!=""){
-													foreach($post_categories as $c){
-														 echo '<input class="p_size" type="hidden" value='. $c->name .' >';
+													$prod_sizes = get_the_terms( get_the_ID(),'product_size' );
+													if($prod_sizes!=""){
+													foreach($prod_sizes as $size){
+														 echo '<input class="p_size" type="hidden" value='. $size->name .' >';
 													} 
 													}
-													
 													//for product color
-													$post_categories = get_the_terms( get_the_ID(),'product_color' );
-													if($post_categories!=""){
-													foreach($post_categories as $c){
-														 echo '<input class="p_color" type="hidden" value='. $c->name .' >';
+													$prod_colors = get_the_terms( get_the_ID(),'product_color' );
+													if($prod_colors!=""){
+													foreach($prod_colors as $color){
+														 echo '<input class="p_color" type="hidden" value='. $color->name .' >';
+													} 
+													}
+													//for product Other attributes
+													$other_attr = get_the_terms( get_the_ID(),'other_attributes' );
+													if($other_attr!=""){
+													foreach($other_attr as $attr){
+														 echo '<input class="p_others" type="hidden" value='. $attr->name .' >';
 													} 
 													}
 													?>

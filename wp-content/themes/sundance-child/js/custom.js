@@ -115,7 +115,15 @@ jQuery(function($){
 							$div = $("<div>").append($obj).append(" " + $(this).val());
 							$(".wpcf7-form .colors-div",$that).append($div);
 					})
-			 
+					
+					$(".p_others",$that).each(function(i){
+							$obj = $('<input>') // Create element on the fly 
+								.attr("name","others")
+								.attr("type","radio")
+								.attr("value",$(this).val())
+							$div = $("<div>").append($obj).append(" " + $(this).val());
+							$(".wpcf7-form .others-div",$that).append($div);
+					})	
 		})
 
 });

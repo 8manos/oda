@@ -790,7 +790,7 @@ span .buy-img{
 .ecotinda .modal .pleft {
     padding-left: 40px;
 }
-.ecotinda .modal .colors-div{
+.ecotinda .modal .colors-div , .ecotinda .modal .others-div{
     padding-left: 40px;
 }
 .formc{
