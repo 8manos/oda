@@ -107,8 +107,14 @@ jQuery(function($){
 							$(".wpcf7-form .pleft",$that).append($div);
 					})
 					
-					
-					
+						$(".p_color",$that).each(function(i){
+							$obj = $('<input>') // Create element on the fly 
+								.attr("name","color")
+								.attr("type","radio")
+								.attr("value",$(this).val())
+							$div = $("<div>").append($obj).append(" " + $(this).val());
+							$(".wpcf7-form .colors-div",$that).append($div);
+					})
 			 
 		})
 

@@ -27,14 +27,22 @@ get_header(); ?>
 												  <img src="<?php echo get_stylesheet_directory_uri();?>/img/modal-close.png" data-dismiss="modal" class="pull-right">
 												</div>
 												
-														<?php
-													unset($_category);
+													<?php // for product size
 													$post_categories = get_the_terms( get_the_ID(),'product_size' );
 													if($post_categories!=""){
 													foreach($post_categories as $c){
 														 echo '<input class="p_size" type="hidden" value='. $c->name .' >';
 													} 
-													}?>
+													}
+													
+													//for product color
+													$post_categories = get_the_terms( get_the_ID(),'product_color' );
+													if($post_categories!=""){
+													foreach($post_categories as $c){
+														 echo '<input class="p_color" type="hidden" value='. $c->name .' >';
+													} 
+													}
+													?>
 												<div class="col-lg-4 pimg">
 												  <?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?>
 												</div>
