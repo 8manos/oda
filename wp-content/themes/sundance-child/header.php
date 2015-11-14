@@ -41,6 +41,25 @@
 					<img src="<?php header_image(); ?>" width="<?php //echo HEADER_IMAGE_WIDTH; ?>" height="<?php //echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 				</a>
 <!-- 				<div class="secondary_menu"><?php wp_nav_menu( array('menu' => 'signup_login' ,'menu_class'=> 'list-inline',)); ?></div> -->
+				<div class="lang-switcher">
+				<?php 
+				 $currentlang = get_bloginfo('language');
+							if($currentlang=="en-US"){
+							$act="mleft";
+							}else{
+							$act="";
+							}
+							?>
+					<!--<div class="spanish"> ESP </div>
+					<div class="lbg">
+						<img class="<?php echo $act; ?>" src="<?php echo get_stylesheet_directory_uri();?>/img/lang_selector.svg">
+					</div>
+					<div class="english"> ENG </div>-->
+				<!--	<?php	if ( is_active_sidebar( 'langswitcher' ) ) : 
+							dynamic_sidebar( 'langswitcher' ); 
+							endif; ?>-->
+							<ul><?php pll_the_languages();?></ul>
+				</div>
 				<div class="menuPanel ">
 					<div class="clsMenu clsMenu1 menuFor" >
 						<span>

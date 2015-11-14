@@ -137,5 +137,17 @@ jQuery(function($){
 					$(".wpcf7-form .others-div",$that).hide();
 				}	
 		})
+		
+		$('.english').click(function(){
+			 $('.lbg img').addClass('mleft');
+			 $( ".lbg img" ).animate({marginLeft: 30}, 80, function() {
+					location.reload();
+				});
+		})
+		$('.spanish').click(function(){
+			 $( ".lbg img" ).animate({marginLeft: 0}, 80, function() {
+					location.reload();
+				});
+		})
 
 });

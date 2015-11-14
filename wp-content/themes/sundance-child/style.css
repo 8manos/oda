@@ -1202,6 +1202,45 @@ font-size: 30px;
 .secondary_menu ul li a{	
 color:#8A8481;
 }
+.lang-switcher{
+	position:fixed;
+	right:0;
+	z-index:9999;
+	margin-right: 90px;
+	padding-top: 50px;
+	font-family: "stabile-regular";
+	font-size: 40px;
+	display:inline-flex;
+}
+.lang-switcher ul , .lang-switcher ul li{
+	display:inline-block;
+}
+.lang-switcher ul li{
+text-overflow: ellipsis;
+	width: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.lbg { 
+	background:transparent url('img/lang_bg.svg') center center  no-repeat;/*
+	height:50px;*/
+	width:70px;
+	margin-top:5px;
+}
+.lbg img{
+	margin-top:-7px;
+	  -webkit-transition: margin 1s ease;
+  -moz-transition: margin 1s ease;
+  -o-transition: margin 1s ease;
+  transition: margin 1s ease;
+}
+.mleft{
+	margin-left:30px;
+	margin-top:-9px !important;
+}
+.spanish , .english{
+	cursor:pointer;
+}
 .join-page , .login-page{
 	margin:80px 0 40px ;
 }
