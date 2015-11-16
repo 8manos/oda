@@ -4,14 +4,15 @@ jQuery(function($){
 		if(!isMenuShow){
 			$(".withBg").animate({width:'toggle'},350,'',function(){
 					$(".clsMenu2").show();
-
+					$(".lang-switcher").hide();
 			});
 			isMenuShow = true ;
 		}else{
 			isMenuShow = false;
 			$(".clsMenu2").hide();
-			$(".withBg").animate({width:'toggle'},350,'',function(){
 
+			$(".withBg").animate({width:'toggle'},350,'',function(){
+				$(".lang-switcher").show();
 
 			});
 		}
@@ -23,9 +24,9 @@ jQuery(function($){
 			$('.grid-item.visible-xs',$('.grid')).remove();//destroy element
 		}
 	}
-	
 
-	
+
+
 	var posts = document.querySelectorAll('.grid, .recmd');
 	imagesLoaded( posts, function() {
 				$('.grid , .recmd').masonry({
@@ -33,9 +34,9 @@ jQuery(function($){
 				containerStyle: {position:'relative'},
 		})
   });
-	
-	
-	
+
+
+
 			var fan=$(".fancybox").fancybox({
 					openEffect	: 'none',
 					closeEffect	: 'none'
@@ -70,37 +71,37 @@ jQuery(function($){
 		//Above line does not needed
     $container.isotope({ filter: filterValue });
   });
-	
+
 	  var $li = $('.work-cat li').click(function() {
         $li.removeClass('active_cat');
         $(this).addClass('active_cat');
 				$('.all').removeClass('active_cat');
     });
-		
+
 		$("#view_map , #view_act").fancybox({
-			
+
       });
-			
-			
+
+
 		$(".work-title").click(function(){
 			var id=$(this).attr("data-target");
 			window.location.hash = id;
 		})
-			
+
 		var modid=window.location.hash;
 		if(modid!=""){
      $(modid).modal('show');
 		}
-		
+
 		$('.prod-box').each(function(i){
 					$(".wpcf7-form .btn-size",$(this)).remove();
 					//$(".wpcf7-form .pleft",$(this)).append("<div>Tallas</div>");
 					$that = $(this) ;
-					
+
 		   //console.log($(".p_size",$that).length);
-				if($(".p_size",$that).length!=0){	
+				if($(".p_size",$that).length!=0){
 					$(".p_size",$that).each(function(i){
-							$obj = $('<input>') // Create element on the fly 
+							$obj = $('<input>') // Create element on the fly
 								.attr("name","size")
 								.attr("type","radio")
 								.attr("value",$(this).val())
@@ -110,10 +111,10 @@ jQuery(function($){
 				}else{
 					$(".wpcf7-form .pleft",$that).hide();
 				}
-				
-				if($(".p_color",$that).length!=0){	
+
+				if($(".p_color",$that).length!=0){
 					$(".p_color",$that).each(function(i){
-							$obj = $('<input>') // Create element on the fly 
+							$obj = $('<input>') // Create element on the fly
 								.attr("name","color")
 								.attr("type","radio")
 								.attr("value",$(this).val())
@@ -123,10 +124,10 @@ jQuery(function($){
 				}else{
 					$(".wpcf7-form .colors-div",$that).hide();
 				}
-				
-				if($(".p_others",$that).length!=0){	
+
+				if($(".p_others",$that).length!=0){
 					$(".p_others",$that).each(function(i){
-							$obj = $('<input>') // Create element on the fly 
+							$obj = $('<input>') // Create element on the fly
 								.attr("name","others")
 								.attr("type","radio")
 								.attr("value",$(this).val())
@@ -135,9 +136,9 @@ jQuery(function($){
 					})
 				}else{
 					$(".wpcf7-form .others-div",$that).hide();
-				}	
+				}
 		})
-		
+
 		$(".lang-item-en").click(function(){
 			 $(".lbg img").addClass('mleft');
 			 $( ".lbg img" ).animate({marginLeft: 30}, 80, function() {
