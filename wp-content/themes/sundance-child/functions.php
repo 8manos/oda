@@ -168,20 +168,7 @@ function copyright_sidebar_init() {
     ) );
 }
 
-//This will be used to register  language switcher section
-add_action( 'widgets_init', 'language_switcher_init' );
 
-function language_switcher_init() {
-    register_sidebar( array(
-        'name' => __( 'Language Switcher Section', 'sundance' ),
-        'id' => 'langswitcher',
-        'description' => __( 'Widgets in this area will be shown in Language Switcher Section.', 'sundance' ),
-//         'before_widget' => '<li id="%1$s" class="widget %2$s">',
-// 				'after_widget'  => '</li>',
-// 				'before_title'  => '<h2 class="widgettitle">',
-// 				'after_title'   => '</h2>',
-    ) );
-}
 //Check whether class exists or not
 if(class_exists('Social_Icons_Widget')){
 	class mySocialIcons extends Social_Icons_Widget {
