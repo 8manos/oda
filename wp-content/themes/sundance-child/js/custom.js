@@ -138,15 +138,13 @@ jQuery(function($){
 				}	
 		})
 		
-		$('.english').click(function(){
-			 $('.lbg img').addClass('mleft');
+		$(".lang-item-en").click(function(){
+			 $(".lbg img").addClass('mleft');
 			 $( ".lbg img" ).animate({marginLeft: 30}, 80, function() {
-					location.reload();
 				});
 		})
-		$('.spanish').click(function(){
+		$(".lang-item-es").click(function(){
 			 $( ".lbg img" ).animate({marginLeft: 0}, 80, function() {
-					location.reload();
 				});
 		})
 

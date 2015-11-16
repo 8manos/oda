@@ -1212,15 +1212,10 @@ color:#8A8481;
 	font-size: 40px;
 	display:inline-flex;
 }
-.lang-switcher ul , .lang-switcher ul li{
-	display:inline-block;
+.lang-switcher a{
+	color:#000;
+	text-decoration:none;
 }
-.lang-switcher ul li{
-text-overflow: ellipsis;
-	width: 10px;
-	white-space: nowrap;
-	overflow: hidden;
-	}
 .lbg { 
 	background:transparent url('img/lang_bg.svg') center center  no-repeat;/*
 	height:50px;*/
@@ -1492,7 +1487,11 @@ font-size: 66px;}
 .ecotinda .modal .pleft {
     padding-left: 1px;
 }
-	
+.lang-switcher	
+	{font-size: 25px;
+    margin-right: 80px;
+    padding-top: 60px;
+	}
 }
 @media only screen and (max-width : 768px) and (min-width : 321px) {
 	.clsFestMenu{
