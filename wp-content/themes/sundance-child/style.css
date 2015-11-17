@@ -1266,6 +1266,9 @@ font-size: 25px;
 }
 
 @media only screen and (max-width : 320px) {
+	.clsMenu2{
+		margin-top:5px;
+	}
 	.header1-image-link img{
 		width:120px;
 	}
