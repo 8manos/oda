@@ -72,9 +72,9 @@
 							<img  class="clsMenu3" src="<?php echo get_stylesheet_directory_uri(); ?>/img/close.svg">
 							</span>
 						</div>
-
-						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-						
+						<div class="main_menu">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+						</div>
 						 <div class="text-center"> 
 							<?php	if ( is_active_sidebar( 'menusidebar' ) ) : 
 							dynamic_sidebar( 'menusidebar' ); 

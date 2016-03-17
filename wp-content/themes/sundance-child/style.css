@@ -205,7 +205,7 @@ hgroup{
 	color:#fff;
 	font-size:30px;
 }
-.menu-fullpage-container{
+.main_menu > div{
 /* 	width:320px; */
 	margin:0px auto;
 	text-align:center;
@@ -215,21 +215,21 @@ hgroup{
 	margin-top:40px;
 	width: 100%;
 }
-.menu-fullpage-container ul{
+.main_menu ul{
 	list-style-type:none;
 	color:white;
 	font-family:'stabile-regular';
 	margin:0px;
 	padding:0px;
 }
-.menu-fullpage-container ul li{
+.main_menu ul li{
 	margin:0px;
 }
-.menu-fullpage-container ul li a{
+.main_menu ul li a{
 	color:white;
 
 }
-.menu-fullpage-container ul li a:hover{
+.main_menu ul li a:hover{
 	text-decoration:none;
 	color:#00BFAA;
 }
