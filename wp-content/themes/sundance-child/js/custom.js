@@ -152,5 +152,12 @@ jQuery(function($){
 		$('.carousel').carousel({
     interval: false
 		}); 
-
+		
+			$(window).scroll(function(){
+				var window_top = $(window).scrollTop() ;
+				
+				if(window_top > 50){
+					$(".footer_menu .menu-footer_menu-eng-container , .footer_menu .menu-footer_menu-esp-container").addClass('makeFix');
+				}
+			});
 });
