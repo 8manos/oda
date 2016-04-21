@@ -148,5 +148,9 @@ jQuery(function($){
 			 $( ".lbg img" ).animate({marginLeft: 0}, 80, function() {
 				});
 		})
+		
+		$('.carousel').carousel({
+    interval: false
+		}); 
 
 });
