@@ -2,7 +2,8 @@
 function theme_enqueue_styles() {
 
     $parent_style = 'sundance';
-
+    
+		wp_enqueue_style( 'josefin','https://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic,600,600italic,700,700italic');
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'stabile-regular', get_stylesheet_directory_uri() . '/css/fonts/Stabile-regular.css', array( $parent_style ) );
     wp_enqueue_style( 'stabile-toy', get_stylesheet_directory_uri() . '/css/fonts/Stabile-toy.css', array( $parent_style ) );
