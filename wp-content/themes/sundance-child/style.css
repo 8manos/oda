@@ -1559,63 +1559,63 @@ font-size: 66px;}
 	padding-top:0px;
 	padding-bottom:0px;
 }
-.modal-body .left{
+.customModal .modal-body .left{
 	background-color:#EDEDED;
 }
 
     
-.modal-body .right{
+.customModal .modal-body .right{
 	background-color:#F7F7F7;
 }
-.modal-body .heading{
+.customModal .modal-body .heading{
 	margin:80px 0 30px;
 	font-size:30px;
 	font-weight:900;
 	color:#8F9B9B;
 }
-.modal-body .text{
+.customModal .modal-body .text{
 	padding:0 15px;
 	color:#8F9B9B;
 	margin-bottom:10px;
 	font-size:12px;
 }
-.modal-body form {
+.customModal .modal-body form {
 	width:80%;
   margin: 0 auto;
 }
-.modal-body form input{
+.customModal .modal-body form input{
 	border:2px solid #A6AFAE;
 	background-color:#EDEDED;
 	margin-bottom:10px;
 	border-radius:2px;
 }
-.modal-body .left form .btn-default{
+.customModal .modal-body .left form .btn-default{
 	background-color:#D2D3D5;
 	color:#ffffff;
 	box-shadow:none;
 	border-radius:2px;
 }
-.modal-body .left form .btn-default:hover{
+.customModal .modal-body .left form .btn-default:hover{
 	background:#d2d3d5 !important;
 	background-color: #d2d3d5;
 }
-.modal-body .note{
+.customModal .modal-body .note{
 	color:#8F9B9B;
 	font-size:12px;
 	margin:60px 0 20px;
 	text-align:center;
 }
-.modal-body .right{
+.customModal .modal-body .right{
 	padding:0px;
 	text-align:center;
 }
-.modal-body .right .carousel .item{
+.customModal .modal-body .right .carousel .item{
 	padding:0 20px;
 }
-.modal-body .right .heading{
+.customModal .modal-body .right .heading{
 	margin:60px 0 30px;
 }
-.modal-body .right select{
+.customModal .modal-body .right select{
 	width:auto;
 	float:left;
 	margin-right:5px;
@@ -1623,7 +1623,7 @@ font-size: 66px;}
 	border:2px solid #A6AFAE;
 	background-color:transparent;
 }
-.modal-body .right .text{
+.customModal .modal-body .right .text{
 	padding:0;
 	color:#8F9B9B;
 	margin:5px 0 5px 0;
@@ -1761,4 +1761,131 @@ font-size: 66px;}
 }
 footer .site-footer{
 	margin-bottom:56px;
+}
+
+.loginModal .modal-content{
+	height:330px;
+	background-color:transparent;
+}
+.loginModal .modal-body{
+	padding:0px;
+	height:100%;
+}
+.loginModal .modal-body .clearfix{
+	height:100%;
+}
+.loginModal .login{
+	background-color:rgba(255,255,255,0.9); 
+	height:100%;
+}
+.loginModal .loading{
+	background:#2DAF99 url('img/bear.png') center center   no-repeat !important;
+	height:100%;
+	font-family: "stabile-regular";
+	text-align:center;
+	font-size:45px;
+	color:#ffffff;
+}
+.loginModal .loading div{
+	margin-top:35%;
+	
+}
+@media screen and (min-width: 760px) {
+	.loginModal .modal-dialog{
+		width:700px;
+	}
+}
+.loginModal .log-heading{
+	font-family: "stabile-regular";
+	text-align:center;
+	color:#2BB39F;
+	font-size:40px;
+	margin:20px 0;
+}
+.loginModal .login input[type="text"], .loginModal .login input[type="password"] {
+	border:2px solid #2BB39F;
+	background-color:transparent;
+	box-shadow:none;
+	font-family: "stabile-regular";
+	color:#2BB39F !important;
+	width:100%;
+}
+.loginModal .login .link{
+	font-family: "stabile-regular";
+	text-align:center;
+	color:#2BB39F;
+	margin-bottom:20px;
+}
+.loginModal p{
+	margin:0px;
+}
+.loginModal .login .link a{font-weight:600;color:#2BB39F;}
+.loginModal #wp-submit, .loginModal #wp-submit:hover {
+	background:transparent url('img/Button_red.png')   no-repeat !important;
+	background-size:cover;
+	font-family: "stabile-regular";
+	height:44px;
+	margin:0 auto;
+	color:#fff;
+	box-shadow:none;
+	width:152px;
+	text-align:center;
+	font-size:22px;
+	border:none;
+}
+.loginModal .login input::-webkit-input-placeholder {
+color: #2BB39F !important;
+}
+ 
+.loginModal .login input:-moz-placeholder { /* Firefox 18- */
+color: #2BB39F !important;  
+}
+ 
+.loginModal .login input::-moz-placeholder {  /* Firefox 19+ */
+color: #2BB39F !important;  
+}
+ 
+.loginModal .login input:-ms-input-placeholder {  
+color: #2BB39F !important;  
+}
+.loginModal .closeImg{
+		margin: 20px 20px 0 0;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+		cursor:pointer;
+}
+
+
+/*forgot password modal css*/
+.fpModal .modal-content , .fpModal .modal-body{
+	border-radius:3px;
+	height:350px;
+	background:rgba(0, 0, 0, 0) linear-gradient(to bottom, #9afedc 0%, #32fda9 100%) repeat scroll 0 0;
+}
+ .fpClose{
+		margin: 10px 25px 0 0;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+		cursor:pointer;
+}
+.fp-heading{
+	font-family: "stabile-regular";
+	text-align:center;
+	color:#ffffff;
+	font-size:40px;
+	margin:20px 0;
+}
+.ftxt{
+	font-family: "stabile-regular";
+	text-align:center;
+	color:#ffffff;
+	font-size:20px;
+	margin:15px 0;
+	padding:0 30px;
+}
+.fpModal input{
+	width:70%;
+	margin:0px auto;
 }

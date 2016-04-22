@@ -150,7 +150,80 @@ get_header(); ?>
 									</div>
 								</div>
 							</div>
-
+							
+							
+							<!--login modal-->
+								<button class="btn btn-primary " data-toggle="modal" data-target="#loginModal">
+								login
+							</button>
+							<!-- Modal -->
+							<div class="modal fade loginModal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-body">
+											<div class="clearfix">
+												<img  class="closeImg" data-dismiss="modal" src="<?php echo get_stylesheet_directory_uri(); ?>/img/close.png" aria-label="Close"> 
+												<div class="col-lg-6 col-sm-6 login text-center">
+													<div class="log-heading">Ingresa</div>
+													<!--<div class="form-group">
+														<input type="text" class="form-control" placeholder="username">
+													</div>
+													<div class="form-group">
+														<input type="text" class="form-control" placeholder="password">
+													</div>-->
+													<?php
+													$args = array(
+															'echo'           => true,
+															'remember'       => false,
+															'redirect'       => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
+															'form_id'        => 'loginform',
+															'id_username'    => 'user_login',
+															'id_password'    => 'user_pass',
+															'id_remember'    => 'rememberme',
+															'id_submit'      => 'wp-submit',
+															'label_username' => __( '' ),
+															'label_password' => __( '' ),	
+															'label_log_in'   => __( 'Log In' ),
+															'value_username' => '',
+															'value_remember' => false
+													);
+													wp_login_form($args); ?>
+													<div class="link">
+														olvidaste tu contrasena. <a href="">Click Now </a>
+													</div>
+<!-- 													<button class="btn">Ingresar</button> -->
+												</div>
+												<div class="col-lg-6 col-sm-6 loading">
+														<div>cargando...</div>
+												</div>
+											</div>
+									</div>
+								</div>
+							</div>
+							</div>
+							<!--end of login modal-->
+							
+								<!--forgot pwd modal-->
+								<button class="btn btn-primary " data-toggle="modal" data-target="#fpModal">
+								fp
+							</button>
+							<!-- Modal -->
+							<div class="modal fade fpModal" id="fpModal" tabindex="-1" role="dialog" aria-labelledby="fpModalLabel">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-body text-center">
+											<img  class="fpClose" data-dismiss="modal" src="<?php echo get_stylesheet_directory_uri(); ?>/img/close.png" aria-label="Close"> 
+											<div class="fp-heading">problrmas con tu contrasena?</div>
+											<div class="ftxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+											<div class="form-group">
+												<input type="text" placeholder="usuario o correo electronico">
+											</div>	
+											<button class="btn">Restablecer contrasena</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--end of forgot pwd modal-->
 			</div>
 		</div>
 <?php get_footer(); ?>
