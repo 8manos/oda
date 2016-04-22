@@ -150,6 +150,40 @@ get_header(); ?>
 									</div>
 								</div>
 							</div>
+							
+							
+							<!--login modal-->
+								<button class="btn btn-primary " data-toggle="modal" data-target="#loginModal">
+								login
+							</button>
+							<!-- Modal -->
+							<div class="modal fade loginModal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-body">
+											<div class="clearfix">
+												<img  class="closeImg" data-dismiss="modal" src="<?php echo get_stylesheet_directory_uri(); ?>/img/close.png" aria-label="Close"> 
+												<div class="col-lg-6 col-sm-6 login text-center">
+													<div class="log-heading">Ingresa</div>
+													<div class="form-group">
+														<input type="text" class="form-control" placeholder="username">
+													</div>
+													<div class="form-group">
+														<input type="text" class="form-control" placeholder="password">
+													</div>
+													<div class="link">
+														olvidaste tu contrasena. <a href="">Click Now </a>
+													</div>
+													<button class="btn">Ingresar</button>
+												</div>
+												<div class="col-lg-6 col-sm-6 loading">
+														<div>cargando...</div>
+												</div>
+											</div>
+									</div>
+								</div>
+							</div>
+							<!--end of login modal-->
 
 			</div>
 		</div>
