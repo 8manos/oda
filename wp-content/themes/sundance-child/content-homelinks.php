@@ -16,7 +16,7 @@
 	</header><!-- .entry-header -->
 	<div class='row'>
 		<div class='col-lg-10 col-lg-offset-1 ' >
-
+		<div class="row">
 	<?php
 	//make the sql to collect all page links
 	$args = array(
@@ -25,20 +25,32 @@
 	$the_query = new WP_Query( $args );
 
 	if ( $the_query->have_posts() ) :
+		$i=0;
 		while ( $the_query->have_posts() ) : $the_query->the_post();
 			//the_content();
-		?>
+			if($i==3){ ?>
+			</div>
+			<div class="row">
+			<?php } ?>
+			
 			<div class='col-lg-4 col-sm-6 linkBox'>
 				<a href='<?php echo get_the_excerpt();?>'>
          <?php the_post_thumbnail('medium') ?>
         </a>
       </div>
-
+      
+      <?php
+				if($i==5){ ?>
+					</div>
+			<?php } ?>
+			
 		<?php
+		$i++;
 	endwhile;
 	endif;
 	wp_reset_postdata();
-	?>
+	?>	
+			</div>
 		</div> <!-- col-lg-10 -->
 	</div> <!-- row -->
 	<div class='clsLinkSecfooter'>
