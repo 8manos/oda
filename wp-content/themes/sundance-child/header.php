@@ -42,6 +42,10 @@
 				</a>
 <!-- 				<div class="secondary_menu"><?php wp_nav_menu( array('menu' => 'signup_login' ,'menu_class'=> 'list-inline',)); ?></div> -->
 				<div class="lang-switcher" >
+						<ul class="list-inline login-menu">
+							<li><a href=""><?php echo __('Sign Up', 'sundance'); ?></a></li>
+							<li><a href=""><?php echo __('Log IN', 'sundance'); ?></a></li>
+						</ul>
 				<?php 
 				 $currentlang = get_bloginfo('language');
 							if($currentlang=="en-US"){

@@ -1190,7 +1190,8 @@ body .lpad0{
 position:fixed;
 right:0;
 z-index:9999;
-margin-right: 90px;
+/* margin-right: 90px; */
+right:195px;
 padding-top: 55px;
 }
 .secondary_menu ul{
@@ -1909,3 +1910,9 @@ color: #2BB39F !important;
 	border:none;
 	padding-top:0px;
 }
+.login-menu{
+	margin-right:15px;
+}
+.login-menu a:hover{
+	color:#F56BB6
+}	
