@@ -215,10 +215,11 @@ get_header(); ?>
 											<img  class="fpClose" data-dismiss="modal" src="<?php echo get_stylesheet_directory_uri(); ?>/img/close.png" aria-label="Close"> 
 											<div class="fp-heading">problrmas con tu contrasena?</div>
 											<div class="ftxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
-											<div class="form-group">
+											<!--<div class="form-group">
 												<input type="text" placeholder="usuario o correo electronico">
 											</div>	
-											<button class="btn">Restablecer contrasena</button>
+											<button class="btn">Restablecer contrasena</button>-->
+											<?php echo do_shortcode('[clean-login-restore]');?>
 										</div>
 									</div>
 								</div>
