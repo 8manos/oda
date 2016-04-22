@@ -160,4 +160,7 @@ jQuery(function($){
 					$(".footer_menu .menu-footer_menu-eng-container , .footer_menu .menu-footer_menu-esp-container").addClass('makeFix');
 				}
 			});
+			
+		$('#user_login').attr('placeholder', 'Username');
+    $('#user_pass').attr('placeholder', 'Password');
 });

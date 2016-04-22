@@ -1802,12 +1802,13 @@ footer .site-footer{
 	font-size:40px;
 	margin:20px 0;
 }
-.loginModal .login input{
+.loginModal .login input[type="text"], .loginModal .login input[type="password"] {
 	border:2px solid #2BB39F;
 	background-color:transparent;
 	box-shadow:none;
 	font-family: "stabile-regular";
 	color:#2BB39F !important;
+	width:100%;
 }
 .loginModal .login .link{
 	font-family: "stabile-regular";
@@ -1815,8 +1816,11 @@ footer .site-footer{
 	color:#2BB39F;
 	margin-bottom:20px;
 }
+.loginModal p{
+	margin:0px;
+}
 .loginModal .login .link a{font-weight:600;color:#2BB39F;}
-.loginModal .btn , .loginModal .btn:hover {
+.loginModal #wp-submit, .loginModal #wp-submit:hover {
 	background:transparent url('img/Button_red.png')   no-repeat !important;
 	background-size:cover;
 	font-family: "stabile-regular";
@@ -1827,6 +1831,7 @@ footer .site-footer{
 	width:152px;
 	text-align:center;
 	font-size:22px;
+	border:none;
 }
 .loginModal .login input::-webkit-input-placeholder {
 color: #2BB39F !important;
@@ -1849,4 +1854,38 @@ color: #2BB39F !important;
     right: 0;
     z-index: 3;
 		cursor:pointer;
+}
+
+
+/*forgot password modal css*/
+.fpModal .modal-content , .fpModal .modal-body{
+	border-radius:3px;
+	height:350px;
+	background:rgba(0, 0, 0, 0) linear-gradient(to bottom, #9afedc 0%, #32fda9 100%) repeat scroll 0 0;
+}
+ .fpClose{
+		margin: 10px 25px 0 0;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+		cursor:pointer;
+}
+.fp-heading{
+	font-family: "stabile-regular";
+	text-align:center;
+	color:#ffffff;
+	font-size:40px;
+	margin:20px 0;
+}
+.ftxt{
+	font-family: "stabile-regular";
+	text-align:center;
+	color:#ffffff;
+	font-size:20px;
+	margin:15px 0;
+	padding:0 30px;
+}
+.fpModal input{
+	width:70%;
+	margin:0px auto;
 }
