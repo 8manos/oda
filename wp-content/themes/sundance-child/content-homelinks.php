@@ -50,7 +50,7 @@
 	endif;
 	wp_reset_postdata();
 	?>	
-			</div>
+			<!--</div>-->
 		</div> <!-- col-lg-10 -->
 	</div> <!-- row -->
 	<div class='clsLinkSecfooter'>
