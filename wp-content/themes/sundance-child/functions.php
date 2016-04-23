@@ -197,10 +197,10 @@ if(class_exists('Social_Icons_Widget')){
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size( 80, 80, true );
 
-add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
-
-function wpdocs_theme_setup() {
-    add_image_size('slider-size',1280,800,true);
+ add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+// 
+ function wpdocs_theme_setup() {
+    add_image_size('slider-size',1280,582,true);
 }
 function mytheme_image_size_names( $sizes ) {
     $sizes['slider-size'] = __( 'slider-size', 'sundance-child' );
