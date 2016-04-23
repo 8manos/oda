@@ -196,7 +196,18 @@ if(class_exists('Social_Icons_Widget')){
 //Added theme supports
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size( 80, 80, true );
-add_image_size( 'Slider size',1280, 800, true );
+
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+
+function wpdocs_theme_setup() {
+    add_image_size('slider-size',1280,800,true);
+}
+function mytheme_image_size_names( $sizes ) {
+    $sizes['slider-size'] = __( 'slider-size', 'sundance-child' );
+
+    return $sizes;
+}
+add_filter( 'image_size_names_choose', 'mytheme_image_size_names', 11, 1 );
 
  include ('extend-carousel.php');
  remove_shortcode("wp_posts_carousel");
@@ -207,3 +218,5 @@ function trim_excerpt($text) {
      return $text;
     }
 add_filter('get_the_excerpt', 'trim_excerpt');
+
+
