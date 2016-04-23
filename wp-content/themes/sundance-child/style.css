@@ -1206,7 +1206,7 @@ color:#8A8481;
 .lang-switcher{
 	position:fixed;
 	right:0;
-	z-index:9999;
+	z-index:1049;
 	margin-right: 90px;
 	padding-top: 50px;
 	font-family: "stabile-regular";
