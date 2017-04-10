@@ -175,7 +175,7 @@ hgroup{
 }
 .clsMenu1{
 		margin-right:20px;
-		margin-top:55px;
+		margin-top:35px;
 }
 .clsMenu2{
 		margin-right:40px;
@@ -1210,10 +1210,12 @@ color:#8A8481;
 	right:0;
 	z-index:9999;
 	margin-right: 90px;
-	padding-top: 50px;
+	padding-top: 30px;
 	font-family: "stabile-regular";
-	font-size: 40px;
+	font-size: 30px;
 	display:inline-flex;
+	padding-left: 1em;
+	padding-right: 1em;
 }
 .lang-switcher a{
 	color:#000;
