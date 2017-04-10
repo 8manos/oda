@@ -43,7 +43,7 @@
 <!-- 				<div class="secondary_menu"><?php wp_nav_menu( array('menu' => 'signup_login' ,'menu_class'=> 'list-inline',)); ?></div> -->
 				<div class="lang-switcher" >
 						<ul class="list-inline login-menu">
-							<li><a href="" data-toggle="modal" data-target="#myModal"><?php echo __('Sign Up', 'sundance'); ?></a></li>
+							<!-- <li><a href="" data-toggle="modal" data-target="#myModal"><?php echo __('Sign Up', 'sundance'); ?></a></li> -->
 							<li><a href="" data-toggle="modal" data-target="#loginModal"><?php echo __('Log IN', 'sundance'); ?></a></li>
 						</ul>
 				<?php 
