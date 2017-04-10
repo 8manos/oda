@@ -1204,6 +1204,8 @@ font-size: 30px;
 color:#8A8481;
 }
 .lang-switcher{
+	top: 0;
+	background-color: #FFEE00;
 	position:fixed;
 	right:0;
 	z-index:9999;
