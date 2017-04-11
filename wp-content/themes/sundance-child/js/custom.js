@@ -138,16 +138,104 @@ jQuery(function($){
 					$(".wpcf7-form .others-div",$that).hide();
 				}
 		})
+		$( ".lbg img" ).css('cursor','pointer');
+// 		$(".lang-item-en").click(function(){
+// 			 $(".lbg img").addClass('mleft');
+// 			 $( ".lbg img" ).animate({marginLeft: /*3*/0}, 80, function() {
+// 				});
+// 		})
+// 		$(".lang-item-es").click(function(){
+// 			 $( ".lbg img" ).animate({marginLeft: 0}, 80, function() {
+// 				});
+// 		})
+		
+		var sizeSwitch = 30;
+		var switchHandle = $('.lbg img');
+		var option1 =  $('.lang-item-es');
+		var option2 =  $('.lang-item-en');
+		var switchArea =  $('.lbg');
 
-		$(".lang-item-en").click(function(){
-			 $(".lbg img").addClass('mleft');
-			 $( ".lbg img" ).animate({marginLeft: 30}, 80, function() {
-				});
-		})
-		$(".lang-item-es").click(function(){
-			 $( ".lbg img" ).animate({marginLeft: 0}, 80, function() {
-				});
-		})
+		switchHandle.draggable({
+			axis: 'x',
+			containment: 'parent',
+			stop: function() {
+				conditionMove();
+			}
+		});
+
+		option1.click(function() {
+			option1.addClass('active');
+			option2.removeClass('active');
+			switchHandle.animate({
+				left: 0
+			}, 100);
+		});
+
+		option2.click(function() {
+			option2.addClass('active');
+			option1.removeClass('active');
+			switchHandle.animate({
+				left: sizeSwitch + 'px'
+			}, 100);
+		});
+
+		switchArea.click(function() {
+			conditionMoveSnap();
+		});
+
+
+		function conditionMove() {
+			if(parseInt(switchHandle.css('left')) <= (sizeSwitch / 2)) {
+				switchHandle.animate({
+					left: 0
+				}, 100);
+				option1.addClass('active');
+				option2.removeClass('active');
+				window.location = $(".lang-item-es > a").attr('href');
+			}
+			else {
+				switchHandle.animate({
+					left: sizeSwitch + 'px'
+				}, 100);
+				option2.addClass('active');
+				option1.removeClass('active');
+				window.location = $(".lang-item-en > a").attr('href');
+			}
+		}
+
+		function conditionMoveSnap() {
+			if(parseInt(switchHandle.css('left')) == sizeSwitch) {
+				switchHandle.animate({
+					left: 0
+				}, 100);
+				option1.addClass('active');
+				option2.removeClass('active');
+				window.location = $(".lang-item-es > a").attr('href');
+			}
+			else {
+				switchHandle.animate({
+					left: sizeSwitch + 'px'
+				}, 100);
+				option2.addClass('active');
+				option1.removeClass('active');
+				window.location = $(".lang-item-en > a").attr('href');
+			}
+		}
+		
+// 		$('.lbg > img').draggable({
+// 				axis: 'x',
+// 				containment: '.lbg',
+// 				cursor: 'pointer',
+// 				//grid: [30,0],
+// 				stop: function(event,ui){
+// 					if($(".lbg > img").css('left') > '15px'){
+// 						window.location = $(".lang-item-en > a").attr('href');
+// 					}else{
+// 						window.location = $(".lang-item-es > a").attr('href');
+// 					}
+// 				}
+// 			});
+
 		
 		$('.carousel').carousel({
     interval: false
