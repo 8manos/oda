@@ -1270,7 +1270,7 @@ font-size: 25px;
 	width:300px;
 }
 
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width :320px) {
 	.clsMenu2{
 		margin-top:5px;
 	}
@@ -1495,13 +1495,46 @@ font-size: 66px;}
 .ecotinda .modal .pleft {
     padding-left: 1px;
 }
-.lang-switcher	
-	{font-size: 25px;
-    margin-right: 80px;
-    padding-top: 60px;
-	}
+
+.huge_it_slideshow_image_wrap_2{
+	margin-top: 110px !important;
 }
-@media only screen and (max-width : 768px) and (min-width : 321px) {
+.lang-switcher {
+    z-index: 18;
+    width: 100%;
+    margin-right: 0px;
+		padding-bottom:8px;
+}
+.lang-item-es {
+    margin-top: 25px;
+		margin-left: 100px;
+}
+
+.lbg{
+	margin-top: 30px;
+}
+
+.lang-item-en {
+    margin-top: 24px;
+    padding-left: 5px;
+}
+
+.list-inline {
+    list-style: outside none none;
+    margin-left: -5px;
+    padding-left: 100px;
+    position: absolute;
+    margin-top: -20px;
+}
+
+.clsMenu1{
+	margin-top:8px;
+	z-index:19;
+}
+    
+    
+}
+@media only screen and (max-width :768px) and (min-width :321px) {
 	.clsFestMenu{
 		font-size: 25px;
 	}
@@ -1556,7 +1589,45 @@ font-size: 66px;}
 .ecotinda .modal .pleft {
     padding-left: 1px;
 }
+.huge_it_slideshow_image_wrap_2{
+	margin-top: 162px !important;
+}
+.lang-switcher {
+    z-index: 18;
+    width: 100%;
+    margin-right: 0px;
+		padding-bottom:36px;
+}
+.lang-item-es {
+    margin-top: 50px;
+		margin-left: 143px;
+}
 
+.lbg{
+	margin-top: 54px;
+}
+
+.lang-item-en {
+    margin-top: 48px;
+    padding-left: 5px;
+}
+
+.list-inline {
+    list-style: outside none none;
+    margin-left: -5px;
+    padding-left: 145px;
+    position: absolute;
+    margin-top: 5px;
+}
+
+.clsMenu1{
+	margin-top:32px;
+	z-index:19;
+}
+
+.linkBox{
+	text-align:center;
+ }
     
 }
 
