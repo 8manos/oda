@@ -42,10 +42,36 @@
 				</a>
 <!-- 				<div class="secondary_menu"><?php wp_nav_menu( array('menu' => 'signup_login' ,'menu_class'=> 'list-inline',)); ?></div> -->
 				<div class="lang-switcher" >
+				
+						<?php if(!is_user_logged_in()){?>
 						<ul class="list-inline login-menu">
-							<!-- <li><a href="" data-toggle="modal" data-target="#myModal"><?php echo __('Sign Up', 'sundance'); ?></a></li> -->
+<!-- 							<li><a href="" data-toggle="modal" data-target="#myModal"><?php echo __('Sign Up', 'sundance'); ?></a></li> -->
 							<li><a href="" data-toggle="modal" data-target="#loginModal"><?php echo __('Log IN', 'sundance'); ?></a></li>
 						</ul>
+						<?php 
+						}else{
+							?>
+							<ul class="list-inline login-menu">
+								<li><?php 
+									global $current_user;
+									get_currentuserinfo();
+									echo $current_user->user_login;
+									if(!current_user_can('administrator'))
+									show_admin_bar(false);
+									?>
+										<style>
+											/* added because after disabling admin bar, it left a white space */
+											html {
+														margin-top: 0px !important;
+												}
+										</style>
+									<?php
+								?></li>
+								<li><a href="<?php echo wp_logout_url( get_permalink() ); ?>" ><?php echo __('Logout', 'sundance'); ?></a></li>
+							</ul>
+							<?php
+						}
+						?>
 				<?php 
 				 $currentlang = get_bloginfo('language');
 							if($currentlang=="en-US"){
@@ -96,7 +122,7 @@
 					<div class="clearfix">
 						<img  class="closeImg" data-dismiss="modal" src="<?php echo get_stylesheet_directory_uri(); ?>/img/close.png" aria-label="Close"> 
 						<div class="col-lg-6 col-sm-6 login text-center">
-							<div class="log-heading">Ingresa</div>
+							<div class="log-heading"><?php echo __('Ingresa','sundance');?></div>
 							<!--<div class="form-group">
 								<input type="text" class="form-control" placeholder="username">
 							</div>
@@ -121,12 +147,12 @@
 							);
 							wp_login_form($args); ?>
 							<div class="link">
-								olvidaste tu contrasena. <a href="">Click Now </a>
+								<?php echo __('olvidaste tu contrasena. ','sundance');?><a href="">Click Now </a>
 							</div>
 <!-- 													<button class="btn">Ingresar</button> -->
 						</div>
 						<div class="col-lg-6 col-sm-6 loading">
-								<div>cargando...</div>
+								<div><?php echo __('cargando...','sundance');?></div>
 						</div>
 					</div>
 			</div>
@@ -141,9 +167,9 @@
 				<div class="modal-body">
 					<div class="row">
 						<div class="col-lg-6 left text-center">
-								<div class="heading "> Unete</div>
+								<div class="heading "><?php echo __('Unete','sundance');?></div>
 								<div class="text text-center">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+									<?php echo __('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','sundance');?>
 								</div>	
 								<form>
 									<div class="form-group">
@@ -152,7 +178,7 @@
 									</div>
 								</form>
 								<div class="note">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										<?php echo __('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','sundance');?>
 								</div>
 						</div>
 						<div class="col-lg-6 right">
@@ -171,8 +197,8 @@
 									<!-- Wrapper for slides -->
 									<div class="carousel-inner" role="listbox">
 										<div class="item active slide1">
-											<div class="heading "> En compania de un adulto</div>
-											<div class="text text-left"> En compania de un adulto</div>
+											<div class="heading "><?php echo __('En compania de un adulto','sundance');?></div>
+											<div class="text text-left"><?php echo __('En compania de un adulto','sundance');?></div>
 											<div class="clearfix">
 												<?php
 														// lowest year wanted
@@ -207,20 +233,20 @@
 
 												?>
 											</div>
-											<div class="text text-left"> En compania de un adulto</div>
+											<div class="text text-left"> <?php echo __('En compania de un adulto','sundance');?></div>
 											<div class=btn-bar>
-												<button class="btn btn-default">Padre</button>
-												<button class="btn btn-default">Educador</button>
+												<button class="btn btn-default"><?php echo __('Padre','sundance');?></button>
+												<button class="btn btn-default"><?php echo __('Educador','sundance');?></button>
 											</div>
 											<button class="cbtn btn">Continue</button>
 											<div class="note">
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+													<?php echo __('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','sundance');?>
 											</div>
 										</div><!--slide1-->
 										<div class="item slide2">
-												<div class="heading"> Crea tu cuenta</div>
-												<div class="text text-center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-													Nunc tellus purus, dapibus ut pretium quis, egestas quis massa. 
+												<div class="heading"> <?php echo __('Crea tu cuenta','sundance');?></div>
+												<div class="text text-center"> 
+													<?php echo __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus purus, dapibus ut pretium quis, egestas quis massa. ','sundance');?>
 												</div>
 												<br/>
 												<div class="clearfix inp-bar">
@@ -240,13 +266,13 @@
 												</div>
 												<button class="cbtn btn">Continue</button>
 												<div class="note">
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+													<?php echo __('Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.','sundance');?>
 												</div>
 										</div><!--slide2-->
 										<div class="item">
-												<div class="heading"> Gracias por ser parte de nuestra causa!</div>
-												<div class="text text-center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-													Nunc tellus purus, dapibus ut pretium quis, egestas quis massa. Nunc tellus purus, dapibus ut pretium quis, egestas quis massa.
+												<div class="heading"> <?php echo __('Gracias por ser parte de nuestra causa!','sundance');?></div>
+												<div class="text text-center"> 
+													<?php echo __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus purus, dapibus ut pretium quis, egestas quis massa. Nunc tellus purus, dapibus ut pretium quis, egestas quis massa.','sundance');?>
 												</div>
 										</div>
 									</div>
