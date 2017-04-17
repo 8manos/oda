@@ -100,7 +100,7 @@
 							//print_r($translations);
 							?>
 			
-						<div class="lang-item-es "><a href="<?php echo $translations[0]['url'];?>" hreflang="<?php echo $translations[0]['slug'];?>">ESP</a></div>
+						<div class="lang-item-es <?php if($currentlang!="en-US"){ echo "lang-active"; }?>"><a href="<?php echo $translations[0]['url'];?>" hreflang="<?php echo $translations[0]['slug'];?>">ESP</a></div>
 						<div class="lbg">
 						<select id="switch-me">
 							<?php 
@@ -119,7 +119,7 @@
 						</select>
 <!-- 								<img class="<?php //echo $act; ?>" src="<?php //echo get_stylesheet_directory_uri();?>/img/lang_selector.svg"> -->
 						</div>
-						<div class="lang-item-en "><a href="<?php echo $translations[1]['url'];?>" hreflang="<?php echo $translations[0]['slug'];?>">ENG</a></div>
+						<div class="lang-item-en  <?php if($currentlang=="en-US"){ echo "lang-active"; }?>"><a href="<?php echo $translations[1]['url'];?>" hreflang="<?php echo $translations[0]['slug'];?>">ENG</a></div>
 				</div>
 				<div class="menuPanel ">
 					<div class="clsMenu clsMenu1 menuFor" >

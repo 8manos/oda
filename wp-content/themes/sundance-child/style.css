@@ -1853,6 +1853,10 @@ font-size: 66px;}
     position: relative;
     width: 100%;
 }
+.lang-active{
+	text-shadow:white 2px 2px;
+	font-weight:bold;
+}
 
 @media screen and (max-width:360px) {
 		.footer_menu{
