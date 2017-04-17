@@ -13,6 +13,7 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'iconmoon', get_stylesheet_directory_uri() . '/css/iconmoon.css', array( $parent_style ) );
     wp_enqueue_style( 'iconmoon', get_stylesheet_directory_uri() . '/wpp.css', array( $parent_style ) );
 		wp_enqueue_style( 'fancyb', get_stylesheet_directory_uri() . '/css/jquery.fancybox.css', array( $parent_style ) );
+		wp_enqueue_style( 'switchy-css', get_stylesheet_directory_uri() . '/css/switchy.css', array( $parent_style ) );
 
 		wp_enqueue_style( 'bootstrap-style', get_stylesheet_directory_uri() . '/css/bootstrap-3.3.5-dist/css/bootstrap.min.css', array( 'child-style' ) );
 		wp_deregister_script('bxSliderSetup');
@@ -26,10 +27,14 @@ function theme_enqueue_styles() {
 		wp_register_script( 'customjs', get_stylesheet_directory_uri() .'/js/custom.js',array ('jquery','isotope_js'), '1.0.0', true);
     wp_register_script( 'fancybox_pack', get_stylesheet_directory_uri() .'/js/jquery.fancybox.pack.js',array ('jquery'), '1.0.0', true);
 		wp_register_script( 'fancybox', get_stylesheet_directory_uri() .'/js/jquery.fancybox.js',array ('jquery'), '1.0.0', true);
-
+		wp_register_script( 'switchy', get_stylesheet_directory_uri() .'/js/switchy.js',array ('jquery'), '1.0.0', true);
+		wp_register_script( 'event-drag', get_stylesheet_directory_uri() .'/js/jquery.event.drag.js',array ('jquery'), '1.0.0', true);
+		
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('masonary_js');
     wp_enqueue_script('jquery-ui');
+    wp_enqueue_script('switchy');
+    wp_enqueue_script('event-drag');
     
     //wp_enqueue_script('quicksand_js');
     wp_enqueue_script('isotope_js');

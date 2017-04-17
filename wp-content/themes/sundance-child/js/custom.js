@@ -149,93 +149,80 @@ jQuery(function($){
 // 				});
 // 		})
 		
-		var sizeSwitch = 30;
-		var switchHandle = $('.lbg img');
+// 		var sizeSwitch = 30;
+// 		var switchHandle = $('.lbg img');
 		var option1 =  $('.lang-item-es');
 		var option2 =  $('.lang-item-en');
-		var switchArea =  $('.lbg');
-
-		switchHandle.draggable({
-			axis: 'x',
-			containment: 'parent',
-			stop: function() {
-				conditionMove();
-			}
-		});
-
-		option1.click(function() {
-			option1.addClass('active');
-			option2.removeClass('active');
-			switchHandle.animate({
-				left: 0
-			}, 100);
-		});
-
-		option2.click(function() {
-			option2.addClass('active');
-			option1.removeClass('active');
-			switchHandle.animate({
-				left: sizeSwitch + 'px'
-			}, 100);
-		});
-
-		switchArea.click(function() {
-			conditionMoveSnap();
-		});
-
-
-		function conditionMove() {
-			if(parseInt(switchHandle.css('left')) <= (sizeSwitch / 2)) {
-				switchHandle.animate({
-					left: 0
-				}, 100);
-				option1.addClass('active');
-				option2.removeClass('active');
-				window.location = $(".lang-item-es > a").attr('href');
-			}
-			else {
-				switchHandle.animate({
-					left: sizeSwitch + 'px'
-				}, 100);
-				option2.addClass('active');
-				option1.removeClass('active');
-				window.location = $(".lang-item-en > a").attr('href');
-			}
-		}
-
-		function conditionMoveSnap() {
-			if(parseInt(switchHandle.css('left')) == sizeSwitch) {
-				switchHandle.animate({
-					left: 0
-				}, 100);
-				option1.addClass('active');
-				option2.removeClass('active');
-				window.location = $(".lang-item-es > a").attr('href');
-			}
-			else {
-				switchHandle.animate({
-					left: sizeSwitch + 'px'
-				}, 100);
-				option2.addClass('active');
-				option1.removeClass('active');
-				window.location = $(".lang-item-en > a").attr('href');
-			}
-		}
-		
-// 		$('.lbg > img').draggable({
-// 				axis: 'x',
-// 				containment: '.lbg',
-// 				cursor: 'pointer',
-// 				//grid: [30,0],
-// 				stop: function(event,ui){
-// 					if($(".lbg > img").css('left') > '15px'){
-// 						window.location = $(".lang-item-en > a").attr('href');
-// 					}else{
-// 						window.location = $(".lang-item-es > a").attr('href');
-// 					}
+// 		var switchArea =  $('.custom-lbg');
+// 		
+// 		switchHandle.draggable({
+// 			axis: 'x',
+// 			containment: switchArea,
+// 			stop: function(event) {
+// 				event.stopPropagation();
+// 				sizeSwitch = switchHandle.css('left');
+// 				//console.log('1 : ',switchHandle.css('left'));
+// 				
+// 				if(switchHandle.css('left') <= (sizeSwitch / 2) || switchHandle.css('left') == '0px'){
+// // 					switchHandle.animate({
+// // 						left: 0 + 'px'
+// // 					}, 100);
+// 					$(".lang-item-es > a").click();
+// 					$('.lbg img').removeClass(".mleft");
+// 					//console.log('1 : ',switchHandle.css('left'));
+// 				}else{
+// // 					switchHandle.animate({
+// // 						left: sizeSwitch + 'px'
+// // 					}, 100);
+// 					$(".lang-item-en > a").click();
+// 					$('.lbg img').addClass(".mleft");
+// 					//console.log('2',switchHandle.css('left'));
 // 				}
-// 			});
+// 			}
+// 		});
+// 		$(".lang-item-es > a").click(function(event){
+// 			event.stopPropagation();
+// 		})
+// 		$(".lang-item-en > a").click(function(event){
+// 			event.stopPropagation();
+// 		})
+		
+		
+		$('#switch-me').switchy();
 
+		$('#switch-me').on('change', function(){
+
+		// Animate Switchy Bar background color
+			var bgColor = '#ccb3dc';
+			var className = "."+ $(this).val();
+			try{
+			console.log(className , $("a:first", $(className) ).length , $(className).html())
+			if ($(this).val() == 'lang-item-en'){
+				bgColor = 'yellow';
+				window.location =  $("a:first", $(className) ).attr("href");
+			} else if ($(this).val() == 'lang-item-es'){
+				bgColor = 'red';
+				window.location =  $("a:first", $(className) ).attr("href");
+			}
+			}catch(e){
+				console.log('error occured');
+			}
+
+		});
+
+// 		option1.click(function() {
+// 			switchHandle.animate({
+// 				left: 0 + 'px'
+// 			}, 100);
+// 			window.location = $(".lang-item-es > a").attr('href');
+// 		});
+// 
+// 		option2.click(function() {
+// 			switchHandle.animate({
+// 				left: sizeSwitch + 'px'
+// 			}, 100);
+// 			window.location = $(".lang-item-en > a").attr('href');
+// 		});
 		
 		$('.carousel').carousel({
     interval: false

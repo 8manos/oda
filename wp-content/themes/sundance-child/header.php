@@ -26,6 +26,22 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
+<?php
+							$currentlang = get_bloginfo('language');
+							if($currentlang=="en-US"){ ?>
+							<script>
+								jQuery(function($){
+									//$('#switch-me').val('lang-item-en').attr('selected','selected');
+								});
+							</script>
+							<?php }else{ ?>
+							<script>
+								jQuery(function($){
+									//$('#switch-me').val('lang-item-en').attr('selected','selected');
+								});
+							</script>							
+							<?php }
+?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -73,7 +89,7 @@
 						}
 						?>
 				<?php 
-				 $currentlang = get_bloginfo('language');
+							$currentlang = get_bloginfo('language');
 							if($currentlang=="en-US"){
 							$act="mleft";
 							}else{
@@ -86,7 +102,22 @@
 			
 						<div class="lang-item-es "><a href="<?php echo $translations[0]['url'];?>" hreflang="<?php echo $translations[0]['slug'];?>">ESP</a></div>
 						<div class="lbg">
-							<img class="<?php echo $act; ?>" src="<?php echo get_stylesheet_directory_uri();?>/img/lang_selector.svg">
+						<select id="switch-me">
+							<?php 
+								if($currentlang=="en-US"){
+									?>
+										<option value="lang-item-es"></option>
+										<option value="lang-item-en" selected="selected"></option>
+									<?php
+								}else{
+									?>
+										<option value="lang-item-es" selected="selected"></option>
+										<option value="lang-item-en"></option>
+									<?php
+								}
+							?>
+						</select>
+<!-- 								<img class="<?php //echo $act; ?>" src="<?php //echo get_stylesheet_directory_uri();?>/img/lang_selector.svg"> -->
 						</div>
 						<div class="lang-item-en "><a href="<?php echo $translations[1]['url'];?>" hreflang="<?php echo $translations[0]['slug'];?>">ENG</a></div>
 				</div>
