@@ -30,7 +30,7 @@
 			//the_content();
 			if($i==3){ ?>
 			</div>
-			<div class="row">
+			<div class="row-fluid">
 			<?php } ?>
 			
 			<div class='col-lg-4 col-sm-6 linkBox'>
