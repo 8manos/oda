@@ -61,7 +61,7 @@
 				
 						<?php if(!is_user_logged_in()){?>
 						<ul class="list-inline login-menu">
-<!-- 							<li><a href="" data-toggle="modal" data-target="#myModal"><?php echo __('Sign Up', 'sundance'); ?></a></li> -->
+							<li><a href="" data-toggle="modal" data-target="#myModal"><?php echo __('Sign Up', 'sundance'); ?></a></li>
 							<li><a href="" data-toggle="modal" data-target="#loginModal"><?php echo __('Log IN', 'sundance'); ?></a></li>
 						</ul>
 						<?php 
