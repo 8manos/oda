@@ -1625,8 +1625,13 @@ font-size: 66px;}
 	z-index:19;
 }
 
-.linkBox{
-	text-align:center;
+.linkBox {
+    margin: 15px 0 0 10px !important;
+    text-align: center;
+}
+ 
+ .sub-homelink-title {	
+	 font-size:23px;
  }
     
 }
@@ -1827,6 +1832,7 @@ font-size: 66px;}
 	text-decoration:none;
 }
 
+																																																							
 .switchy-container {
 	height:25px !important;
 	width:60px !important;
