@@ -26,27 +26,33 @@
 
 	if ( $the_query->have_posts() ) :
 		$i=0;
+		?>
+		<div class="row-fluid">
+		<?php
 		while ( $the_query->have_posts() ) : $the_query->the_post();
 			//the_content();
-			if($i==3){ ?>
-			</div>
-			<div class="row-fluid">
-			<?php } ?>
+			//if($i==3){ ?>
+			<!--</div>-->
 			
-			<div class='col-lg-4 col-sm-6 linkBox'>
+			<?php //} ?>
+			
+			<div class='col-lg-4 col-sm-6 linkBox text-center'>
 				<a href='<?php echo get_the_excerpt();?>'>
          <?php the_post_thumbnail('medium') ?>
         </a>
       </div>
       
       <?php
-				if($i==5){ ?>
-					</div>
-			<?php } ?>
+				//if($i==5){ ?>
+					<!--</div>-->
+			<?php// } ?>
 			
 		<?php
 		$i++;
 	endwhile;
+	?>
+	</div>
+	<?php
 	endif;
 	wp_reset_postdata();
 	?>	
