@@ -16,7 +16,7 @@
 	</header><!-- .entry-header -->
 	<div class='row'>
 		<div class='col-lg-10 col-lg-offset-1 ' >
-		<div class="row">
+		<div class="row-fluid">
 	<?php
 	//make the sql to collect all page links
 	$args = array(
