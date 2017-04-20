@@ -27,7 +27,7 @@
 	if ( $the_query->have_posts() ) :
 		$i=0;
 		?>
-		<div class="row-fluid">
+<!-- 		<div class="row-fluid"> -->
 		<?php
 		while ( $the_query->have_posts() ) : $the_query->the_post();
 			//the_content();
@@ -51,6 +51,8 @@
 		$i++;
 	endwhile;
 	?>
+<!-- 	</div> -->
+	<div class="clearfix">
 	</div>
 	<?php
 	endif;

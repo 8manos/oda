@@ -67,7 +67,7 @@ hgroup{
 
 }
 .clsLinkSecfooter{
-	height:300px;
+	height:660px;
 	border:0px solid black;
 	background:transparent url('img/hillsTop.png') bottom left repeat-x;
 }
@@ -1539,6 +1539,7 @@ font-size: 66px;}
 	.clsFestMenu{
 		font-size: 25px;
 	}
+	
 	.clsFestMenu ul{margin:0px;}
 	.clsFestPage2{
 		height:810px;
@@ -1633,8 +1634,8 @@ font-size: 66px;}
  
  .sub-homelink-title {	
 	 font-size:23px;
- }
-    
+ } 
+ 
 }
 
 .customModal .modal-body{
@@ -1905,9 +1906,12 @@ footer .site-footer{
 	margin-top:35%;
 	
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width:760px) and (max-width:1024px) {
 	.loginModal .modal-dialog{
 		width:700px;
+	}
+	.clsLinkSecfooter{
+	 height: 200px !important;
 	}
 }
 .loginModal .log-heading{
